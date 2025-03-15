@@ -1,4 +1,4 @@
-<!-- Written 03/14/2025 21:34:27 -->
+<!-- Written 03/14/2025 22:33:58 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -947,6 +947,43 @@
     <title>c_n_max_hys_max</title>
     <CATEGORYMEM index="0" category="17" />
     <EMBEDDEDDATA mmedaddress="0x102B9" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <decimalpl>0</decimalpl>
+    <datatype>6</datatype>
+    <unittype>4</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*32">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0xFC7">
+    <title>c_t_n_max_vs_0</title>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x10732" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>s</units>
+    <decimalpl>1</decimalpl>
+    <datatype>2</datatype>
+    <unittype>84</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*(0.1)">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x7E49">
+    <title>c_tco_n_max_vs_0</title>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x10399" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>C</units>
+    <datatype>13</datatype>
+    <unittype>15</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*(0.75)-48">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6C8E">
+    <title>c_n_max_vs_0</title>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedaddress="0x10297" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <decimalpl>0</decimalpl>
     <datatype>6</datatype>
     <unittype>4</unittype>
