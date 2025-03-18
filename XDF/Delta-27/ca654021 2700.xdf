@@ -1,4 +1,4 @@
-<!-- Written 01/01/2020 00:00:00 -->
+<!-- Written 03/17/2025 21:27:16 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -671,6 +671,17 @@
     <EMBEDDEDDATA mmedaddress="0x8232" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <datatype>0</datatype>
     <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*32">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x160A">
+    <title>8239 RPM VS Diag Limit</title>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedaddress="0x8239" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>6</datatype>
+    <unittype>4</unittype>
     <DALINK index="0" />
     <MATH equation="X*32">
       <VAR id="X" />
