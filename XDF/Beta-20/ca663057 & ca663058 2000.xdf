@@ -1,4 +1,4 @@
-<!-- Written 03/15/2025 21:29:31 -->
+<!-- Written 04/06/2025 12:31:37 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -839,6 +839,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4445" flags="0x0">
     <title>ldpm_maf_hb__iga</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -885,6 +886,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2717" flags="0x0">
     <title>ldpm_maf_1_3</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
