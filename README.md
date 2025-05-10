@@ -14,6 +14,10 @@ Inside ADX files, you'll also find descriptions for logged variables. TunerPro l
 that, for example, if you record a log with `ca66xxx_version_1.0.0.ADX`, you'll still be able to later 
 open it with `ca66xxx_version_2.3.4.ADX` - or the other way around.
 
+### DBC
+
+CAN bus signal definitions. They can be opened with software such as SavvyCAN
+
 ### XDF 
 
 XDF files describe the contents of .bin files that you read/flash using [GKFlasher](https://github.com/Dante383/GKFlasher) or other software.

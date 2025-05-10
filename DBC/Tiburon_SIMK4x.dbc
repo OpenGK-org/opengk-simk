@@ -1,0 +1,185 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: ECU ESP TCM 
+BO_ 809 DME2: 7 ECU
+   SG_ TEMP_ENG : 15|8@0+ (0.75,-48) [-48|142.5] "C" Vector__XXX
+   SG_ AMP_CAN : 23|8@0+ (2,598) [600|1106] "hPa" Vector__XXX
+   SG_ TPS_CAN : 47|8@0+ (0.390625,0) [0|99.2] "%" Vector__XXX
+   SG_ CAN_VERS_CAN : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ MUL_CODE : 7|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ VB_OFF_ACT_CAN : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ ACK_ES_CAN : 39|8@0+ (0.390625,0) [0|99.2] "%" Vector__XXX
+   SG_ ENG_CHR_CAN : 55|4@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ CONF_TCU_CAN : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 790 DME1: 7 ECU
+   SG_ N_ENG : 16|16@1+ (0.15625,0) [0|10000] "rpm" Vector__XXX
+   SG_ TQI_TQR_CAN : 15|8@0+ (0.39,0) [0|100] "%" Vector__XXX
+   SG_ TQI_CAN : 39|8@0+ (0.39,0) [0|100] "%" Vector__XXX
+   SG_ SWI_IGK_CAN : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ F_N_ENG_CAN : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ ACK_TCS_CAN : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ PUC_STAT : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ TQ_COR_STAT_CAN : 5|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ RLY_AC_CAN : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ F_SUB_TQI_CAN : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ TQ_LOSS_CAN : 47|8@0+ (0.39,0) [0|100] "%" Vector__XXX
+   SG_ VS_CAN : 48|8@0+ (1,0) [0|255] "kmh" Vector__XXX
+   SG_ TQI_MAF_CAN : 56|8@0+ (0.39,0) [0|100] "%" Vector__XXX
+
+BO_ 339 ASC1: 7 ESP
+   SG_ VSS : 23|8@0+ (0.95439,0) [0|350] "kmh" Vector__XXX
+   SG_ MD_INC_ASC : 31|8@0+ (0.390625,0) [0|99.6094] "%" Vector__XXX
+   SG_ TCS_REQ_CAN : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ MSR_C_REQ_CAN : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ TCS_PAS : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ TCS_GSC : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ ABS_DIAG : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ ABS_DIAG14 : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ TCS_DEF : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ TCS_CTL : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ ABS_ACT : 10|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ EBD_DEF : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ ESP_PAS : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ ESP_DEF : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ ESP_CTL : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ TCS_MFRN : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ TQI_MSR_CAN : 39|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ TQI_SLW_TCS_CAN : 47|8@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 496 ASC2: 7 ESP
+   SG_ VSS1 : 7|8@0+ (0.95439,0) [0|255] "kmh" Vector__XXX
+   SG_ VSS2 : 15|8@0+ (0.95439,0) [0|255] "kmh" Vector__XXX
+   SG_ VSS3 : 23|8@0+ (0.95439,0) [0|255] "kmh" Vector__XXX
+   SG_ VSS4 : 31|8@0+ (0.95439,0) [0|255] "kmh" Vector__XXX
+
+BO_ 1349 DME4: 4 ECU
+   SG_ FCO : 8|16@1+ (0.128,0) [0|8389] "microliters" Vector__XXX
+   SG_ IM_AUTHEN_CAN : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ L_MIL_CAN : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ IM_STAT_CAN : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ AMP_CAN : 7|5@0+ (25.4,0) [0|1] "mmHg" Vector__XXX
+   SG_ VB : 31|8@0+ (0.1,0) [0|99] "v" Vector__XXX
+
+BO_ 672 DME5: 8 ECU
+
+BO_ 1087 EGS1_Automatic_Transmission: 8 TCM
+
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_ "GenMsgForegroundColor" BO_ 339 "#000000";
+BA_ "GenMsgForegroundColor" BO_ 496 "#000000";
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "matchingcriteria" 0;
+BA_DEF_DEF_ "filterlabeling" 0;
+CM_ SG_ 809 TEMP_ENG "Engine_Coolant_Temperature_in_Celsius";
+CM_ SG_ 809 AMP_CAN "Ambient_Pressure_in_hPa";
+CM_ SG_ 809 TPS_CAN "Accelerator_Pedal_Position_in_%_of_PVS_MAX._Values_around_10-15%_are_to_be_expected_for_an_un-touched_pedal";
+CM_ SG_ 809 CAN_VERS_CAN "CAN_Version";
+CM_ SG_ 809 MUL_CODE "Identification_of_MUL_INFO";
+CM_ SG_ 809 VB_OFF_ACT_CAN "Detection_of_battery_disconnection";
+CM_ SG_ 809 ACK_ES_CAN "Acknowledgment_engine_stopped";
+CM_ SG_ 809 ENG_CHR_CAN "Engine_characteristic_-_kind_of_fuel,_ETS";
+CM_ SG_ 809 CONF_TCU_CAN "TCU_configuration";
+CM_ SG_ 790 N_ENG "Engine_speed_in_rpm";
+CM_ SG_ 790 TQI_TQR_CAN "Indexed_Engine_Torque_in_%_of_C_TQ_STND_including_ASR/MSR/ETCU/LIM/AMT/GEAR_intervention";
+CM_ SG_ 790 TQI_CAN "Indicated_Engine_Torque_in_%_of_C_TQ_STND_based_on_PVS,_N,_AMP,_TIA_,TCO,_IGA,_PUC_so_ip_tqi_pvs__n__pvs";
+CM_ SG_ 790 SWI_IGK_CAN "Terminal_15_–KEY_ON";
+CM_ SG_ 790 F_N_ENG_CAN "Error_–_engine_speed_signal";
+CM_ SG_ 790 ACK_TCS_CAN "Acknowledgement_of_TCS._This_bit_is_set_to_0_if_no_CAN_messages_from_the_TCS_were_received_for_at_least_500ms";
+CM_ SG_ 790 PUC_STAT "Engine_in_fuel_cut_off_LV_PUC_-_Trailing_Throttle_Fuel_Cut_Off";
+CM_ SG_ 790 TQ_COR_STAT_CAN "Status,_torque_intervention";
+CM_ SG_ 790 RLY_AC_CAN "Activation,_air_conditioner_compressor_relay";
+CM_ SG_ 790 F_SUB_TQI_CAN "Error_on_torque_measure_or_calculation";
+CM_ SG_ 790 TQ_LOSS_CAN "Engine_Torque_Loss_due_to_engine_friction,_AC_compressor_and_electrical_power_consumption_in_%_of_C_TQ_STND";
+CM_ SG_ 790 VS_CAN "Vehicle_speed_in_kmh";
+CM_ SG_ 790 TQI_MAF_CAN "Theoretical_engine_torque_in_percentage_of_C_TQ_STND_after_charge_intervention";
+CM_ SG_ 339 VSS "Vehicle_speed_signal";
+CM_ SG_ 339 MD_INC_ASC "Torque_intervention_for_ASC_function";
+CM_ SG_ 339 TCS_REQ_CAN "Request_TCS";
+CM_ SG_ 339 MSR_C_REQ_CAN "Request_for_MSR_functions";
+CM_ SG_ 339 TCS_PAS "TCS_disabled_by_user";
+CM_ SG_ 339 TCS_GSC "TCS_gear_shift_characteristics";
+CM_ SG_ 339 ABS_DIAG "ABS_TCS/ESP_diagnostic_mode_indication";
+CM_ SG_ 339 ABS_DIAG14 "ABS_defective_indication";
+CM_ SG_ 339 TCS_DEF "TCS_defective_indication";
+CM_ SG_ 339 TCS_CTL "TCS_control_indication";
+CM_ SG_ 339 ABS_ACT "ABS_control_indication";
+CM_ SG_ 339 EBD_DEF "EBD_defective_indication";
+CM_ SG_ 339 ESP_PAS "ESP_disabled_by_user";
+CM_ SG_ 339 ESP_DEF "ESP_defective";
+CM_ SG_ 339 ESP_CTL "ESP_control_indication";
+CM_ SG_ 339 TCS_MFRN "TCS_manufacturer_information";
+CM_ SG_ 339 TQI_MSR_CAN "Reserved_for_MSR";
+CM_ SG_ 339 TQI_SLW_TCS_CAN "Slow_torque_intervention_for_TCS";
+CM_ SG_ 496 VSS1 "Wheel_1_speed_signal";
+CM_ SG_ 496 VSS2 "Wheel_2_speed_signal";
+CM_ SG_ 496 VSS3 "Wheel_3_speed_signal";
+CM_ SG_ 496 VSS4 "Wheel_4_speed_signal";
+CM_ SG_ 1349 FCO "Fuel_consumption";
+CM_ SG_ 1349 IM_AUTHEN_CAN "Authentication_immobilizer";
+CM_ SG_ 1349 L_MIL_CAN "Check_Engine_Lamp_or_Malfunction_Indication_Lamp";
+CM_ SG_ 1349 IM_STAT_CAN "Status_of_immobilizer";
+CM_ SG_ 1349 AMP_CAN "Atmospheric_pressure";
+CM_ SG_ 1349 VB "Battery_voltage";
+VAL_ 809 VB_OFF_ACT_CAN 16 "Battery_connected";
+VAL_ 809 ENG_CHR_CAN 0 "";
+VAL_ 809 CONF_TCU_CAN 0 "";
+VAL_ 790 SWI_IGK_CAN 0 "Terminal_15_-_key_off" 1 "Terminal_15_-_key_on";
+VAL_ 790 TQ_COR_STAT_CAN 0 "The_desired_intervention_regarding_ignition_angle_retardation_and_cylinder_shut-off_is_executed." 1 "The_desired_intervention_regarding_ignition_angle_retardation_and_cylinder_shut-off_is_executed;_however,_the_requested_target_torque_can_not_be_adjusted_precisely_(torque_steps)" 2 "The_torque_reduction_regarding_the_ignition_angle_retardation_cannot_be_completely_executed._A_cylinder_shut-off_is_not_possible_at_this_time._Therefore_a_remaining_torque_(as_difference_between_TQI_ASR/GS_REQ_and_TQI_AV)_is_present_and_cannot_be_reduced." 3 "The_desired_torque_intervention_for_TCS_regarding_the_ignition_angle_and_cylinder_shut-off_can_no_longer_be_executed._The_torque_intervention_is_terminated,_the_engine_management_system_resets_the_requested_engine_torque_to_the_TQI_value_using_a_ramp.";
+VAL_ 790 RLY_AC_CAN 0 "Air_conditioner_compressor_relay_disabled" 1 "Air_conditioner_compressor_relay_activated";
+VAL_ 790 F_SUB_TQI_CAN 1 "Error_on_torque_measure_or_calculation";
+VAL_ 1349 IM_AUTHEN_CAN 0 "Immobiliser_authenticated" 1 "Immobiliser_not_authenticated" 0 "";
+VAL_ 1349 L_MIL_CAN 1 "Check_engine_/_malfunction_indication_lamp_turned_on";
+VAL_ 1349 IM_STAT_CAN 0 "Immobiliser_turned_off" 1 "Immobiliser_active";
