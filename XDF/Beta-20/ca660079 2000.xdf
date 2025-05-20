@@ -1,4 +1,4 @@
-<!-- Written 03/24/2025 07:41:35 -->
+<!-- Written 05/20/2025 16:20:00 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -18,6 +18,7 @@
     <CATEGORY index="0x10" name="Engine Speed" />
     <CATEGORY index="0x14" name="Sensor Definitions" />
     <CATEGORY index="0x2B" name="Identification" />
+    <CATEGORY index="0x2C" name="Community Patches" />
   </XDFHEADER>
   <XDFTABLE uniqueid="0xC58" flags="0x0">
     <title>sstm_lm_6_4 (Warm Up MAF Axis)</title>
@@ -1939,6 +1940,42 @@
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x4AB0">
+    <title>c_n_fcut</title>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedaddress="0x8207" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <decimalpl>0</decimalpl>
+    <datatype>6</datatype>
+    <unittype>4</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*32">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6C56">
+    <title>c_n_max_fcut</title>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedaddress="0x8213" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <decimalpl>0</decimalpl>
+    <datatype>6</datatype>
+    <unittype>4</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*32">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x5C70">
+    <title>c_t_n_max_fcut</title>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x84EE" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <decimalpl>1</decimalpl>
+    <datatype>3</datatype>
+    <unittype>84</unittype>
+    <DALINK index="0" />
+    <MATH equation="(X*0.1)">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1C3">
     <title>c_n_max_hys</title>
     <CATEGORYMEM index="0" category="17" />
@@ -2740,4 +2777,24 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
+  <XDFCONSTANT uniqueid="0x236D">
+    <title>c_tco_th_open</title>
+    <CATEGORYMEM index="0" category="16" />
+    <EMBEDDEDDATA mmedaddress="0x82BD" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <decimalpl>1</decimalpl>
+    <datatype>13</datatype>
+    <unittype>15</unittype>
+    <DALINK index="0" />
+    <MATH equation="(X*0.750)-48">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFPATCH uniqueid="0x7879">
+    <title>Launch Control Patch</title>
+    <description>This enables a 4000 RPM launch control that is wheel speed based. Use c_n_fcut and c_n_max_fcut to control the RPM which you are limited at for launch.</description>
+    <CATEGORYMEM index="0" category="45" />
+    <XDFPATCHENTRY name="c_t_n_max_fcut" address="0x84EE" datasize="0x2" patchdata="0100" basedata="6810" />
+    <XDFPATCHENTRY name="c_tco_th_open" address="0x82BD" datasize="0x1" patchdata="68" basedata="B1" />
+    <XDFPATCHENTRY name="c_n_max_hys & c_n_max_hys_max" address="0x8214" datasize="0x2" patchdata="0000" basedata="010A" />
+  </XDFPATCH>
 </XDFFORMAT>
