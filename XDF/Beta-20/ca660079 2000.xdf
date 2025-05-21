@@ -2795,6 +2795,6 @@
     <CATEGORYMEM index="0" category="45" />
     <XDFPATCHENTRY name="c_t_n_max_fcut" address="0x84EE" datasize="0x2" patchdata="0100" basedata="6810" />
     <XDFPATCHENTRY name="c_tco_th_open" address="0x82BD" datasize="0x1" patchdata="68" basedata="B1" />
-    <XDFPATCHENTRY name="c_n_max_hys & c_n_max_hys_max" address="0x8214" datasize="0x2" patchdata="0000" basedata="010A" />
+    <XDFPATCHENTRY name="c_n_max_hys and c_n_max_hys_max" address="0x8214" datasize="0x2" patchdata="0000" basedata="010A" />
   </XDFPATCH>
 </XDFFORMAT>
