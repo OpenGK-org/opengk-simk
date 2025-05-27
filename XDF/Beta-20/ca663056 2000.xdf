@@ -1,4 +1,4 @@
-<!-- Written 04/11/2025 11:17:38 -->
+<!-- Written 05/26/2025 21:00:59 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -1079,7 +1079,7 @@
       <min>60.000000</min>
       <max>155.625000</max>
       <outputtype>1</outputtype>
-      <MATH equation="(X * 0.37353515625) + 60">
+      <MATH equation="(X * 0.375) + 60">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1121,49 +1121,7 @@
       <min>60.000000</min>
       <max>155.625000</max>
       <outputtype>1</outputtype>
-      <MATH equation="(X * 0.37353515625) + 60">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x4502" flags="0x30">
-    <title>18FC6 12x16 8bit IVVT Camshaft Setpoint TCO2 Part Load</title>
-    <description>Index: 392  TI :IP_CAM_SP_TCO_2_PL_IVVT_IN&#013;&#010;Target spread for TCO_2, part load, intake camshaft&#013;&#010;           IP_CAM_SP_TCO_2_PL_IVVT_IN[&#176;CRK] = f(N[rpm], MAF_IVVT[mg/stk])</description>
-    <CATEGORYMEM index="0" category="10" />
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x18288" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
-      <units>mg/stroke</units>
-      <indexcount>12</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="3" linkobjid="0x1442" />
-      <datatype>23</datatype>
-      <unittype>90</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x18222" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
-      <units>RPM</units>
-      <indexcount>16</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="3" linkobjid="0x248" />
-      <datatype>6</datatype>
-      <unittype>4</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x18FC6" mmedelementsizebits="8" mmedrowcount="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <units>&#176;</units>
-      <decimalpl>3</decimalpl>
-      <min>60.000000</min>
-      <max>155.625000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="(X * 0.37353515625) + 60">
+      <MATH equation="(X * 0.375) + 60">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1205,7 +1163,49 @@
       <min>60.000000</min>
       <max>155.625000</max>
       <outputtype>1</outputtype>
-      <MATH equation="(X * 0.37353515625) + 60">
+      <MATH equation="(X * 0.375) + 60">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x4502" flags="0x30">
+    <title>18FC6 12x16 8bit IVVT Camshaft Setpoint TCO2 Part Load</title>
+    <description>Index: 392  TI :IP_CAM_SP_TCO_2_PL_IVVT_IN&#013;&#010;Target spread for TCO_2, part load, intake camshaft&#013;&#010;           IP_CAM_SP_TCO_2_PL_IVVT_IN[&#176;CRK] = f(N[rpm], MAF_IVVT[mg/stk])</description>
+    <CATEGORYMEM index="0" category="10" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x18288" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <units>mg/stroke</units>
+      <indexcount>12</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="3" linkobjid="0x1442" />
+      <datatype>23</datatype>
+      <unittype>90</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x18222" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <units>RPM</units>
+      <indexcount>16</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="3" linkobjid="0x248" />
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x18FC6" mmedelementsizebits="8" mmedrowcount="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>&#176;</units>
+      <decimalpl>3</decimalpl>
+      <min>60.000000</min>
+      <max>155.625000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="(X * 0.375) + 60">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1247,7 +1247,7 @@
       <min>60.000000</min>
       <max>155.625000</max>
       <outputtype>1</outputtype>
-      <MATH equation="(X * 0.37353515625)">
+      <MATH equation="(X * 0.375)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1288,7 +1288,7 @@
       <min>60.000000</min>
       <max>155.625000</max>
       <outputtype>1</outputtype>
-      <MATH equation="(X * 0.37353515625) + 60">
+      <MATH equation="(X * 0.375) + 60">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1324,12 +1324,12 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x18F91" mmedelementsizebits="8" mmedrowcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x18F92" mmedelementsizebits="8" mmedrowcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>3</decimalpl>
       <min>85.000000</min>
       <max>125.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="(X * 0.37353515625) + 60">
+      <MATH equation="(X * 0.375) + 60">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
