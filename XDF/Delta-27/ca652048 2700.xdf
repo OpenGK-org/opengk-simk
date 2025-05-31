@@ -1,4 +1,4 @@
-<!-- Written 04/29/2025 16:29:13 -->
+<!-- Written 05/31/2025 09:51:51 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -34552,7 +34552,7 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x8871" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>4</indexcount>
       <embedinfo type="3" linkobjid="0x127" />
       <datatype>3</datatype>
@@ -34565,8 +34565,8 @@
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedaddress="0x9E0C" mmedelementsizebits="8" mmedrowcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>1</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
+      <min>-23.625000</min>
+      <max>72.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="(0.375 * X) + (-23.625000)">
         <VAR id="X" />
@@ -34579,7 +34579,7 @@
     <CATEGORYMEM index="0" category="425" />
     <CATEGORYMEM index="1" category="462" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x8EAE" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>4</indexcount>
       <embedinfo type="3" linkobjid="0xBA" />
       <datatype>3</datatype>
@@ -34590,7 +34590,7 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x8EA4" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>4</indexcount>
       <embedinfo type="3" linkobjid="0xD6" />
       <datatype>3</datatype>
@@ -34603,8 +34603,8 @@
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x9E10" mmedelementsizebits="8" mmedrowcount="4" mmedcolcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>1</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
+      <min>-23.625000</min>
+      <max>72.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="(0.375 * X) + (-23.625000)">
         <VAR id="X" />
@@ -34617,7 +34617,7 @@
     <CATEGORYMEM index="0" category="425" />
     <CATEGORYMEM index="1" category="462" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x8E8A" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
       <embedinfo type="3" linkobjid="0xFD" />
       <datatype>3</datatype>
@@ -34628,7 +34628,7 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x8CB4" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>16</indexcount>
       <embedinfo type="3" linkobjid="0x10B" />
       <datatype>3</datatype>
@@ -34641,8 +34641,8 @@
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x9D4C" mmedelementsizebits="8" mmedrowcount="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>1</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
+      <min>-23.625000</min>
+      <max>72.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="(0.375 * X) + (-23.625000)">
         <VAR id="X" />
