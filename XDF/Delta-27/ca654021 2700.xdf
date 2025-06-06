@@ -1,4 +1,4 @@
-<!-- Written 03/17/2025 21:27:16 -->
+<!-- Written 06/05/2025 20:16:45 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -678,6 +678,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x160A">
     <title>8239 RPM VS Diag Limit</title>
+    <description>RPM limit when vehicle speed sensor fault is present.</description>
     <CATEGORYMEM index="0" category="17" />
     <EMBEDDEDDATA mmedaddress="0x8239" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <datatype>6</datatype>
