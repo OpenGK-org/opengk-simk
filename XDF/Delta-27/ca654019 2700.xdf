@@ -1,4 +1,4 @@
-<!-- Written 06/08/2025 16:03:02 -->
+<!-- Written 06/08/2025 17:17:29 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -110,33 +110,27 @@
     <title>A336 4x4 8bit Ignition Table Idle</title>
     <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x910E" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <units>mg/stroke</units>
       <indexcount>4</indexcount>
       <outputtype>2</outputtype>
+      <embedinfo type="3" linkobjid="0x2B8C" />
       <datatype>23</datatype>
       <unittype>90</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="00" />
-      <LABEL index="1" value="00" />
-      <LABEL index="2" value="00" />
-      <LABEL index="3" value="00" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x9104" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <units>RPM</units>
       <indexcount>4</indexcount>
       <outputtype>2</outputtype>
+      <embedinfo type="3" linkobjid="0x58FC" />
       <datatype>6</datatype>
       <unittype>4</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="00" />
-      <LABEL index="1" value="00" />
-      <LABEL index="2" value="00" />
-      <LABEL index="3" value="00" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
