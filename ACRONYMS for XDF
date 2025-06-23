@@ -19,6 +19,8 @@ MAF - mass air flow
 MAP - manifold absolute pressure
 N - engine speed [rpm]
 PL - part load 
+PU - trailing throttle
+PUC - trailing throttle fuel cut-off
 SOI - start of injection (phase)
 ST - start
 T - time
@@ -37,6 +39,4 @@ WUP - warm-up
 under recognition:
 ASR - 
 AST - 
-PU - 
-PUC - 
 
