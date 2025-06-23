@@ -1,4 +1,4 @@
-<!-- Written 05/30/2025 17:11:20 -->
+<!-- Written 06/21/2025 02:33:58 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -20,6 +20,7 @@
     <CATEGORY index="0x10" name="Engine Speed" />
     <CATEGORY index="0x14" name="Sensor Definitions" />
     <CATEGORY index="0x2B" name="Identification" />
+    <CATEGORY index="0x68" name="Community patches" />
   </XDFHEADER>
   <XDFCONSTANT uniqueid="0x5E7A" flags="0xC">
     <title>1011C IVVT Camshaft Setpoint Range Max</title>
@@ -2446,4 +2447,11 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
+  <XDFPATCH uniqueid="0x359E">
+    <title>KWP IOCLID Privilege Escalation</title>
+    <description>Adds a new InputOutputControlByLocalIdentifier, 0xBB, that upon passing to LONG_TERM_ADJUSTMENT, escalates privileges in current diagnostic session to Siemens level</description>
+    <CATEGORYMEM index="0" category="105" />
+    <XDFPATCHENTRY name="Escalate privileges" address="0x75DE0" datasize="0x16" patchdata="47F8BB00EA20EE5DE7FC3100DB00E178F7F84BF4DB00" basedata="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+    <XDFPATCHENTRY name="Extend identifier list" address="0x623B0" datasize="0x4" patchdata="DA0FE05D" basedata="E7FC3100" />
+  </XDFPATCH>
 </XDFFORMAT>
