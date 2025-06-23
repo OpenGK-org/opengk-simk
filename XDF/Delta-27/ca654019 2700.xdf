@@ -1,4 +1,4 @@
-<!-- Written 06/22/2025 21:07:00 -->
+<!-- Written 06/22/2025 21:17:52 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -1369,6 +1369,7 @@
   <XDFTABLE uniqueid="0x25A3" flags="0x0">
     <title>A12C Dynamic IGA corr. in Idle</title>
     <description>Index: 168  kf 113:&#013;&#010;            IP_IGA_N_DIF_IS[ CRK] = f(N_DIF_COR[rpm])</description>
+    <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -1406,6 +1407,7 @@
   <XDFTABLE uniqueid="0x3893" flags="0x0">
     <title>A138 Dynamic IGA corr. in Idle AT</title>
     <description>Index: 169  kf 113a:&#013;&#010;            IP_IGA_N_DIF_IS_AT[ CRK] = f(N_DIF_COR[rpm])</description>
+    <CATEGORYMEM index="1" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -1600,6 +1602,7 @@
   </XDFPATCH>
   <XDFTABLE uniqueid="0x59A6" flags="0x0">
     <title>sstm_n_dif_kor_6_6</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
