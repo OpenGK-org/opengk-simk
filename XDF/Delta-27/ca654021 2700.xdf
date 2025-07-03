@@ -1,4 +1,4 @@
-<!-- Written 06/28/2025 18:46:39 -->
+<!-- Written 07/03/2025 21:06:57 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -20,6 +20,14 @@
     <CATEGORY index="0x2B" name="Identification" />
     <CATEGORY index="0x2C" name="Community Patches" />
   </XDFHEADER>
+  <XDFPATCH uniqueid="0x4BED">
+    <title>Ghost Cams</title>
+    <description>Modifies values in Dynamic Ignition Correction at Idle table and appropriate axis RPM values to induce an artificial lope at idle, also known as &quot;Ghost Cams&quot;&#013;&#010;- Kimchispiceworks</description>
+    <CATEGORYMEM index="0" category="45" />
+    <XDFPATCHENTRY name="Modify Idle correction table" address="0xA1BE" datasize="0xC" patchdata="3030434343B5B5B5B5B5B5B5" basedata="30303D5065809BABB0B5B5B5" />
+    <XDFPATCHENTRY name="Modify AT Idle correction tab" address="0xA1CA" datasize="0xC" patchdata="3030434343B5B5B5B5B5B5B5" basedata="30303D5065809BABB0B5B5B5" />
+    <XDFPATCHENTRY name="Modify rpm correction axis" address="0x9104" datasize="0x18" patchdata="C07E107F887FC47FFB7F00800580258050807880A080C880" basedata="107F607F887FC47FEC7F00801480328050807880A080C880" />
+  </XDFPATCH>
   <XDFTABLE uniqueid="0x913" flags="0x30">
     <title>IP_ISAPWM_DHP__N__TPS</title>
     <description>Index: 277  kf 213: ip_isapwm_dhp__n__tps&#013;&#010;            IP_ISAPWM_DHP[ ] = f(N[rpm],TPS[&#176;TPS])&#013;&#010;&#013;&#010;Dashpot function for MT</description>
