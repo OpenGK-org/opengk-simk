@@ -1,10 +1,10 @@
-<!-- Written 06/22/2025 21:17:52 -->
+<!-- Written 07/04/2025 07:05:39 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
     <deftitle>Hyundai 2.7L Siemens 652019</deftitle>
     <description></description>
-    <author>OpenGK - chase206, dmg210, dante, kylem</author>
+    <author>OpenGK - chase206, dmg210, dante, kylem, KimchiSpiceWorks</author>
     <BASEOFFSET offset="0" subtract="0" />
     <DEFAULTS datasizeinbits="8" sigdigits="2" outputtype="1" signed="0" lsbfirst="0" float="0" />
     <REGION type="0xFFFFFFFF" startaddress="0x0" size="0x7FFFF" regioncolor="0x0" regionflags="0x0" name="Binary File" desc="This region describes the bin file edited by this XDF" />
@@ -19,6 +19,175 @@
     <CATEGORY index="0x2B" name="Identification" />
     <CATEGORY index="0x2C" name="Community Patches" />
   </XDFHEADER>
+  <XDFPATCH uniqueid="0x393A">
+    <title>Ghost Cams</title>
+    <description>Modifies values in Dynamic Ignition Correction at Idle table and appropriate axis RPM values to induce an artificial lope at idle, also known as &quot;Ghost Cams&quot;&#013;&#010;- Kimchispiceworks</description>
+    <CATEGORYMEM index="0" category="45" />
+    <XDFPATCHENTRY name="Modify Idle correction table" address="0xA12C" datasize="0xC" patchdata="3030434343B5B5B5B5B5B5B5" basedata="30303D5065809BABB0B5B5B5" />
+    <XDFPATCHENTRY name="Modify AT Idle correction tab" address="0xA138" datasize="0xC" patchdata="3030434343B5B5B5B5B5B5B5" basedata="30303D5065809BABB0B5B5B5" />
+    <XDFPATCHENTRY name="Modify rpm correction axis" address="0x90A0" datasize="0x18" patchdata="C07E107F887FC47FFB7F00800580258050807880A080C880" basedata="107F607F887FC47FEC7F00801480328050807880A080C880" />
+  </XDFPATCH>
+  <XDFTABLE uniqueid="0x61D8" flags="0x30">
+    <title>IP_ISAPWM_DHP__N__TPS</title>
+    <description>Index: 277  kf 213: ip_isapwm_dhp__n__tps&#013;&#010;            IP_ISAPWM_DHP[ ] = f(N[rpm],TPS[&#176;TPS])&#013;&#010;&#013;&#010;Dashpot function for MT</description>
+    <CATEGORYMEM index="0" category="17" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x8A86" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <units>%</units>
+      <indexcount>5</indexcount>
+      <decimalpl>1</decimalpl>
+      <embedinfo type="3" linkobjid="0x272B" />
+      <datatype>57</datatype>
+      <unittype>67</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x8A7E" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <units>RPM</units>
+      <indexcount>7</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="3" linkobjid="0x6530" />
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0xA38A" mmedelementsizebits="8" mmedrowcount="7" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>PWM percent</units>
+      <decimalpl>1</decimalpl>
+      <min>0.000000</min>
+      <max>60.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.390625">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x1E70" flags="0x10">
+    <title>IP_ISAPWM_DHP_AT__N__TPS</title>
+    <description>Index: 278  kf 213a: ip_isapwm_dhp_at__n__tps&#013;&#010;            IP_ISAPWM_DHP_AT[ ] = f(N[rpm],TPS[&#176;TPS])&#013;&#010;&#013;&#010;Dashpot function for AT</description>
+    <CATEGORYMEM index="0" category="17" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x8A86" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <units>%</units>
+      <indexcount>5</indexcount>
+      <decimalpl>1</decimalpl>
+      <embedinfo type="3" linkobjid="0x272B" />
+      <datatype>57</datatype>
+      <unittype>67</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x8A7E" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <units>RPM</units>
+      <indexcount>7</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="3" linkobjid="0x6530" />
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0xA3AD" mmedelementsizebits="8" mmedrowcount="7" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>PWM percent</units>
+      <decimalpl>1</decimalpl>
+      <min>0.000000</min>
+      <max>60.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.390625">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x3A77" flags="0x0">
+    <title>IP_ISAPWM_TPS__N__TPS</title>
+    <description>Index: 269  kf 211: ip_isapwm_tps__n__tps&#013;&#010;            IP_ISAPWM_TPS[%] = f(N[rpm], TPS[&#176;TPS])&#013;&#010;&#013;&#010;Idle speed actuator vs TPS postion</description>
+    <CATEGORYMEM index="0" category="17" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x8A86" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>5</indexcount>
+      <decimalpl>1</decimalpl>
+      <embedinfo type="3" linkobjid="0x272B" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x8A7E" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>7</indexcount>
+      <embedinfo type="3" linkobjid="0x6530" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0xA525" mmedelementsizebits="8" mmedrowcount="7" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>1</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.390625+(-19.921875)">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x27F8" flags="0x10">
+    <title>ISAPWM_LGRD</title>
+    <description>Index: 279  kf 214: ip_isapwm_lgrd__n&#013;&#010;            IP_ISAPWM_LGRD[ ] = f(N[rpm])&#013;&#010;&#013;&#010;Trailing gradiant for Dashpot function &lt;3000rpm</description>
+    <CATEGORYMEM index="0" category="17" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <units>%</units>
+      <indexcount>1</indexcount>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="0.00" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x8AAA" mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <units>RPM</units>
+      <indexcount>5</indexcount>
+      <embedinfo type="3" linkobjid="0x5E0F" />
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0xA498" mmedelementsizebits="8" mmedrowcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>1</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.097656">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
   <XDFPATCH uniqueid="0x425F">
     <title>KWP IOCLID Privilege Escalation</title>
     <description>Adds a new InputOutputControlByLocalIdentifier, 0xBB, that upon passing to LONG_TERM_ADJUSTMENT, escalates privileges in current diagnostic session to Siemens level</description>
@@ -202,6 +371,96 @@
       <max>10000.000000</max>
       <outputtype>2</outputtype>
       <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x6530" flags="0x0">
+    <title>sstm_n_7_3</title>
+    <description>7 axis RPM</description>
+    <CATEGORYMEM index="0" category="1" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <units>RPM</units>
+      <indexcount>1</indexcount>
+      <outputtype>2</outputtype>
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="00" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>7</indexcount>
+      <decimalpl>1</decimalpl>
+      <outputtype>2</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="0" />
+      <LABEL index="2" value="0" />
+      <LABEL index="3" value="0" />
+      <LABEL index="4" value="0" />
+      <LABEL index="5" value="0" />
+      <LABEL index="6" value="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x8A7E" mmedelementsizebits="8" mmedrowcount="7" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>RPM</units>
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>10000.000000</max>
+      <outputtype>2</outputtype>
+      <MATH equation="X*32">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x272B" flags="0x0">
+    <title>sstm_dk_2_3</title>
+    <description>TPS axis for various functions</description>
+    <CATEGORYMEM index="0" category="1" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>5</indexcount>
+      <decimalpl>1</decimalpl>
+      <datatype>57</datatype>
+      <unittype>67</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="0.0" />
+      <LABEL index="1" value="0.0" />
+      <LABEL index="2" value="0.0" />
+      <LABEL index="3" value="0.0" />
+      <LABEL index="4" value="0.0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>1</indexcount>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="0.00" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x04" mmedaddress="0x8A86" mmedelementsizebits="8" mmedrowcount="1" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>1</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.390625">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1644,6 +1903,49 @@
       <max>255.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="X-32768">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x5E0F" flags="0x30">
+    <title>sstm_n_4_3</title>
+    <description>RPM 5 axis</description>
+    <CATEGORYMEM index="0" category="1" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <units>RPM</units>
+      <indexcount>1</indexcount>
+      <outputtype>2</outputtype>
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="00" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>5</indexcount>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="0.00" />
+      <LABEL index="1" value="0.00" />
+      <LABEL index="2" value="0.00" />
+      <LABEL index="3" value="0.00" />
+      <LABEL index="4" value="0.00" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x8AAA" mmedelementsizebits="8" mmedrowcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>10000.000000</max>
+      <outputtype>2</outputtype>
+      <MATH equation="X*32">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
