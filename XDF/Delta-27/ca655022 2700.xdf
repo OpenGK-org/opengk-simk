@@ -1,4 +1,4 @@
-<!-- Written 07/04/2025 16:37:09 -->
+<!-- Written 07/04/2025 07:47:24 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -901,11 +901,11 @@
     <title>MAF Calibration Patch E46 330ci</title>
     <description>Use this patch to convert to commonly found MAFs to extend the MAF limitation.&#013;&#010;&#013;&#010;-chase206</description>
     <CATEGORYMEM index="0" category="45" />
-    <XDFPATCHENTRY name="Convert to E46 330ci MAF #2" address="0xBADE" datasize="0x100" patchdata="C11F5E20FC209C214022E5228C233724E32493254526F826B0276A282529E329A52A682B302CF82CC52D952E682F3C301531F131D032B13397347E356A365A374C3841393A3A383B383C3C3D453E513F614075418C42A843C844EE45154743487549AA4AE54B254D6A4EB34F01515552AE530C557156DC574A59C15A3C5CBE5D485FD8606E620A64B0655A670E69CA6A8C6C586E2A700772EC73D875D177D179DC7BF17D11803C827384B58603895E8BC58D3A90BC924E95EC97989A509D11A0DEA2B1A58CA86EAB55AE41B130B421B713BA05BDF8BFECC2DEC5D3C8C8CBBECEB7D1B1D4AED7AEDAB1DDB8E0C3E3D3E6E7E900ED1EF043F36EF6A1F9DAFCFEFF" basedata="6E17DB174918B81829199C19111A881A001B7B1BF71B751CF61C781DFD1D841E0D1F981F2620B6204821DD2174220D23A9234724E7248A252F26D72680272D28DC288D29412AF72AB02B6B2C292DEA2DAD2E732F3C300731D531A6327A3351342A350736E736CA37B0389A39873A783B6D3C663D623E623F674070417D428E43A544BF45DF4604482E495D4A914BCB4C0A4E4F4F9950E9513F539A54FA556157CD583F5AB75B345DB85E4260D16167630365A5664E68FD69B26B6E6D316FFA70CA72A27480766578517A457C3F7E3F804682538466867F889E8AC28CEC8E1B9150938A95C9970D9A579CA99E04A16AA3DDA55FA8F2AA9AAD57B02EB320B631B9" />
-    <XDFPATCHENTRY name="Convert to E46 330ci MAF #1" address="0xB9DE" datasize="0x100" patchdata="000000000000000071008E00AC00C800E50001011E013A01580173019101AE01D001E301F7010A021E02330248025E0273028A02A102B802D102EA0203031C03380353036E038C03A803C503E50303042304430465048704A804CC04F00413053A0560058505AE05D50500062A0655068106AE06DC063C073C076E07A107D5070C0843087C08B508F1082E096C09AC09EC092E0A710AB50AFA0A3E0B850BCC0B150C5E0CA70CF10C3A0D850DD10D1E0E6A0EB80E080F580FA80FFA0F4E10A110F8104E11A81101125C12BA121A137A13DE134314A81411157E15EA155A16CC164117B8173118AC182A19AA192C1AB11A381BC11B4C1CDA1C6A1DFC1D911E281F" basedata="000000000000000040014D015A0168017601830191019F01AE01BC01CB01DA01E901F801080218022802390249025B026C027D028F02A202B402C702DA02EE02010316032A033F0355036A0381039703AE03C603DE03F6030F04290443045D0478049304AF04CC04E80406052405420561058005A005C005E1050206240647066A068D06B106D606FB06210748076F079607BF07E80712083D0869089608C408F408240955098809BC09F209290A610A9A0AD50A110B4F0B8D0BCD0B0E0C510C940CD90C1F0D660DAE0DF80D420E8E0EDB0E290F780FC90F1A106C10C01015116B11C2111A127312CD1229138513E3134314A31405156815CD1533169B160417" />
+    <XDFPATCHENTRY name="Convert to E46 330ci MAF #2" address="0xC148" datasize="0x100" patchdata="C11F5E20FC209C214022E5228C233724E32493254526F826B0276A282529E329A52A682B302CF82CC52D952E682F3C301531F131D032B13397347E356A365A374C3841393A3A383B383C3C3D453E513F614075418C42A843C844EE45154743487549AA4AE54B254D6A4EB34F01515552AE530C557156DC574A59C15A3C5CBE5D485FD8606E620A64B0655A670E69CA6A8C6C586E2A700772EC73D875D177D179DC7BF17D11803C827384B58603895E8BC58D3A90BC924E95EC97989A509D11A0DEA2B1A58CA86EAB55AE41B130B421B713BA05BDF8BFECC2DEC5D3C8C8CBBECEB7D1B1D4AED7AEDAB1DDB8E0C3E3D3E6E7E900ED1EF043F36EF6A1F9DAFCFEFF" basedata="6E17DB174918B81829199C19111A881A001B7B1BF71B751CF61C781DFD1D841E0D1F981F2620B6204821DD2174220D23A9234724E7248A252F26D72680272D28DC288D29412AF72AB02B6B2C292DEA2DAD2E732F3C300731D531A6327A3351342A350736E736CA37B0389A39873A783B6D3C663D623E623F674070417D428E43A544BF45DF4604482E495D4A914BCB4C0A4E4F4F9950E9513F539A54FA556157CD583F5AB75B345DB85E4260D16167630365A5664E68FD69B26B6E6D316FFA70CA72A27480766578517A457C3F7E3F804682538466867F889E8AC28CEC8E1B9150938A95C9970D9A579CA99E04A16AA3DDA55FA8F2AA9AAD57B02EB320B631B9" />
+    <XDFPATCHENTRY name="Convert to E46 330ci MAF #1" address="0xC048" datasize="0x100" patchdata="000000000000000071008E00AC00C800E50001011E013A01580173019101AE01D001E301F7010A021E02330248025E0273028A02A102B802D102EA0203031C03380353036E038C03A803C503E50303042304430465048704A804CC04F00413053A0560058505AE05D50500062A0655068106AE06DC063C073C076E07A107D5070C0843087C08B508F1082E096C09AC09EC092E0A710AB50AFA0A3E0B850BCC0B150C5E0CA70CF10C3A0D850DD10D1E0E6A0EB80E080F580FA80FFA0F4E10A110F8104E11A81101125C12BA121A137A13DE134314A81411157E15EA155A16CC164117B8173118AC182A19AA192C1AB11A381BC11B4C1CDA1C6A1DFC1D911E281F" basedata="000000000000000040014D015A0168017601830191019F01AE01BC01CB01DA01E901F801080218022802390249025B026C027D028F02A202B402C702DA02EE02010316032A033F0355036A0381039703AE03C603DE03F6030F04290443045D0478049304AF04CC04E80406052405420561058005A005C005E1050206240647066A068D06B106D606FB06210748076F079607BF07E80712083D0869089608C408F408240955098809BC09F209290A610A9A0AD50A110B4F0B8D0BCD0B0E0C510C940CD90C1F0D660DAE0DF80D420E8E0EDB0E290F780FC90F1A106C10C01015116B11C2111A127312CD1229138513E3134314A31405156815CD1533169B160417" />
   </XDFPATCH>
   <XDFCONSTANT uniqueid="0x4568">
-    <title>821F RPM Launch Limit 1 (DEV)</title>
+    <title>821F RPM Launch Limit 1</title>
     <description>Set this the same as launch limit 2&#013;&#010;&#013;&#010;Launch Control Enable 1 &amp; 2 need to be enabled for these limits to work. Launch Limits work best at 4000 RPM and RPM Limit Hysterisis 1 &amp; 2 set to 0 RPM. Lower values of 3500 RPM will work but at a reduced bounce rate.</description>
     <CATEGORYMEM index="0" category="17" />
     <EMBEDDEDDATA mmedaddress="0x821F" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -917,10 +917,10 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x5578">
-    <title>822F RPM Launch Limit 2 (DEV)</title>
+    <title>822F RPM Launch Limit 2</title>
     <description>Set this the same as launch limit 1&#013;&#010;&#013;&#010;Launch Control Enable 1 &amp; 2 need to be enabled for these limits to work. Launch Limits work best at 4000 RPM and RPM Limit Hysterisis 1 &amp; 2 set to 0 RPM. Lower values of 3500 RPM will work but at a reduced bounce rate.</description>
     <CATEGORYMEM index="0" category="17" />
-    <EMBEDDEDDATA mmedaddress="0x822F" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x8230" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <datatype>6</datatype>
     <unittype>4</unittype>
     <DALINK index="0" />
@@ -929,7 +929,7 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x6FC5">
-    <title>8228 RPM Soft Limit (DEV)</title>
+    <title>8228 RPM Soft Limit</title>
     <description>Ignition cutoff. Typically 96RPM lower than RPM Hard Limit.&#013;&#010;&#013;&#010;If used with RPM Limit Hysterisis 1 &amp; 2 set to 0 RPM you can set both Soft and Hard Limits to the same RPM value.</description>
     <CATEGORYMEM index="0" category="17" />
     <EMBEDDEDDATA mmedaddress="0x8228" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -941,10 +941,10 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x28B2">
-    <title>8230 RPM Hard Limit (DEV)</title>
+    <title>8230 RPM Hard Limit</title>
     <description>Fuel cutoff. Typically 96RPM higher than RPM Hard Limit.&#013;&#010;&#013;&#010;If used with RPM Limit Hysterisis 1 &amp; 2 set to 0 RPM you can set both Soft and Hard Limits to the same RPM value.</description>
     <CATEGORYMEM index="0" category="17" />
-    <EMBEDDEDDATA mmedaddress="0x8236" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x8237" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <datatype>6</datatype>
     <unittype>4</unittype>
     <DALINK index="0" />
@@ -953,20 +953,8 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x360F">
-    <title>8231 RPM Limit Hysterisis 1 (DEV)</title>
+    <title>8231 RPM Limit Hysterisis 1</title>
     <description>Set to 0 for fast limiter bounce.&#013;&#010;Set to 1 for OEM limiter bounce.&#013;&#010;&#013;&#010;Use in conjuction with RPM Limit Hysterisis 2.</description>
-    <CATEGORYMEM index="0" category="17" />
-    <EMBEDDEDDATA mmedaddress="0x8231" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-    <datatype>0</datatype>
-    <unittype>0</unittype>
-    <DALINK index="0" />
-    <MATH equation="X*32">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x6560">
-    <title>8232 RPM Limit Hysterisis 2 (DEV)</title>
-    <description>Set to 0 for fast limiter bounce.&#013;&#010;Set to 10 for OEM limiter bounce.&#013;&#010;&#013;&#010;Use in conjuction with RPM Limit Hysterisis 1.</description>
     <CATEGORYMEM index="0" category="17" />
     <EMBEDDEDDATA mmedaddress="0x8232" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <datatype>0</datatype>
@@ -976,11 +964,23 @@
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6560">
+    <title>8232 RPM Limit Hysterisis 2</title>
+    <description>Set to 0 for fast limiter bounce.&#013;&#010;Set to 10 for OEM limiter bounce.&#013;&#010;&#013;&#010;Use in conjuction with RPM Limit Hysterisis 1.</description>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedaddress="0x8233" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*32">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x160A">
-    <title>8239 RPM VS Diag Limit (DEV)</title>
+    <title>8239 RPM VS Diag Limit</title>
     <description>RPM limit when vehicle speed sensor fault is present.</description>
     <CATEGORYMEM index="0" category="17" />
-    <EMBEDDEDDATA mmedaddress="0x8239" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x823A" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <datatype>6</datatype>
     <unittype>4</unittype>
     <DALINK index="0" />
@@ -1725,10 +1725,10 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFCONSTANT uniqueid="0x68ED">
-    <title>81BE MAF Max (DEV)</title>
+    <title>81BE MAF Max</title>
     <description>c_maf_max mg/stk</description>
     <CATEGORYMEM index="0" category="6" />
-    <EMBEDDEDDATA mmedaddress="0x81BE" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x81C1" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <units>mg/stk</units>
     <decimalpl>0</decimalpl>
     <datatype>25</datatype>
@@ -1739,10 +1739,10 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1D8B">
-    <title>847A MAF MAX DIAG (DEV)</title>
+    <title>847A MAF MAX DIAG</title>
     <description>c_maf_kgh_max_diag kg/hr (Used as a MAF clamp max value)</description>
     <CATEGORYMEM index="0" category="6" />
-    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x847A" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x84C2" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <units>kg/hr</units>
     <outputtype>2</outputtype>
     <decimalpl>0</decimalpl>
@@ -1754,7 +1754,7 @@
     </MATH>
   </XDFCONSTANT>
   <XDFTABLE uniqueid="0xC46" flags="0x0">
-    <title>82F7 Launch Control Enable 1 (DEV)</title>
+    <title>82F7 Launch Control Enable 1</title>
     <description>To enable launch control, set value to 104.&#013;&#010;To disable launch control, set value to 177.&#013;&#010;&#013;&#010;Launch Control Enable 2 is also required.</description>
     <CATEGORYMEM index="0" category="17" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1780,7 +1780,7 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedaddress="0x82F7" mmedelementsizebits="8" mmedrowcount="1" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x82FF" mmedelementsizebits="8" mmedrowcount="1" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
@@ -1791,7 +1791,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4EB9" flags="0x0">
-    <title>8522 Launch Control Enable 2 (DEV)</title>
+    <title>8522 Launch Control Enable 2</title>
     <description>To enable launch control, set value to 1 &amp; 0.&#013;&#010;To disable launch control, set value to 104 &amp; 16.&#013;&#010;&#013;&#010;Launch Control Enable 1 is also required.</description>
     <CATEGORYMEM index="0" category="17" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1818,7 +1818,7 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedaddress="0x8522" mmedelementsizebits="8" mmedrowcount="2" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x8584" mmedelementsizebits="8" mmedrowcount="2" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
