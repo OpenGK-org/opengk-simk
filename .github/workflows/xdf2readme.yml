@@ -32,7 +32,7 @@ jobs:
       - name: Generate README files from XDF
         run: |
           mkdir -p XDF/docs
-          for file in XDF/*.*; do
+          for file in XDF/**/*.* XDF/*.*; do
             if [ -f "$file" ]; then
               base=$(basename "$file")
               output="XDF/docs/${base%.*}.md"
