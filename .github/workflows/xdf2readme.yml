@@ -37,7 +37,7 @@ jobs:
               base=$(basename "$file")
               output="XDF/docs/${base%.*}.md"
               python external/xdf2readme/xdf2readme.py \
-                --template external/xdf2readme/templates/opengk_template.md \
+                --template opengk_template.md \
                 --output "$output" \
                 "$file"
             fi
