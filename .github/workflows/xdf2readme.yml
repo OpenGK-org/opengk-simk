@@ -1,0 +1,58 @@
+name: Generate XDF summaries
+
+on:
+  push:
+    paths: ['XDF/**']
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  generate-readmes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Clone xdf2readme
+        run: |
+          git clone https://github.com/dante383/xdf2readme external/xdf2readme
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r external/xdf2readme/requirements.txt
+
+      - name: Generate README files from XDF
+        run: |
+          mkdir -p XDF/docs
+          for file in XDF/**/*.* XDF/*.*; do
+            if [ -f "$file" ]; then
+              base=$(basename "$file")
+              output="XDF/docs/${base%.*}.md"
+              python external/xdf2readme/xdf2readme.py \
+                --template opengk_template.md \
+                --output "$output" \
+                "$file"
+            fi
+          done
+
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions
+          author_email: github-actions@github.com
+          message: chore; update generated XDF markdown files
+          add: 'XDF/docs/*.md'
+     
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
