@@ -1,4 +1,4 @@
-<!-- Written 05/20/2025 16:20:00 -->
+<!-- Written 07/28/2025 20:08:47 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -21,7 +21,7 @@
     <CATEGORY index="0x2C" name="Community Patches" />
   </XDFHEADER>
   <XDFTABLE uniqueid="0xC58" flags="0x0">
-    <title>sstm_lm_6_4 (Warm Up MAF Axis)</title>
+    <title>sstm_lm_6_4</title>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
@@ -66,7 +66,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x59B6" flags="0x0">
-    <title>sstm_n_5_4 (Warm Up RPM Axis)</title>
+    <title>sstm_n_5_4</title>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
@@ -101,7 +101,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8C59" mmedelementsizebits="8" mmedrowcount="1" mmedcolcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -111,7 +111,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2719" flags="0x0">
-    <title>sstm_n_2_5 (Cold Start RPM Axis)</title>
+    <title>sstm_n_2_5</title>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
@@ -143,7 +143,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x9084" mmedelementsizebits="16" mmedrowcount="1" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -153,7 +153,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x5C27" flags="0x0">
-    <title>sst_tkw_st_ti_tkw_w (Warm Up TCO ST Axis)</title>
+    <title>sst_tkw_st_ti_tkw_w</title>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
@@ -193,7 +193,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2556" flags="0x0">
-    <title>sstm_tkw_4_4 (Warm Up TCO Axis)</title>
+    <title>sstm_tkw_4_4</title>
     <description>Coolant Temp</description>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -239,7 +239,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x645C" flags="0x0">
-    <title>sstm_tal_2_6 (IACV Stepper TIA Axis)</title>
+    <title>sstm_tal_2_6</title>
     <description>Air Temp</description>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -283,7 +283,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0xA77" flags="0x0">
-    <title>sstm_tkw_1_5 (Cold Start TCO Axis)</title>
+    <title>sstm_tkw_1_5</title>
     <description>Coolant Temp</description>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -770,8 +770,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3F72" flags="0x0">
-    <title>ip_ti_cor_is__n__maf (Closed Loop AFR Target at Idle Speed)</title>
-    <description>Index: 163  kf   &#013;&#010;39: &#013;&#010;Correction factor basic injection time in IS&#013;&#010;&#013;&#010;            IP_TI_COR_IS[-] = f(N[rpm], MAF[mg/TDC])&#013;&#010;</description>
+    <title>ip_ti_cor_is__n__maf_afr</title>
+    <description>Index: 163  kf   &#013;&#010;39: &#013;&#010;Correction factor basic injection time in IS&#013;&#010;&#013;&#010;            IP_TI_COR_IS[-] = f(N[rpm], MAF[mg/TDC])&#013;&#010;&#013;&#010;Experimental calculation to estimate AFR.</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x9090" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -934,8 +934,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x530F" flags="0x0">
-    <title>ip_ti_fl__n__amp (WOT Enrichment in AFR)</title>
-    <description>Index: 168  kf  26: ip_ti_fl__n__amp&#013;&#010;            IP_TI_FL[-] = f(N[rpm], AMP[hPA]) - converted to PSI</description>
+    <title>ip_ti_fl__n__amp_afr</title>
+    <description>Index: 168  kf  26: ip_ti_fl__n__amp&#013;&#010;            IP_TI_FL[-] = f(N[rpm], AMP[PSIG])&#013;&#010;&#013;&#010;Experimental calculation to estimate AFR assuming closed loop table is corrected.</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x93C0" mmedelementsizebits="16" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -1676,7 +1676,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3471" flags="0x0">
-    <title>ip_ti_wup__n__maf (Warm Up Fuel Enrichment Table - MT)</title>
+    <title>ip_ti_wup__n__maf</title>
     <description>Index: 82   kf   9: ip_ti_wup__n__maf&#013;&#010;            IP_TI_WUP[-] = f(N[rpm] ,MAF[mg/TDC])&#013;&#010;Warm-up TI correction vs. operating point (MT)</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1716,7 +1716,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x6D42" flags="0x0">
-    <title>ip_ti_tco_wup__tco__tco__tco_st (Warm Up Fuel Enrichment Table - MT)</title>
+    <title>ip_ti_tco_wup__tco__tco__tco_st</title>
     <description>Index: 84   kf  10: ip_ti_tco_wup__tco__tco_st&#013;&#010;            IP_TI_TCO_WUP[-] = f(TCO[&#176;C],TCO_ST[&#176;C])&#013;&#010;Warm-up TI correction vs. coolant temp. (MT)</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1756,7 +1756,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7F08" flags="0x0">
-    <title>ip_ti_cst__n__tco_st (Cold Start Fuel Enrichment Table)</title>
+    <title>ip_ti_cst__n__tco_st</title>
     <description>Index: 69   kf   4: ip_ti_cst__n__tco_st&#013;&#010;            IP_TI_CST[-] = f(N[rpm] ,TCO_ST[&#176;C])&#013;&#010;Basic injection time at start up</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1796,7 +1796,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2656" flags="0x0">
-    <title>ip_isapwm_tia_fac__tia (IAVC Stepper - IAT Correction Factor)</title>
+    <title>ip_isapwm_tia_fac__tia</title>
     <description>Index: 345  kf 191: ip_isapwm_tia_fac__tia&#013;&#010;            IP_ISAPWM_TIA_FAC[-] = f(TIA[&#176;C])&#013;&#010;Air temperature ISA correction factor</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1837,7 +1837,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x1D36" flags="0x0">
-    <title>ip_isapwm_st__n__tco (IAVC Stepper - Manual)</title>
+    <title>ip_isapwm_st__n__tco</title>
     <description>Index: 325&#013;&#010;Idle speed valve basic opening and corrections&#013;&#010;            IP_ISAPWM_ST[%] = f(N[rpm] ,TCO[&#176;C])</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1877,7 +1877,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x5406" flags="0x0">
-    <title>ip_isapwm_st__n__tco (IAVC Stepper - Auto)</title>
+    <title>ip_isapwm_st_at__n__tco</title>
     <description>Index: 326&#013;&#010;Idle speed valve basic opening and corrections&#013;&#010;            IP_ISAPWM_ST[%] = f(N[rpm] ,TCO[&#176;C])</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -2795,6 +2795,6 @@
     <CATEGORYMEM index="0" category="45" />
     <XDFPATCHENTRY name="c_t_n_max_fcut" address="0x84EE" datasize="0x2" patchdata="0100" basedata="6810" />
     <XDFPATCHENTRY name="c_tco_th_open" address="0x82BD" datasize="0x1" patchdata="68" basedata="B1" />
-    <XDFPATCHENTRY name="c_n_max_hys and c_n_max_hys_max" address="0x8214" datasize="0x2" patchdata="0000" basedata="010A" />
+    <XDFPATCHENTRY name="c_n_max_hys and c_n_max_hys_m" address="0x8214" datasize="0x2" patchdata="0000" basedata="010A" />
   </XDFPATCH>
 </XDFFORMAT>
