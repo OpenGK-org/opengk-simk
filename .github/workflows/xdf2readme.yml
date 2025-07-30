@@ -39,7 +39,7 @@ jobs:
               python external/xdf2readme/xdf2readme.py \
                 --template opengk_template.md \
                 --output "$output" \
-                "$file"
+                "$file" || true
             fi
           done
 
