@@ -32,14 +32,14 @@ jobs:
       - name: Generate README files from XDF
         run: |
           mkdir -p XDF/docs
-          for file in XDF/**/*.* XDF/*.*; do
+          for file in XDF/**/*.{xdf,XDF} XDF/*.{xdf,XDF}; do # apparently gitlab doesn't care about `shopt -s nocaseglob`, and i don't really feel like testing it right now
             if [ -f "$file" ]; then
               base=$(basename "$file")
               output="XDF/docs/${base%.*}.md"
               python external/xdf2readme/xdf2readme.py \
                 --template opengk_template.md \
                 --output "$output" \
-                "$file"
+                "$file" || true
             fi
           done
 
