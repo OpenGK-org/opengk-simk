@@ -1,4 +1,4 @@
-<!-- Written 09/07/2025 11:03:13 -->
+<!-- Written 09/07/2025 11:27:42 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -28,7 +28,7 @@
     <title>c_n_accin_off</title>
     <description>The RPM where the car disengages the AC pulley to prevent damage to the compressor. Might be useful for fast spooling engines e.g forced induction.</description>
     <CATEGORYMEM index="0" category="17" />
-    <EMBEDDEDDATA mmedaddress="0x1028F" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x1028E" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <datatype>6</datatype>
     <unittype>4</unittype>
     <DALINK index="0" />
