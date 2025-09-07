@@ -1,4 +1,4 @@
-<!-- Written 09/07/2025 17:25:55 -->
+<!-- Written 09/07/2025 11:03:13 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -32,7 +32,7 @@
     <datatype>6</datatype>
     <unittype>4</unittype>
     <DALINK index="0" />
-    <MATH equation="X*31.875">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -525,7 +525,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4D4D" flags="0x0">
-    <title> id_iga_dec_knk_1__n_kn</title>
+    <title>id_iga_dec_knk_1__n_kn</title>
     <description>Index: 317  Spark retard at recognised knocking, Intensity 1&#013;&#010;&#013;&#010;KNK: id_iga_dec_knk_1__n_knk&#013;&#010;            ID_IGA_DEC_KNK_1[&#176;CRK/720&#176;CRK] = f(N_KNK[rpm])</description>
     <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -571,7 +571,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7F21" flags="0x0">
-    <title> id_iga_dec_knk_2__n_kn</title>
+    <title>id_iga_dec_knk_2__n_kn</title>
     <description>Index: 319  Spark retard at recognised knocking, Intensity 2&#013;&#010;&#013;&#010;KNK: id_iga_dec_knk_2__n_knk&#013;&#010;            ID_IGA_DEC_KNK_2[&#176;CRK/720&#176;CRK] = f(N_KNK[rpm])</description>
     <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
