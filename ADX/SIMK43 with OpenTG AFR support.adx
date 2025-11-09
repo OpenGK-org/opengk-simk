@@ -1,9 +1,9 @@
 <ADXFORMAT version="1.01">
-  <!-- Written 09/29/2025 22:40:11 -->
+  <!-- Written 11/09/2025 15:07:01 -->
   <ADXHEADER>
     <guid>4948f148-506d-4384-b7b8-364330319c5f</guid>
     <flags>0x10001</flags>
-    <objectcount>212</objectcount>
+    <objectcount>216</objectcount>
     <userversion>v10.2</userversion>
     <author>dmg210</author>
     <desc>Values based on SIMK43 4mbit ECU running ca663056.</desc>
@@ -13,6 +13,145 @@
     <monitorcmd>MONITORMACRO</monitorcmd>
     <disconnectcmd>DISCONNECTMACR</disconnectcmd>
   </ADXHEADER>
+
+  <ADXHISTOGRAM id="HSTFT" idhash="0x3C382F74" title="STFT">
+    <rows>16</rows>
+    <cols>12</cols>
+    <xmin>0.000000</xmin>
+    <xmax>0.000000</xmax>
+    <ymin>0.000000</ymin>
+    <ymax>0.000000</ymax>
+    <rowval index="0" val="512.000000" />
+    <rowval index="1" val="704.000000" />
+    <rowval index="2" val="992.000000" />
+    <rowval index="3" val="1248.000000" />
+    <rowval index="4" val="1504.000000" />
+    <rowval index="5" val="1728.000000" />
+    <rowval index="6" val="2016.000000" />
+    <rowval index="7" val="2528.000000" />
+    <rowval index="8" val="2832.000000" />
+    <rowval index="9" val="3008.000000" />
+    <rowval index="10" val="3296.000000" />
+    <rowval index="11" val="4064.000000" />
+    <rowval index="12" val="4512.000000" />
+    <rowval index="13" val="5600.000000" />
+    <rowval index="14" val="6016.000000" />
+    <rowval index="15" val="6400.000000" />
+    <colval index="0" val="40.000000" />
+    <colval index="1" val="70.000000" />
+    <colval index="2" val="100.000000" />
+    <colval index="3" val="130.000000" />
+    <colval index="4" val="160.000000" />
+    <colval index="5" val="190.000000" />
+    <colval index="6" val="220.000000" />
+    <colval index="7" val="250.000000" />
+    <colval index="8" val="280.000000" />
+    <colval index="9" val="350.000000" />
+    <colval index="10" val="400.000000" />
+    <colval index="11" val="450.000000" />
+    <historysize>10</historysize>
+    <xidhash>0xB9608BD0</xidhash>
+    <yidhash>0xCD0CD1DB</yidhash>
+    <zidhash>0xAF7D8339</zidhash>
+  </ADXHISTOGRAM>
+
+  <ADXHISTOGRAM id="LTFTPARTLOAD" idhash="0x6F0C3F4E" title="LTFT Part Load">
+    <rows>16</rows>
+    <cols>12</cols>
+    <xmin>0.000000</xmin>
+    <xmax>0.000000</xmax>
+    <ymin>0.000000</ymin>
+    <ymax>0.000000</ymax>
+    <rowval index="0" val="512.000000" />
+    <rowval index="1" val="704.000000" />
+    <rowval index="2" val="992.000000" />
+    <rowval index="3" val="1248.000000" />
+    <rowval index="4" val="1504.000000" />
+    <rowval index="5" val="1728.000000" />
+    <rowval index="6" val="2016.000000" />
+    <rowval index="7" val="2528.000000" />
+    <rowval index="8" val="2832.000000" />
+    <rowval index="9" val="3008.000000" />
+    <rowval index="10" val="3296.000000" />
+    <rowval index="11" val="4064.000000" />
+    <rowval index="12" val="4512.000000" />
+    <rowval index="13" val="5600.000000" />
+    <rowval index="14" val="6016.000000" />
+    <rowval index="15" val="6400.000000" />
+    <colval index="0" val="40.000000" />
+    <colval index="1" val="70.000000" />
+    <colval index="2" val="100.000000" />
+    <colval index="3" val="130.000000" />
+    <colval index="4" val="160.000000" />
+    <colval index="5" val="190.000000" />
+    <colval index="6" val="220.000000" />
+    <colval index="7" val="250.000000" />
+    <colval index="8" val="280.000000" />
+    <colval index="9" val="350.000000" />
+    <colval index="10" val="400.000000" />
+    <colval index="11" val="450.000000" />
+    <historysize>10</historysize>
+    <xidhash>0xB9608BD0</xidhash>
+    <yidhash>0xCD0CD1DB</yidhash>
+    <zidhash>0x29DBF487</zidhash>
+  </ADXHISTOGRAM>
+
+  <ADXVALUE id="STFT" idhash="0xAF7D8339" title="Short Term Fuel Trim">
+    <flags>0x00000003</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Short Term Fuel Trim (%)</units>
+    <packetoffset>0x08</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="0.78125 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXHISTOGRAM id="FUELINJDUTYCYC" idhash="0x94DB964A" title="Fuel Inj Duty Cycle">
+    <desc>% of maximum injector duty cycle</desc>
+    <rows>16</rows>
+    <cols>13</cols>
+    <xmin>0.000000</xmin>
+    <xmax>0.000000</xmax>
+    <ymin>0.000000</ymin>
+    <ymax>0.000000</ymax>
+    <rowval index="0" val="512.000000" />
+    <rowval index="1" val="704.000000" />
+    <rowval index="2" val="992.000000" />
+    <rowval index="3" val="1248.000000" />
+    <rowval index="4" val="1504.000000" />
+    <rowval index="5" val="1728.000000" />
+    <rowval index="6" val="2016.000000" />
+    <rowval index="7" val="2528.000000" />
+    <rowval index="8" val="3008.000000" />
+    <rowval index="9" val="3296.000000" />
+    <rowval index="10" val="4064.000000" />
+    <rowval index="11" val="4512.000000" />
+    <rowval index="12" val="4832.000000" />
+    <rowval index="13" val="5600.000000" />
+    <rowval index="14" val="6016.000000" />
+    <rowval index="15" val="6400.000000" />
+    <colval index="0" val="0.000000" />
+    <colval index="1" val="35.000000" />
+    <colval index="2" val="75.000000" />
+    <colval index="3" val="125.000000" />
+    <colval index="4" val="175.000000" />
+    <colval index="5" val="250.000000" />
+    <colval index="6" val="325.000000" />
+    <colval index="7" val="400.000000" />
+    <colval index="8" val="450.000000" />
+    <colval index="9" val="500.000000" />
+    <colval index="10" val="550.000000" />
+    <colval index="11" val="600.000000" />
+    <colval index="12" val="700.000000" />
+    <historysize>10</historysize>
+    <xidhash>0xB9608BD0</xidhash>
+    <yidhash>0xCD0CD1DB</yidhash>
+    <zidhash>0xBC880022</zidhash>
+  </ADXHISTOGRAM>
 
   <ADXLOOKUPTABLE id="AEM30-4110AFR" idhash="0x1190248E" title="AEM 30-4110 AFR">
     <desc>In: V&#013;&#010;Out AFR</desc>
@@ -969,7 +1108,7 @@
   </ADXHISTOGRAM>
 
   <ADXLISTVIEW id="MAINLIST" idhash="0x7F6896CC" title="Main List">
-    <entrycount>89</entrycount>
+    <entrycount>91</entrycount>
     <ADXLVENTRY entrytype="1" flags="0x00000001" title="Digital Values" />
     <ADXLVENTRY entrytype="0" itemidhash="0x4F45984A" />
     <ADXLVENTRY entrytype="0" itemidhash="0x04E68707" />
@@ -1002,6 +1141,8 @@
     <ADXLVENTRY entrytype="0" itemidhash="0xB9608BD0" />
     <ADXLVENTRY entrytype="0" itemidhash="0x29DBF487" />
     <ADXLVENTRY entrytype="0" itemidhash="0x7FDBF486" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xAF7D8339" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x7FD15486" />
     <ADXLVENTRY entrytype="0" itemidhash="0x3302D1D8" />
     <ADXLVENTRY entrytype="0" itemidhash="0xBFBFC69E" />
     <ADXLVENTRY entrytype="0" itemidhash="0x05CE59C9" />
