@@ -1,4 +1,4 @@
-<!-- Written 12/08/2025 00:37:03 -->
+<!-- Written 12/14/2025 12:34:53 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -5041,7 +5041,19 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x4CD6">
-    <title>10408 Vehicle Speed Max 1</title>
+    <title>10408 Vehicle Speed Max 1 (MPH)</title>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedaddress="0x10408" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <decimalpl>0</decimalpl>
+    <datatype>5</datatype>
+    <unittype>6</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*0.621371">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x75F">
+    <title>10408 Vehicle Speed Max 1 (KMH)</title>
     <CATEGORYMEM index="0" category="17" />
     <EMBEDDEDDATA mmedaddress="0x10408" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <decimalpl>0</decimalpl>
@@ -5053,7 +5065,19 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x4F9E">
-    <title>10409 Vehicle Speed Max 2</title>
+    <title>10409 Vehicle Speed Max 2 (MPH)</title>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedaddress="0x10409" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <decimalpl>0</decimalpl>
+    <datatype>5</datatype>
+    <unittype>6</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*0.621371">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x18B5">
+    <title>10409 Vehicle Speed Max 2 (KMH)</title>
     <CATEGORYMEM index="0" category="17" />
     <EMBEDDEDDATA mmedaddress="0x10409" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <decimalpl>0</decimalpl>
