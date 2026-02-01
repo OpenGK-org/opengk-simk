@@ -1,4 +1,4 @@
-<!-- Written 01/19/2026 17:54:48 -->
+<!-- Written 01/29/2026 17:15:22 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -5607,7 +5607,7 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x462" flags="0xC">
-    <title>0x10530 c_fco_fac</title>
+    <title>0x10530 c_fco_fac (ul/ms)</title>
     <description>C_FCO_FAC&#013;&#010;&#013;&#010;Factor for data sent to fuel gauge</description>
     <CATEGORYMEM index="0" category="5" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x10530" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -5617,7 +5617,22 @@
     <datatype>6</datatype>
     <unittype>4</unittype>
     <DALINK index="0" />
-    <MATH equation="X * 0.00024414435034714274814984359502556">
+    <MATH equation="X * 0.000244134">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x26E0" flags="0xC">
+    <title>0x10530 c_fco_fac (cc/m)</title>
+    <description>C_FCO_FAC&#013;&#010;&#013;&#010;Factor for data sent to fuel gauge</description>
+    <CATEGORYMEM index="0" category="5" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x10530" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>cc/m</units>
+    <decimalpl>3</decimalpl>
+    <rangehigh>16.000000</rangehigh>
+    <datatype>6</datatype>
+    <unittype>4</unittype>
+    <DALINK index="0" />
+    <MATH equation="X * 0.01464805">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
