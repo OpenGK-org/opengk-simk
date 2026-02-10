@@ -1,4 +1,4 @@
-<!-- Written 02/09/2026 19:25:18 -->
+<!-- Written 02/10/2026 09:26:33 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -8250,7 +8250,7 @@
     <description>Constants N / VS limitations</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
-    <EMBEDDEDDATA mmedaddress="0x821E" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0x821E" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <outputtype>2</outputtype>
     <decimalpl>0</decimalpl>
     <rangehigh>8160.000000</rangehigh>
@@ -12905,7 +12905,7 @@
     <description>Constants N / VS limitations</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
-    <EMBEDDEDDATA mmedaddress="0x84C2" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x84C2" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <decimalpl>1</decimalpl>
     <rangehigh>6553.500000</rangehigh>
     <rangelow>0.100000</rangelow>
