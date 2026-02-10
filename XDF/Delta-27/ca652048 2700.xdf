@@ -1,4 +1,4 @@
-<!-- Written 02/10/2026 09:29:25 -->
+<!-- Written 02/10/2026 09:39:47 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -8282,7 +8282,7 @@
     <description>Constants N / VS limitations</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
-    <EMBEDDEDDATA mmedaddress="0x8221" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8221" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <outputtype>2</outputtype>
     <decimalpl>0</decimalpl>
     <rangehigh>8160.000000</rangehigh>
@@ -10279,7 +10279,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="0.75*X-48.0">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
