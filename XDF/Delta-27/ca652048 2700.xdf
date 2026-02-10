@@ -1,4 +1,4 @@
-<!-- Written 02/10/2026 09:26:33 -->
+<!-- Written 02/10/2026 09:29:25 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -7932,7 +7932,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -8257,7 +8257,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
