@@ -1,4 +1,4 @@
-<!-- Written 07/21/2025 19:48:01 -->
+<!-- Written 02/09/2026 19:25:18 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -17990,7 +17990,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x9074" mmedelementsizebits="16" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -24541,7 +24541,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8EA4" mmedelementsizebits="16" mmedrowcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -26776,7 +26776,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x89BD" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -26824,7 +26824,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x85FE" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -26874,7 +26874,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8FA2" mmedelementsizebits="16" mmedrowcount="10" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -26923,7 +26923,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8A21" mmedelementsizebits="8" mmedrowcount="9" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -26970,7 +26970,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x878D" mmedelementsizebits="8" mmedrowcount="7" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27026,7 +27026,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8CB4" mmedelementsizebits="16" mmedrowcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27070,7 +27070,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x85B3" mmedelementsizebits="8" mmedrowcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27115,7 +27115,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8E5A" mmedelementsizebits="16" mmedrowcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27163,7 +27163,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8F18" mmedelementsizebits="16" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27219,7 +27219,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x859D" mmedelementsizebits="8" mmedrowcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27265,7 +27265,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x87B8" mmedelementsizebits="8" mmedrowcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27309,7 +27309,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8E18" mmedelementsizebits="16" mmedrowcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27353,7 +27353,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8EB8" mmedelementsizebits="16" mmedrowcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27401,7 +27401,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x887B" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27446,7 +27446,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8924" mmedelementsizebits="8" mmedrowcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27490,7 +27490,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x85F5" mmedelementsizebits="8" mmedrowcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27533,7 +27533,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x874F" mmedelementsizebits="8" mmedrowcount="3" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27576,7 +27576,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x85FA" mmedelementsizebits="8" mmedrowcount="3" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27624,7 +27624,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x885F" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27672,7 +27672,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8BD3" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27716,7 +27716,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x85CB" mmedelementsizebits="8" mmedrowcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27763,7 +27763,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x88F8" mmedelementsizebits="8" mmedrowcount="7" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -27809,7 +27809,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x86F9" mmedelementsizebits="8" mmedrowcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
