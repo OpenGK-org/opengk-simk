@@ -1,4 +1,4 @@
-<!-- Written 12/14/2025 12:30:09 -->
+<!-- Written 03/08/2026 11:20:26 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -953,7 +953,7 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x360F">
-    <title>8231 RPM Limit Hysterisis 1</title>
+    <title>8232 RPM Limit Hysterisis 1</title>
     <description>Set to 0 for fast limiter bounce.&#013;&#010;Set to 1 for OEM limiter bounce.&#013;&#010;&#013;&#010;Use in conjuction with RPM Limit Hysterisis 2.</description>
     <CATEGORYMEM index="0" category="17" />
     <EMBEDDEDDATA mmedaddress="0x8232" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -965,7 +965,7 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x6560">
-    <title>8232 RPM Limit Hysterisis 2</title>
+    <title>8233 RPM Limit Hysterisis 2</title>
     <description>Set to 0 for fast limiter bounce.&#013;&#010;Set to 10 for OEM limiter bounce.&#013;&#010;&#013;&#010;Use in conjuction with RPM Limit Hysterisis 1.</description>
     <CATEGORYMEM index="0" category="17" />
     <EMBEDDEDDATA mmedaddress="0x8233" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -977,7 +977,7 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x160A">
-    <title>8239 RPM VS Diag Limit</title>
+    <title>823A RPM VS Diag Limit</title>
     <description>RPM limit when vehicle speed sensor fault is present.</description>
     <CATEGORYMEM index="0" category="17" />
     <EMBEDDEDDATA mmedaddress="0x823A" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -1691,7 +1691,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x5C72" flags="0x30">
-    <title>9C4E 12x16 8bit WOT TPS Trigger</title>
+    <title>9C4E 12x1 8bit WOT TPS Trigger</title>
     <description>Conversion value is estimated and not exact.&#013;&#010;&#013;&#010;Sets minimum TPS angle for full load WOT condition. Use WOT Enrichment table to adjust enrichment factor.</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1773,7 +1773,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFCONSTANT uniqueid="0x68ED">
-    <title>81BE MAF Max</title>
+    <title>81C1 MAF Max</title>
     <description>c_maf_max mg/stk</description>
     <CATEGORYMEM index="0" category="6" />
     <EMBEDDEDDATA mmedaddress="0x81C1" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -1787,7 +1787,7 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1D8B">
-    <title>847A MAF MAX DIAG</title>
+    <title>84C2 MAF MAX DIAG</title>
     <description>c_maf_kgh_max_diag kg/hr (Used as a MAF clamp max value)</description>
     <CATEGORYMEM index="0" category="6" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x84C2" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -1802,7 +1802,7 @@
     </MATH>
   </XDFCONSTANT>
   <XDFTABLE uniqueid="0xC46" flags="0x0">
-    <title>82F7 Launch Control Enable 1</title>
+    <title>82FF Launch Control Enable 1</title>
     <description>To enable launch control, set value to 104.&#013;&#010;To disable launch control, set value to 177.&#013;&#010;&#013;&#010;Launch Control Enable 2 is also required.</description>
     <CATEGORYMEM index="0" category="17" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1839,7 +1839,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4EB9" flags="0x0">
-    <title>8522 Launch Control Enable 2</title>
+    <title>8584 Launch Control Enable 2</title>
     <description>To enable launch control, set value to 1 &amp; 0.&#013;&#010;To disable launch control, set value to 104 &amp; 16.&#013;&#010;&#013;&#010;Launch Control Enable 1 is also required.</description>
     <CATEGORYMEM index="0" category="17" />
     <XDFAXIS id="x" uniqueid="0x0">
