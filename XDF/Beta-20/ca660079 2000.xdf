@@ -1,4 +1,4 @@
-<!-- Written 04/07/2026 12:10:57 -->
+<!-- Written 04/22/2026 17:13:36 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -25,7 +25,6 @@
   <XDFTABLE uniqueid="0x6B00" flags="0x30">
     <title>sst_zw_mw_kr_kf_ti_ks_zw</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="239" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -68,7 +67,6 @@
   <XDFTABLE uniqueid="0x57B2" flags="0x30">
     <title>sst_zw_mw_kr_kf_lm_min_ks</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="239" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -111,7 +109,6 @@
   <XDFTABLE uniqueid="0x1402" flags="0x30">
     <title>sstm_n_1_8</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="248" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <units>N[rpm]</units>
@@ -154,6 +151,21 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
+  <XDFCONSTANT uniqueid="0x6660" flags="0xC">
+    <title>C_MAF_MAX</title>
+    <description>&quot;calibration data, mass air flow, maxiumum&quot;</description>
+    <CATEGORYMEM index="0" category="5" />
+    <EMBEDDEDDATA mmedaddress="0x81AF" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <outputtype>2</outputtype>
+    <decimalpl>0</decimalpl>
+    <rangehigh>1389.000000</rangehigh>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <DALINK index="0" />
+    <MATH equation="(X/255)*1389">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1D30" flags="0xC">
     <title>C_TI_FAC Nominal injector capacity</title>
     <description>same around as original C_TI_FAC [ms/(mg*TDC)] stock 210cc/min&#013;&#010;attention it is reverse to traditional value, higher diplacenent drops the value (time for same fuel)</description>
@@ -171,7 +183,6 @@
   <XDFTABLE uniqueid="0x1432" flags="0x30">
     <title>ldp_n_32_ip_iga_ch_is</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="248" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <units>N[rpm]</units>
@@ -219,7 +230,6 @@
   <XDFTABLE uniqueid="0xCD2" flags="0x30">
     <title>ldp_maf_ip_iga_ch_is</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="244" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -266,7 +276,6 @@
   <XDFTABLE uniqueid="0x76E5" flags="0x30">
     <title>ldp_t_ast_ip_iga_ch_fac</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="249" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -313,7 +322,6 @@
   <XDFTABLE uniqueid="0x7FE" flags="0x30">
     <title>ldp_tco_ip_iga_ch_fac</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="228" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -360,7 +368,6 @@
   <XDFTABLE uniqueid="0x5D27" flags="0x30">
     <title>ldp_amp_map_dif_ip_ti_rfu</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="223" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -408,7 +415,6 @@
     <title>C_AMP_MAX</title>
     <description>&quot;calibration data, Ambient Pressure, maxiumum&quot;</description>
     <CATEGORYMEM index="0" category="21" />
-    <CATEGORYMEM index="1" category="21" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8358" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <rangehigh>5434.000000</rangehigh>
     <datatype>3</datatype>
@@ -495,7 +501,6 @@
   <XDFTABLE uniqueid="0x2F4C" flags="0x30">
     <title>ldpm_n_32__eff_vol_cor</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="248" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <units>N[rpm]</units>
@@ -543,7 +548,6 @@
   <XDFTABLE uniqueid="0x5C73" flags="0x30">
     <title>ldpm_maf__eff_vol_cor</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="244" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -590,7 +594,6 @@
   <XDFTABLE uniqueid="0x672A" flags="0x30">
     <title>ldpm_amp_ad__eff_vol_amp</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="268" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -635,7 +638,6 @@
   <XDFTABLE uniqueid="0x62B2" flags="0x30">
     <title>ldpm_n_eff_vol_ofs</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="248" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <units>N[rpm]</units>
@@ -687,7 +689,6 @@
   <XDFTABLE uniqueid="0x4C71" flags="0x30">
     <title>sst_n_kf_zwb_ll</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="248" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <units>N[rpm]</units>
@@ -731,7 +732,6 @@
   <XDFTABLE uniqueid="0x9E8" flags="0x30">
     <title>sst_lm_kf_zwb_ll</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="244" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -774,7 +774,6 @@
   <XDFTABLE uniqueid="0x63CA" flags="0x30">
     <title>sst_tal_kf_fak_tal_tkw</title>
     <CATEGORYMEM index="0" category="1" />
-    <CATEGORYMEM index="1" category="242" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -1261,21 +1260,6 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
-  <XDFCONSTANT uniqueid="0x6660" flags="0xC">
-    <title>C_MAF_MAX</title>
-    <description>&quot;calibration data, mass air flow, maxiumum&quot;</description>
-    <CATEGORYMEM index="0" category="5" />
-    <EMBEDDEDDATA mmedaddress="0x81AF" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-    <outputtype>2</outputtype>
-    <decimalpl>0</decimalpl>
-    <rangehigh>1389.000000</rangehigh>
-    <datatype>3</datatype>
-    <unittype>3</unittype>
-    <DALINK index="0" />
-    <MATH equation="(X/255)*1389">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
   <XDFTABLE uniqueid="0x625" flags="0x0">
     <title>IP_PRED_FAC_neg__N</title>
     <description>IP_PRED_FAC_neg[-] = f(N[rpm])</description>
@@ -1711,13 +1695,6 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
-  <XDFFLAG uniqueid="0x2CDA">
-    <title>c_conf_cp_diag</title>
-    <description>Evaporative system diagnosis :&#013;&#010;C_CONF_DIAGCP = 0 Passive&#013;&#010;C_CONF_DIAGCP = 1 Active : single run per driving cycle&#013;&#010;C_CONF_DIAGCP = 2 Active : continuous run</description>
-    <CATEGORYMEM index="0" category="13" />
-    <EMBEDDEDDATA mmedaddress="0x810C" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-    <mask>0x01</mask>
-  </XDFFLAG>
   <XDFCONSTANT uniqueid="0x7AAA">
     <title>C_CONF_CP</title>
     <CATEGORYMEM index="0" category="13" />
@@ -1729,6 +1706,13 @@
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
+  <XDFFLAG uniqueid="0x2CDA">
+    <title>c_conf_cp_diag</title>
+    <description>Evaporative system diagnosis :&#013;&#010;C_CONF_DIAGCP = 0 Passive&#013;&#010;C_CONF_DIAGCP = 1 Active : single run per driving cycle&#013;&#010;C_CONF_DIAGCP = 2 Active : continuous run</description>
+    <CATEGORYMEM index="0" category="13" />
+    <EMBEDDEDDATA mmedaddress="0x810C" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <mask>0x01</mask>
+  </XDFFLAG>
   <XDFFLAG uniqueid="0x5040">
     <title>c_conf_lam</title>
     <description>Oxygen sensor configuration :&#013;&#010;C_CONF_LAM = 0 Open loop&#013;&#010;C_CONF_LAM = 1 Lambda control</description>
