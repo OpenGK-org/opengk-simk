@@ -1,4 +1,4 @@
-<!-- Written 04/22/2026 17:13:36 -->
+<!-- Written 04/22/2026 17:22:37 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -152,7 +152,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFCONSTANT uniqueid="0x6660" flags="0xC">
-    <title>C_MAF_MAX</title>
+    <title>c_maf_max</title>
     <description>&quot;calibration data, mass air flow, maxiumum&quot;</description>
     <CATEGORYMEM index="0" category="5" />
     <EMBEDDEDDATA mmedaddress="0x81AF" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -167,7 +167,7 @@
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1D30" flags="0xC">
-    <title>C_TI_FAC Nominal injector capacity</title>
+    <title>c_ti_fac Nominal injector capacity</title>
     <description>same around as original C_TI_FAC [ms/(mg*TDC)] stock 210cc/min&#013;&#010;attention it is reverse to traditional value, higher diplacenent drops the value (time for same fuel)</description>
     <CATEGORYMEM index="0" category="5" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x853A" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -412,7 +412,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFCONSTANT uniqueid="0x7D6D" flags="0xC">
-    <title>C_AMP_MAX</title>
+    <title>c_amp_max</title>
     <description>&quot;calibration data, Ambient Pressure, maxiumum&quot;</description>
     <CATEGORYMEM index="0" category="21" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8358" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -425,7 +425,7 @@
     </MATH>
   </XDFCONSTANT>
   <XDFTABLE uniqueid="0x3858" flags="0x30">
-    <title>IP_EFF_TIA_FAC__N_32__MAF</title>
+    <title>ip_eff_tia_fac__n_32__maf</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, efficiency, Intake Air Temperature, factor, coefficient, engine speed, mass air flow&quot; - Size: BYTE, TR: mafr</description>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -462,7 +462,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x765F" flags="0x30">
-    <title>IP_EFF_TCO_FAC__N_32__MAF</title>
+    <title>ip_eff_tco_fac__n_32__maf</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, efficiency, Coolant Temperature, factor, coefficient, engine speed, mass air flow&quot; - Size: BYTE, TR: mafr</description>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -816,7 +816,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2CD0" flags="0x0">
-    <title>IP_EFF_VOL_OFS__N</title>
+    <title>ip_eff_vol_ofs__n</title>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8EF2" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -852,7 +852,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x6360" flags="0x30">
-    <title>IP_EFF_VOL_OFS_AMP</title>
+    <title>ip_eff_vol_ofs_amp</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, efficiency, volume, offset, Ambient Pressure&quot; - Size: WORD, TR: mafr</description>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -889,7 +889,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x65E4" flags="0x0">
-    <title>IP_EFF_VOL_SLOP_N</title>
+    <title>ip_eff_vol_slop_n</title>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8EF2" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -925,7 +925,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3AC2" flags="0x30">
-    <title>IP_EFF_VOL_SLOP_AMP</title>
+    <title>ip_eff_vol_slop_amp</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, efficiency, volume, slope, Ambient Pressure&quot; - Size: WORD, TR: mafr</description>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1261,7 +1261,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x625" flags="0x0">
-    <title>IP_PRED_FAC_neg__N</title>
+    <title>ip_pred_fac_neg__n</title>
     <description>IP_PRED_FAC_neg[-] = f(N[rpm])</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1299,7 +1299,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7274" flags="0x0">
-    <title>IP_PRED_FAC_POS__N</title>
+    <title>ip_pred_fac_pos__n</title>
     <description>IP_PRED_FAC_POS[-] = f(N[rpm])</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1696,7 +1696,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFCONSTANT uniqueid="0x7AAA">
-    <title>C_CONF_CP</title>
+    <title>c_conf_cp</title>
     <CATEGORYMEM index="0" category="13" />
     <EMBEDDEDDATA mmedaddress="0x810B" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <datatype>0</datatype>
@@ -3143,7 +3143,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x30FC" flags="0x30">
-    <title>IP_TI_RFU__AMP_MAP_DIF</title>
+    <title>ip_ti_rfu__amp_map_dif</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, Injection Time, returnless fuel system, Ambient Pressure, manifold air pressure, diffrence&quot; - Size: WORD, TR: koth</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -3180,7 +3180,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4584" flags="0x30">
-    <title>IP_TI_ST_REST__TCO</title>
+    <title>ip_ti_st_rest__tco</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, Injection Time, starting, restart, Coolant Temperature&quot; - Size: BYTE, TR: PIOCH</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -3338,7 +3338,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3623" flags="0x30">
-    <title>IP_TI_COP_N_MAF</title>
+    <title>ip_ti_cop__n__maf</title>
     <description>Index: 194  kf  88: ip_ti_cop__n__maf&#013;&#010;            IP_TI_COP[-] = f(N[rpm],MAF[mg/TDC])</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -3377,7 +3377,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x1D7" flags="0x30">
-    <title>IP_TI_COP_IGA__IGA_COP</title>
+    <title>ip_ti_cop_iga__iga_cop</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, Injection Time, catalyst overheating prevention, ignition angle, ignition angle, catalyst overheating prevention&quot; - Size: BYTE, TR: mifo</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -3414,11 +3414,11 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0xB5" flags="0x30">
-    <title>IP_MAF_MIN_COP__N__IGA_COP</title>
+    <title>ip_maf_min_cop__n__iga_cop</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, mass air flow, minumum, catalyst overheating prevention, engine speed, ignition angle, catalyst overheating prevention&quot; - Size: BYTE, TR: mifo</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x8AC5" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x8AC6" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>4</indexcount>
       <embedinfo type="3" linkobjid="0x57B2" />
       <datatype>3</datatype>
@@ -4415,7 +4415,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x177F" flags="0x30">
-    <title>IP_IGAB_IS__N__MAF</title>
+    <title>ip_igab_is__n__maf</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, Basic ignition angle, idle speed, engine speed, mass air flow&quot; - Size: BYTE, TR: PIOCH</description>
     <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -4630,7 +4630,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2C1E" flags="0x30">
-    <title>IP_IGA_CH_IS__MAF__N_32</title>
+    <title>ip_iga_ch_is__maf__n_32</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, ignition angle, catalyst heating, idle speed, mass air flow, engine speed, &quot; - Size: BYTE, TR: jono</description>
     <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -4667,7 +4667,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x51E8" flags="0x30">
-    <title>IP_IGA_CH_FAC__TCO__T_AST</title>
+    <title>ip_iga_ch_fac__tco__t_ast</title>
     <description>Description: &quot;index table with arbitrary amount of inputs with interpolation, ignition angle, catalyst heating, factor, coefficient, Coolant Temperature, Time/Duration, after-start&quot; - Size: BYTE, TR: jono</description>
     <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
