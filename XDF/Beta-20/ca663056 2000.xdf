@@ -1,4 +1,4 @@
-<!-- Written 03/14/2026 13:22:39 -->
+<!-- Written 04/27/2026 21:12:25 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -6424,6 +6424,83 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
+  <XDFTABLE uniqueid="0x1043" flags="0x30">
+    <title>[2048kg/h] 11B4E 16x16 16bit MAF Definition</title>
+    <description>MAF sensor definition</description>
+    <CATEGORYMEM index="0" category="21" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>16</indexcount>
+      <decimalpl>3</decimalpl>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="0.000" />
+      <LABEL index="1" value="1.000" />
+      <LABEL index="2" value="2.000" />
+      <LABEL index="3" value="3.000" />
+      <LABEL index="4" value="4.000" />
+      <LABEL index="5" value="5.000" />
+      <LABEL index="6" value="6.000" />
+      <LABEL index="7" value="7.000" />
+      <LABEL index="8" value="8.000" />
+      <LABEL index="9" value="9.000" />
+      <LABEL index="10" value="10.000" />
+      <LABEL index="11" value="11.000" />
+      <LABEL index="12" value="12.000" />
+      <LABEL index="13" value="13.000" />
+      <LABEL index="14" value="14.000" />
+      <LABEL index="15" value="15.000" />
+      <MATH equation="x*0.00007629510948">
+        <VAR id="x" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>16</indexcount>
+      <decimalpl>0</decimalpl>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="16" />
+      <LABEL index="2" value="32" />
+      <LABEL index="3" value="48" />
+      <LABEL index="4" value="64" />
+      <LABEL index="5" value="80" />
+      <LABEL index="6" value="96" />
+      <LABEL index="7" value="112" />
+      <LABEL index="8" value="128" />
+      <LABEL index="9" value="144" />
+      <LABEL index="10" value="160" />
+      <LABEL index="11" value="176" />
+      <LABEL index="12" value="192" />
+      <LABEL index="13" value="208" />
+      <LABEL index="14" value="224" />
+      <LABEL index="15" value="240" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x11B4E" mmedelementsizebits="16" mmedrowcount="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>kg/h</units>
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>1024.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X * 0.03125">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFPATCH uniqueid="0x143F">
+    <title>2048kg/h MAF Patch</title>
+    <description>Extend the airflow capability of the ECU to 2048kg/h. &#013;&#010;&#013;&#010;Important: As the patch alters the resolution of the mass airflow sensor scale you need to adjust the id_maf_tab table to alter and display the correct mass airflow sensor scale. Using any other xdf to view the maf sensor scale will display incorrect data.&#013;&#010;&#013;&#010;1. Divide the MAF definition table by 2, if using the stock one.&#013;&#010;2. Use the 2048kg/h table in order to paste new sensor data &#013;&#010;3. Increase the ADX maximum value to &quot;2048kg/h&quot;.</description>
+    <CATEGORYMEM index="0" category="21" />
+    <XDFPATCHENTRY name="Location 2" address="0x44BCF" datasize="0x1" patchdata="04" basedata="14" />
+    <XDFPATCHENTRY name="Location 1" address="0x44BA9" datasize="0x1" patchdata="04" basedata="14" />
+  </XDFPATCH>
   <XDFTABLE uniqueid="0x17B0" flags="0x30">
     <title>0x193EC MAF Measurement Factor {UNKNOWN}</title>
     <description>Index: 23   IMM: ip_maf_kgh_mes_fac&#013;&#010;            IP_MAF_KGH_MES_FAC[-] = f(N[rpm], TPS_SEG[&#176;TPS])</description>
@@ -6675,18 +6752,6 @@
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x53C3">
-    <title>10294 RPM Launch Limit 1</title>
-    <description>Set this the same as launch limit 2&#013;&#010;&#013;&#010;Launch Control Enable 1 &amp; 2 need to be enabled for these limits to work. Launch Limits work best at 4000 RPM and RPM Limit Hysterisis 1 &amp; 2 set to 0 RPM. Lower values of 3500 RPM will work but at a reduced bounce rate.</description>
-    <CATEGORYMEM index="0" category="17" />
-    <EMBEDDEDDATA mmedaddress="0x10294" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-    <datatype>6</datatype>
-    <unittype>4</unittype>
-    <DALINK index="0" />
-    <MATH equation="X*32">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x4340" flags="0xC">
     <title>0x1011C IVVT Camshaft Setpoint Range Max</title>
     <description>C_CAM_ADJ_RNG_MAX_IN&#013;&#010;&#013;&#010;Constant Camshaft Adjust Range Max Intake</description>
@@ -6749,19 +6814,6 @@
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x3C3C" flags="0xC">
-    <title>0x100A4 Catalyst Efficiency Monitoring</title>
-    <description>c_conf_cat_eff</description>
-    <CATEGORYMEM index="0" category="11" />
-    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x100A4" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-    <rangehigh>1.000000</rangehigh>
-    <datatype>26</datatype>
-    <unittype>98</unittype>
-    <DALINK index="0" />
-    <MATH equation="X">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1866" flags="0xC">
     <title>0x100CE Downstream O2 Monitoring</title>
     <description>C_ABC_INC_VLS_DOWN</description>
@@ -6775,11 +6827,24 @@
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x2132" flags="0xC">
-    <title>0x100A1 Canister Purge</title>
+  <XDFCONSTANT uniqueid="0x450A" flags="0xC">
+    <title>0x10149 Catalyst Efficiency Monitoring</title>
+    <description>c_conf_cat_eff</description>
+    <CATEGORYMEM index="0" category="11" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x10149" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <rangehigh>1.000000</rangehigh>
+    <datatype>26</datatype>
+    <unittype>98</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x7B67" flags="0xC">
+    <title>0x10148 Canister Purge</title>
     <description>c_conf_cp</description>
     <CATEGORYMEM index="0" category="18" />
-    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x100A1" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x10148" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <decimalpl>0</decimalpl>
     <rangehigh>2.000000</rangehigh>
     <datatype>0</datatype>
@@ -6789,11 +6854,11 @@
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x1315" flags="0xC">
-    <title>0x100A2 Canister Purge Diagnosing</title>
+  <XDFCONSTANT uniqueid="0x4BEF" flags="0xC">
+    <title>0x1014B Canister Purge Diagnosing</title>
     <description>c_conf_diagcp</description>
     <CATEGORYMEM index="0" category="18" />
-    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x100A2" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x1014B" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <decimalpl>0</decimalpl>
     <rangehigh>2.000000</rangehigh>
     <datatype>0</datatype>
@@ -6875,6 +6940,18 @@
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6560">
+    <title>102B6 RPM Limit Hysterisis 2</title>
+    <description>Set to 0 for fast limiter bounce.&#013;&#010;Set to 17 for OEM limiter bounce.&#013;&#010;&#013;&#010;Use in conjuction with RPM Limit Hysterisis 1.</description>
+    <CATEGORYMEM index="0" category="17" />
+    <EMBEDDEDDATA mmedaddress="0x102B6" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*32">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x59AE">
     <title>106EE c_t_n_max_vs_0</title>
     <CATEGORYMEM index="0" category="17" />
@@ -6898,18 +6975,6 @@
     <unittype>0</unittype>
     <DALINK index="0" />
     <MATH equation="X*(0.75)-48">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x6560">
-    <title>102B6 RPM Limit Hysterisis 2</title>
-    <description>Set to 0 for fast limiter bounce.&#013;&#010;Set to 17 for OEM limiter bounce.&#013;&#010;&#013;&#010;Use in conjuction with RPM Limit Hysterisis 1.</description>
-    <CATEGORYMEM index="0" category="17" />
-    <EMBEDDEDDATA mmedaddress="0x102B6" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
-    <datatype>0</datatype>
-    <unittype>0</unittype>
-    <DALINK index="0" />
-    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
