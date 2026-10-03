@@ -1,4 +1,4 @@
-<!-- Written 07/27/2025 14:58:06 -->
+<!-- Written 10/02/2026 21:08:44 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -21,6 +21,21 @@
     <CATEGORY index="0x14" name="Sensor Definitions" />
     <CATEGORY index="0x2B" name="Identification" />
   </XDFHEADER>
+  <XDFCONSTANT uniqueid="0x39D1" flags="0xC">
+    <title>c_ti_min</title>
+    <description>C_TI_MIN&#013;&#010;Minimum injection time</description>
+    <CATEGORYMEM index="0" category="5" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x108F2" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>ms</units>
+    <decimalpl>3</decimalpl>
+    <rangehigh>16.000000</rangehigh>
+    <datatype>6</datatype>
+    <unittype>4</unittype>
+    <DALINK index="0" />
+    <MATH equation="X * 0.004">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
   <XDFTABLE uniqueid="0x5702" flags="0x0">
     <title>sstm_n_2_5</title>
     <CATEGORYMEM index="0" category="1" />
