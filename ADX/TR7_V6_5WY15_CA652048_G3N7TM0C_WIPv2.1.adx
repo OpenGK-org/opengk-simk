@@ -1,12 +1,12 @@
 <ADXFORMAT version="1.01">
-  <!-- Written 10/22/2026 13:32:54 -->
+  <!-- Written 10/22/2026 13:37:46 -->
   <ADXHEADER>
     <guid>4948f148-506d-4384-b7b8-364330319c5f</guid>
     <flags>0x10001</flags>
     <objectcount>168</objectcount>
-    <userversion>2</userversion>
-    <author>Not A TR7</author>
-    <desc>Originally by dmg210 (v9.2), most recent modifications by Not A TR7 (new version numbering), using a version from KimchiSpiceWorks found on the OpenGK Discord.&#013;&#010;&#013;&#010;dmg210 setup:&#013;&#010;SIMK43 V6 4mbit (5WY17) &#013;&#010;Bench Test ECU: ca654012 G4E7TM0B &#013;&#010;&#013;&#010;TR7 setup: &#013;&#010;SIMK41 V6 2mbit (5wy15)&#013;&#010;Test vehicle ecu: ca652048 g3n7tm0c&#013;&#010;&#013;&#010;V6 limited to 10400 baud (5 Hz).&#013;&#010;I dont know which of these values work on the simk43, some have been changed or added for the simk41, some are known innacurate and havent been fixed yet.</desc>
+    <userversion>2.1</userversion>
+    <author>Not A TR7 &amp; dmg210</author>
+    <desc>Originally by dmg210 (v9.2), most recent modifications by Not A TR7 (new version numbering), using a version from KimchiSpiceWorks found on the OpenGK Discord.&#013;&#010;&#013;&#010;TR7 setup: &#013;&#010;SIMK41 V6 2mbit (5wy15)&#013;&#010;Test vehicle ecu: ca652048 g3n7tm0c&#013;&#010;&#013;&#010;Original version/dmg210 setup:&#013;&#010;SIMK43 V6 4mbit (5WY17) &#013;&#010;Bench Test ECU: ca654012 G4E7TM0B &#013;&#010;&#013;&#010;V6 limited to 10400 baud (5 Hz).&#013;&#010;I dont know which of these values worked on the simk43, some have been changed or added for the simk41. Some values are known to be innacurate on the simk41 and havent been fixed yet, many values havent been checked.</desc>
     <baud>10400</baud>
     <DEFAULTS datasizeinbits="8" sigdigits="2" outputtype="3" baud="0" signed="0" lsbfirst="0" float="0" />
     <connectcmd>CONNECTMACRO</connectcmd>
