@@ -1,10 +1,10 @@
 <ADXFORMAT version="1.01">
-  <!-- Written 10/22/2026 13:37:46 -->
+  <!-- Written 10/22/2026 16:52:27 -->
   <ADXHEADER>
     <guid>4948f148-506d-4384-b7b8-364330319c5f</guid>
     <flags>0x10001</flags>
     <objectcount>168</objectcount>
-    <userversion>2.1</userversion>
+    <userversion>2.5</userversion>
     <author>Not A TR7 &amp; dmg210</author>
     <desc>Originally by dmg210 (v9.2), most recent modifications by Not A TR7 (new version numbering), using a version from KimchiSpiceWorks found on the OpenGK Discord.&#013;&#010;&#013;&#010;TR7 setup: &#013;&#010;SIMK41 V6 2mbit (5wy15)&#013;&#010;Test vehicle ecu: ca652048 g3n7tm0c&#013;&#010;&#013;&#010;Original version/dmg210 setup:&#013;&#010;SIMK43 V6 4mbit (5WY17) &#013;&#010;Bench Test ECU: ca654012 G4E7TM0B &#013;&#010;&#013;&#010;V6 limited to 10400 baud (5 Hz).&#013;&#010;I dont know which of these values worked on the simk43, some have been changed or added for the simk41. Some values are known to be innacurate on the simk41 and havent been fixed yet, many values havent been checked.</desc>
     <baud>10400</baud>
@@ -13,32 +13,6 @@
     <monitorcmd>MONITORMACRO</monitorcmd>
     <disconnectcmd>DISCONNECTMACR</disconnectcmd>
   </ADXHEADER>
-
-  <ADXHISTOGRAM id="LTFTPARTLOAD" idhash="0x6F0C3F4E" title="ltft part load">
-    <rows>1</rows>
-    <cols>1</cols>
-    <xmin>0.000000</xmin>
-    <xmax>0.000000</xmax>
-    <ymin>0.000000</ymin>
-    <ymax>0.000000</ymax>
-    <rowval index="0" val="0.000000" />
-    <colval index="0" val="0.000000" />
-    <historysize>1</historysize>
-    <zidhash>0x29DBF487</zidhash>
-  </ADXHISTOGRAM>
-
-  <ADXHISTOGRAM id="LTFTIDLE" idhash="0x33D50198" title="ltft idle">
-    <rows>1</rows>
-    <cols>1</cols>
-    <xmin>0.000000</xmin>
-    <xmax>0.000000</xmax>
-    <ymin>0.000000</ymin>
-    <ymax>0.000000</ymax>
-    <rowval index="0" val="0.000000" />
-    <colval index="0" val="0.000000" />
-    <historysize>1</historysize>
-    <zidhash>0x7FDBF486</zidhash>
-  </ADXHISTOGRAM>
 
   <ADXHISTOGRAM id="STFTBANK2" idhash="0x0FBE70C6" title="stft bank 2">
     <rows>16</rows>
@@ -126,18 +100,6 @@
     <zidhash>0xF60C0FDD</zidhash>
   </ADXHISTOGRAM>
 
-  <ADXLISTVIEW id="FUELTRIM" idhash="0x6DD30AF2" title="fuel trim">
-    <entrycount>8</entrycount>
-    <ADXLVENTRY entrytype="0" itemidhash="0x29DBF487" />
-    <ADXLVENTRY entrytype="0" itemidhash="0x7FDBF486" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xF60C0FDD" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xF60C157D" />
-    <ADXLVENTRY entrytype="0" itemidhash="0x079A46E6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0x0ACA46E6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xCD44515B" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xCD0CD1DB" />
-  </ADXLISTVIEW>
-
   <ADXVALUE id="MAFVTOIDK" idhash="0xF8DCBBEC" title="maf flow rate">
     <desc>convert maf voltage to same unit as </desc>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
@@ -194,11 +156,9 @@
     <plotoutlinecolor>0x00FFFFFF</plotoutlinecolor>
     <titlecolor>0x00FFFFFF</titlecolor>
     <timeaxiscolor>0x00FFFFFF</timeaxiscolor>
-    <entrycount>4</entrycount>
-    <ADXMONSERIES linecolor="0xFFFFC8" axiscolor="0xFFFFC8" itemidhash="0xF60C0FDD" />
-    <ADXMONSERIES linecolor="0xC8FFFF" axiscolor="0xC8FFFF" itemidhash="0xF60C157D" />
-    <ADXMONSERIES linecolor="0x8080FF" axiscolor="0x8080FF" itemidhash="0x29DBF487" />
-    <ADXMONSERIES linecolor="0x80FF80" axiscolor="0x80FF80" itemidhash="0x7FDBF486" />
+    <entrycount>2</entrycount>
+    <ADXMONSERIES linecolor="0x8080D5" axiscolor="0x8080D5" itemidhash="0xE8F8A5FF" />
+    <ADXMONSERIES linecolor="0xD5AA80" axiscolor="0xD5AA80" itemidhash="0xCBB8A424" />
   </ADXMONITOR>
 
   <ADXCLISTENSILENCE id="500MSPAUSE" idhash="0xBA65BF61" title="500msPause">
@@ -761,6 +721,19 @@
     <ADXLVENTRY entrytype="0" itemidhash="0xCD0CD1DB" />
     <ADXLVENTRY entrytype="0" itemidhash="0xDD1D236C" />
     <ADXLVENTRY entrytype="0" itemidhash="0xC36163F4" />
+  </ADXLISTVIEW>
+
+  <ADXLISTVIEW id="FUELTRIM" idhash="0x6DD30AF2" title="fuel trim">
+    <entrycount>9</entrycount>
+    <ADXLVENTRY entrytype="0" itemidhash="0x394DCBB8" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x394DD118" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x1F1E4D50" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF60C157D" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF60C0FDD" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xE8F8A5FF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x5870379B" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCD44515B" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCD0CD1DB" />
   </ADXLISTVIEW>
 
   <ADXLISTVIEW id="MSWBITS" idhash="0xE42F58C1" title="Multi Function Steering Wheel Bits">
@@ -2610,38 +2583,6 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="LTFTPLOAD" idhash="0x29DBF487" title="Long Term Fuel Trim-Part Load">
-    <desc>??</desc>
-    <flags>0x00000002</flags>
-    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
-    <units>Long Term Fuel Trim-Part Load (%)</units>
-    <packetoffset>0x42</packetoffset>
-    <sizeinbits>16</sizeinbits>
-    <range low="-100.000000" high="100.000000" />
-    <alarms low="0.000000" high="255.000000" />
-    <digcount>2</digcount>
-    <outputtype>3</outputtype>
-    <MATH equation="(x - 32768) / 327.68">
-      <VAR varID="x" type="native" />
-    </MATH>
-  </ADXVALUE>
-
-  <ADXVALUE id="LTFTILOAD" idhash="0x7FDBF486" title="Long Term Fuel Trim-Idle Load">
-    <desc>??</desc>
-    <flags>0x00000002</flags>
-    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
-    <units>Long Term Fuel Trim-Idle Load (%)</units>
-    <packetoffset>0x3E</packetoffset>
-    <sizeinbits>16</sizeinbits>
-    <range low="-100.000000" high="100.000000" />
-    <alarms low="0.000000" high="255.000000" />
-    <digcount>2</digcount>
-    <outputtype>3</outputtype>
-    <MATH equation="(x - 32768) / 327.68">
-      <VAR varID="x" type="native" />
-    </MATH>
-  </ADXVALUE>
-
   <ADXVALUE id="STFTB1" idhash="0xF60C0FDD" title="Short Term Fuel Trim - Bank 1">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
@@ -2696,10 +2637,57 @@
     </MATH>
   </ADXVALUE>
 
+  <ADXVALUE id="LTFTPLB1" idhash="0x394DCBB8" title="Long Term Fuel Trim - Part Load - Bank 1">
+    <desc>??</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Long Term Fuel Trim - Part Load - Bank 1(%)</units>
+    <packetoffset>0x42</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-100.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="(x - 32768) / 327.68">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LTFTPLB2" idhash="0x394DD118" title="Long Term Fuel Trim - Part Load - Bank 2">
+    <flags>0x00000002</flags>
+    <units>Long Term Fuel Trim - Part Load - Bank 2(%)</units>
+    <packetoffset>0x44</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-100.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="(x - 32768) / 327.68">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LTFTIDLELoad" idhash="0x1F1E4D50" title="Long Term Fuel Trim - Idle Load">
+    <desc>??</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Long Term Fuel Trim-Idle Load (%)</units>
+    <packetoffset>0x3E</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-100.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="(x - 32768) / 327.68">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
   <ADXVALUE id="STFTINSTAVG" idhash="0xCBB8A424" title="STFT  b1 b2 avg">
     <desc>instanteneous average of stft for bank1 and bank2</desc>
+    <units>Short Term Fuel Trim Average (%)</units>
     <packetoffset>0x00</packetoffset>
-    <range low="0.000000" high="255.000000" />
+    <range low="-100.000000" high="100.000000" />
     <alarms low="0.000000" high="255.000000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
@@ -2709,17 +2697,29 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="STFTDIFF" idhash="0x30593598" title="stft b1 - stft b2">
-    <desc>difference between stft bank 1 and stft bank 2</desc>
-    <units>short term fuel trim bank 1 - bank 2</units>
+  <ADXVALUE id="AVGSTFTB1B2AVG" idhash="0x5870379B" title="avg stft b1 b2 avg">
+    <units>Average Short Term Fuel Trim Average (%)</units>
     <packetoffset>0x00</packetoffset>
-    <range low="0.000000" high="255.000000" />
+    <range low="-100.000000" high="100.000000" />
     <alarms low="0.000000" high="255.000000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
-    <MATH equation="X-Y">
-      <VAR varID="X" type="link" linkIDHash="0xF60C0FDD" />
-      <VAR varID="Y" type="link" linkIDHash="0xF60C157D" />
+    <MATH equation="(x+y)*0.5">
+      <VAR varID="x" type="link" linkIDHash="0x79A46E6" />
+      <VAR varID="y" type="link" linkIDHash="0xACA46E6" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LTFTB1B2AVG" idhash="0xE8F8A5FF" title="LTFT b1 b2 avg">
+    <units>Long Term Fuel Trim Average (%)</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="-100.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="(x+y)*0.5">
+      <VAR varID="x" type="link" linkIDHash="0x394DCBB8" />
+      <VAR varID="y" type="link" linkIDHash="0x394DD118" />
     </MATH>
   </ADXVALUE>
 
@@ -3247,11 +3247,11 @@
     <ADXDGENTRY gaugetype="1" itemidhash="0xB9608BD0" left="0" top="75" right="25" bottom="100" bkgndcolor="0x00333333" titlecolor="0x00FFFFFF" unitscolor="0x00FDFDFD" curvaltxtcolor="0x00FA05B7" />
     <ADXDGENTRY gaugetype="1" itemidhash="0xCA3A4DE3" left="25" top="75" right="50" bottom="100" bkgndcolor="0x00333333" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" curvaltxtcolor="0x005155FF" />
     <ADXDGENTRY gaugetype="1" itemidhash="0xF8DCBBEC" left="50" top="50" right="75" bottom="75" bkgndcolor="0x00333333" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" curvaltxtcolor="0x00D560FB" />
-    <ADXDGENTRY gaugetype="1" itemidhash="0xCBB8A424" left="50" top="75" right="75" bottom="100" bkgndcolor="0x00333333" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" curvaltxtcolor="0x005155FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x5870379B" left="50" top="75" right="75" bottom="100" bkgndcolor="0x00333333" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" curvaltxtcolor="0x005155FF" />
     <ADXDGENTRY gaugetype="0" itemidhash="0xDD1D236C" left="37" top="0" right="62" bottom="50" arcmax="300" bkgndcolor="0x00333333" />
     <ADXDGENTRY gaugetype="1" itemidhash="0xD543D749" left="65" top="0" right="100" bottom="50" bkgndcolor="0x00333333" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" curvaltxtcolor="0x00A0FCF8" />
-    <ADXDGENTRY gaugetype="1" itemidhash="0x2F4C9E7C" left="75" top="75" right="100" bottom="100" bkgndcolor="0x00333333" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" curvaltxtcolor="0x00F9B639" />
-    <ADXDGENTRY gaugetype="1" itemidhash="0x0882C50D" left="75" top="50" right="100" bottom="75" bkgndcolor="0x00333333" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" curvaltxtcolor="0x00F9B639" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xE8F8A5FF" left="75" top="75" right="100" bottom="100" bkgndcolor="0x00333333" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" curvaltxtcolor="0x00F9B639" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x2F4C9E7C" left="75" top="50" right="100" bottom="75" bkgndcolor="0x00333333" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" curvaltxtcolor="0x00F9B639" />
   </ADXDASHBOARD>
 
   <ADXMACRO id="MONITORMACRO" idhash="0xD177CF5B" title="Monitor Macro" basecmdflags="0x01" repeatcount="1">
