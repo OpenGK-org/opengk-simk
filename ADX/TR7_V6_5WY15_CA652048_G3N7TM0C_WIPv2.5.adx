@@ -1,5 +1,5 @@
 <ADXFORMAT version="1.01">
-  <!-- Written 10/22/2026 16:52:27 -->
+  <!-- Written 10/22/2026 16:57:05 -->
   <ADXHEADER>
     <guid>4948f148-506d-4384-b7b8-364330319c5f</guid>
     <flags>0x10001</flags>
@@ -2592,7 +2592,7 @@
     <alarms low="0.000000" high="255.000000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
-    <MATH equation="(x-128)/1.28">
+    <MATH equation="(x-128)/2.56">
       <VAR varID="x" type="native" />
     </MATH>
   </ADXVALUE>
@@ -2606,7 +2606,7 @@
     <alarms low="0.000000" high="255.000000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
-    <MATH equation="(x-128)/1.28">
+    <MATH equation="(x-128)/2.56">
       <VAR varID="x" type="native" />
     </MATH>
   </ADXVALUE>
@@ -2619,7 +2619,7 @@
     <alarms low="0.000000" high="255.000000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
-    <MATH equation="(x-128)/1.28">
+    <MATH equation="(x-128)/2.56">
       <VAR varID="x" type="native" />
     </MATH>
   </ADXVALUE>
@@ -2632,7 +2632,7 @@
     <alarms low="0.000000" high="255.000000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
-    <MATH equation="(x-128)/1.28">
+    <MATH equation="(x-128)/2.56">
       <VAR varID="x" type="native" />
     </MATH>
   </ADXVALUE>
