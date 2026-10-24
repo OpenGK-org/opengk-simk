@@ -1,9 +1,9 @@
 <ADXFORMAT version="1.01">
-  <!-- Written 10/23/2026 23:21:31 -->
+  <!-- Written 10/24/2026 01:34:26 -->
   <ADXHEADER>
     <guid>4948f148-506d-4384-b7b8-364330319c5f</guid>
     <flags>0x10001</flags>
-    <objectcount>282</objectcount>
+    <objectcount>281</objectcount>
     <userversion>3</userversion>
     <author>Not A TR7 &amp; dmg210</author>
     <desc>Originally by dmg210 (v9.2), most recent modifications by Not A TR7 (new version numbering), using a version from KimchiSpiceWorks found on the OpenGK Discord.&#013;&#010;&#013;&#010;TR7 setup: &#013;&#010;SIMK41 V6 2mbit (5wy15)&#013;&#010;Test vehicle ecu: ca652048 g3n7tm0c&#013;&#010;&#013;&#010;Original version/dmg210 setup:&#013;&#010;SIMK43 V6 4mbit (5WY17) &#013;&#010;Bench Test ECU: ca654012 G4E7TM0B &#013;&#010;&#013;&#010;V6 limited to 10400 baud (5 Hz).&#013;&#010;I dont know which of these values worked on the simk43, some have been changed or added for the simk41. Some values are known to be innacurate on the simk41 and havent been fixed yet, many values havent been checked.</desc>
@@ -20,7 +20,7 @@
     <plotoutlinecolor>0x00FFFFFF</plotoutlinecolor>
     <titlecolor>0x00B90F4A</titlecolor>
     <timeaxiscolor>0x00FFFFFF</timeaxiscolor>
-    <entrycount>7</entrycount>
+    <entrycount>9</entrycount>
     <ADXMONSERIES linecolor="0x0000FF" axiscolor="0x0000FF" itemidhash="0x3777E1DF" />
     <ADXMONSERIES linecolor="0x00FFFF" axiscolor="0x00FFFF" itemidhash="0x3777FB7F" />
     <ADXMONSERIES linecolor="0x00FF00" axiscolor="0x00FF00" itemidhash="0x3777E47F" />
@@ -28,6 +28,8 @@
     <ADXMONSERIES linecolor="0xFF0000" axiscolor="0xFF0000" itemidhash="0x3777F11F" />
     <ADXMONSERIES linecolor="0xFF00FF" axiscolor="0xFF00FF" itemidhash="0x3777F2BF" />
     <ADXMONSERIES linecolor="0xFFFFFF" axiscolor="0xFFFFFF" itemidhash="0x78EEDC1F" />
+    <ADXMONSERIES linecolor="0x009D9D" axiscolor="0x009D9D" itemidhash="0xCD44515B" />
+    <ADXMONSERIES linecolor="0x004B97" axiscolor="0x004B97" itemidhash="0xCD0CD1DB" />
   </ADXMONITOR>
 
   <ADXLISTVIEW id="RAWVALUES" idhash="0xA1FD98C5" title="Raw Values">
@@ -694,7 +696,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_21" idhash="0xEF4693E6" title="Raw Byte 0x21    Ignition Angle Cyl 1?">
+  <ADXVALUE id="RAW_21" idhash="0xEF4693E6" title="Raw Byte 0x21    Ignition Angle Cyl 1">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x21</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -708,7 +710,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_22" idhash="0xEF468946" title="Raw Byte 0x22    Ignition Angle Cyl 2?">
+  <ADXVALUE id="RAW_22" idhash="0xEF468946" title="Raw Byte 0x22    Ignition Angle Cyl 2">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x22</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -722,7 +724,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_23" idhash="0xEF469646" title="Raw Byte 0x23    Ignition Angle Cyl 3?">
+  <ADXVALUE id="RAW_23" idhash="0xEF469646" title="Raw Byte 0x23    Ignition Angle Cyl 3">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x23</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -736,7 +738,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_24" idhash="0xEF469446" title="Raw Byte 0x24    Ignition Angle Cyl 4?">
+  <ADXVALUE id="RAW_24" idhash="0xEF469446" title="Raw Byte 0x24    Ignition Angle Cyl 4">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x24</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -750,7 +752,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_25" idhash="0xEF468326" title="Raw Byte 0x25    Ignition Angle Cyl 5?">
+  <ADXVALUE id="RAW_25" idhash="0xEF468326" title="Raw Byte 0x25    Ignition Angle Cyl 5">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x25</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -764,7 +766,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_26" idhash="0xEF468086" title="Raw Byte 0x26    Ignition Angle Cyl 6?">
+  <ADXVALUE id="RAW_26" idhash="0xEF468086" title="Raw Byte 0x26    Ignition Angle Cyl 6">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x26</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -778,7 +780,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_27" idhash="0xEF469AC6" title="Raw Byte 0x27">
+  <ADXVALUE id="RAW_27" idhash="0xEF469AC6" title="Raw Byte 0x27    Injection Time Cylinder 1">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x27</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -792,7 +794,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_28" idhash="0xEF469786" title="Raw Byte 0x28">
+  <ADXVALUE id="RAW_28" idhash="0xEF469786" title="Raw Byte 0x28    Injection Time Cylinder 1">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x28</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -806,7 +808,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_29" idhash="0xEF4680C6" title="Raw Byte 0x29">
+  <ADXVALUE id="RAW_29" idhash="0xEF4680C6" title="Raw Byte 0x29    Injection Time Cylinder 2">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x29</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -820,7 +822,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_2A" idhash="0xEF4683C6" title="Raw Byte 0x2A">
+  <ADXVALUE id="RAW_2A" idhash="0xEF4683C6" title="Raw Byte 0x2A    Injection Time Cylinder 2">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x2A</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -834,7 +836,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_2B" idhash="0xEF4699A6" title="Raw Byte 0x2B">
+  <ADXVALUE id="RAW_2B" idhash="0xEF4699A6" title="Raw Byte 0x2B    Injection Time Cylinder 3">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x2B</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -848,7 +850,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_2C" idhash="0xEF469C46" title="Raw Byte 0x2C">
+  <ADXVALUE id="RAW_2C" idhash="0xEF469C46" title="Raw Byte 0x2C    Injection Time Cylinder 3">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x2C</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -862,7 +864,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_2D" idhash="0xEF469906" title="Raw Byte 0x2D">
+  <ADXVALUE id="RAW_2D" idhash="0xEF469906" title="Raw Byte 0x2D    Injection Time Cylinder 4">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x2D</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -876,7 +878,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_2E" idhash="0xEF4681C6" title="Raw Byte 0x2E">
+  <ADXVALUE id="RAW_2E" idhash="0xEF4681C6" title="Raw Byte 0x2E    Injection Time Cylinder 4">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x2E</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -890,7 +892,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_2F" idhash="0xEF4694C6" title="Raw Byte 0x2F">
+  <ADXVALUE id="RAW_2F" idhash="0xEF4694C6" title="Raw Byte 0x2F    Injection Time Cylinder 5">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x2F</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -904,7 +906,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_30" idhash="0xEF457DA6" title="Raw Byte 0x30">
+  <ADXVALUE id="RAW_30" idhash="0xEF457DA6" title="Raw Byte 0x30    Injection Time Cylinder 5">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x30</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -918,7 +920,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_31" idhash="0xEF4573E6" title="Raw Byte 0x31">
+  <ADXVALUE id="RAW_31" idhash="0xEF4573E6" title="Raw Byte 0x31    Injection Time Cylinder 6">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x31</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -932,7 +934,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_32" idhash="0xEF456946" title="Raw Byte 0x32">
+  <ADXVALUE id="RAW_32" idhash="0xEF456946" title="Raw Byte 0x32    Injection Time Cylinder 6">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x32</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -946,7 +948,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_33" idhash="0xEF457646" title="Raw Byte 0x33">
+  <ADXVALUE id="RAW_33" idhash="0xEF457646" title="Raw Byte 0x33    Injection Time Bank 1 avg">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x33</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -960,7 +962,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_34" idhash="0xEF457446" title="Raw Byte 0x34">
+  <ADXVALUE id="RAW_34" idhash="0xEF457446" title="Raw Byte 0x34    Injection Time Bank 1 avg">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x34</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -974,7 +976,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_35" idhash="0xEF456326" title="Raw Byte 0x35">
+  <ADXVALUE id="RAW_35" idhash="0xEF456326" title="Raw Byte 0x35    Injection Time Bank 2 avg">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x35</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -988,7 +990,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_36" idhash="0xEF456086" title="Raw Byte 0x36">
+  <ADXVALUE id="RAW_36" idhash="0xEF456086" title="Raw Byte 0x36    Injection Time Bank 2 avg">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x36</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -1212,7 +1214,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_46" idhash="0xEF452086" title="Raw Byte 0x46">
+  <ADXVALUE id="RAW_46" idhash="0xEF452086" title="Raw Byte 0x46    ">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x46</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -1838,28 +1840,15 @@
     <ADXMONSERIES linecolor="0x07E233" axiscolor="0x07E233" itemidhash="0xCD0CD1DB" />
   </ADXMONITOR>
 
-  <ADXMONITOR id="TPMON" idhash="0x11449FD5" title="TPMON">
-    <mainbkgcolor>0x00000000</mainbkgcolor>
-    <plotbkgcolor>0x003E3E3E</plotbkgcolor>
-    <plotoutlinecolor>0x00FFFFFF</plotoutlinecolor>
-    <titlecolor>0x0015BFF0</titlecolor>
-    <timeaxiscolor>0x00FFFFFF</timeaxiscolor>
-    <entrycount>4</entrycount>
-    <ADXMONSERIES linecolor="0x09A5F0" axiscolor="0x09A5F0" itemidhash="0xCD44515B" />
-    <ADXMONSERIES linecolor="0xFFFFFF" axiscolor="0xFFFFFF" itemidhash="0x78EEDC1F" />
-    <ADXMONSERIES linecolor="0xFF8080" axiscolor="0xFF8080" itemidhash="0xF8DCBBEC" />
-    <ADXMONSERIES linecolor="0x000000" axiscolor="0x000000" itemidhash="0x13616005" />
-  </ADXMONITOR>
-
-  <ADXMONITOR id="STFTMON" idhash="0xC180275E" title="fuel trim">
+  <ADXMONITOR id="STFTMON" idhash="0xC180275E" title="fuel trim?">
     <mainbkgcolor>0x00000000</mainbkgcolor>
     <plotbkgcolor>0x003E3E3E</plotbkgcolor>
     <plotoutlinecolor>0x00FFFFFF</plotoutlinecolor>
     <titlecolor>0x00FFFFFF</titlecolor>
     <timeaxiscolor>0x00FFFFFF</timeaxiscolor>
     <entrycount>2</entrycount>
-    <ADXMONSERIES linecolor="0x8080D5" axiscolor="0x8080D5" itemidhash="0xE8F8A5FF" />
-    <ADXMONSERIES linecolor="0xD5AA80" axiscolor="0xD5AA80" itemidhash="0xCBB8A424" />
+    <ADXMONSERIES linecolor="0xFFFFFF" axiscolor="0xFFFFFF" itemidhash="0x78EEDC1F" />
+    <ADXMONSERIES linecolor="0x000000" axiscolor="0x000000" itemidhash="0xF60C157D" />
   </ADXMONITOR>
 
   <ADXCLISTENSILENCE id="500MSPAUSE" idhash="0xBA65BF61" title="500msPause">
@@ -4017,7 +4006,6 @@
 
   <ADXVALUE id="IGNITION1" idhash="0x3777E1DF" title="Ignition Angle Cyl 1">
     <desc>iga_1</desc>
-    <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Ignition Angle Cyl 1 (&#239;&#191;&#189;CRK)</units>
     <packetoffset>0x21</packetoffset>
@@ -4032,7 +4020,6 @@
 
   <ADXVALUE id="IGNITION2" idhash="0x3777FB7F" title="Ignition Angle Cyl 2">
     <desc>iga_2</desc>
-    <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Ignition Angle Cyl 2 (&#239;&#191;&#189;CRK)</units>
     <packetoffset>0x22</packetoffset>
@@ -4047,7 +4034,6 @@
 
   <ADXVALUE id="IGNITION3" idhash="0x3777E47F" title="Ignition Angle Cyl 3">
     <desc>iga_3</desc>
-    <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Ignition Angle Cyl 3 (&#239;&#191;&#189;CRK)</units>
     <packetoffset>0x23</packetoffset>
@@ -4062,7 +4048,6 @@
 
   <ADXVALUE id="IGNITION4" idhash="0x3777E67F" title="Ignition Angle Cyl 4">
     <desc>iga_4</desc>
-    <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Ignition Angle Cyl 4 (&#239;&#191;&#189;CRK)</units>
     <packetoffset>0x24</packetoffset>
@@ -4077,7 +4062,6 @@
 
   <ADXVALUE id="IGNITION5" idhash="0x3777F11F" title="Ignition Angle Cyl 5">
     <desc>iga_5</desc>
-    <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Ignition Angle Cyl 5 (&#239;&#191;&#189;CRK)</units>
     <packetoffset>0x25</packetoffset>
@@ -4092,7 +4076,6 @@
 
   <ADXVALUE id="IGNITION6" idhash="0x3777F2BF" title="Ignition Angle Cyl 6">
     <desc>iga_6</desc>
-    <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Ignition Angle Cyl 6 (&#239;&#191;&#189;CRK)</units>
     <packetoffset>0x26</packetoffset>
