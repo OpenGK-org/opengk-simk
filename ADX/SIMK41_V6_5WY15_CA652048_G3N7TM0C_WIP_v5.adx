@@ -1,9 +1,9 @@
 <ADXFORMAT version="1.01">
-  <!-- Written 10/25/2026 01:16:25 -->
+  <!-- Written 10/27/2026 04:14:02 -->
   <ADXHEADER>
     <guid>4948f148-506d-4384-b7b8-364330319c5f</guid>
     <flags>0x10001</flags>
-    <objectcount>124</objectcount>
+    <objectcount>133</objectcount>
     <userversion>3</userversion>
     <author>Not A TR7</author>
     <desc> SIMK41 V6 2mbit (5wy15)&#013;&#010;ca652048 g3n7tm0c&#013;&#010;</desc>
@@ -13,6 +13,94 @@
     <monitorcmd>MONITORMACRO</monitorcmd>
     <disconnectcmd>DISCONNECTMACR</disconnectcmd>
   </ADXHEADER>
+
+  <ADXBITMASK id="ACON" idhash="0xA2553399" title="0X1C    AC ON">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x1C</packetoffset>
+    <operand>0x00000001</operand>
+    <bitop>AND</bitop>
+    <result>0x00000001</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="0X5CUNIDENTIFIE" idhash="0xD7B31ACB" title="0X5C    Unidentified Flag">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x5C</packetoffset>
+    <operand>0x00000001</operand>
+    <bitop>AND</bitop>
+    <result>0x00000001</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="OFF" idhash="0xCD1AAC5B" title="0X60(1)    Not Running">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000001</operand>
+    <bitop>AND</bitop>
+    <result>0x00000001</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="CRANKING" idhash="0xB5EA569F" title="0X60(2)     Cranking">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000002</operand>
+    <bitop>AND</bitop>
+    <result>0x00000002</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="IDLE" idhash="0xACB26039" title="0X60(3)     Idle">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000004</operand>
+    <bitop>AND</bitop>
+    <result>0x00000004</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="PARTLOAD" idhash="0x7515C938" title="0X60(4)     Part Load">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000008</operand>
+    <bitop>AND</bitop>
+    <result>0x00000008</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="OVERRUNFUELCUT" idhash="0xB5C028DB" title="0X60(5)     Overrun Fuel Cutoff">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000010</operand>
+    <bitop>AND</bitop>
+    <result>0x00000010</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="WIDEOPENTHROTT" idhash="0x9E5EBD57" title="0X60(6)     Wide Open Throttle">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000020</operand>
+    <bitop>AND</bitop>
+    <result>0x00000020</result>
+  </ADXBITMASK>
 
   <ADXMONITOR id="ASAfsda" idhash="0xBC79D621" title="bbbbbbbbbb">
     <mainbkgcolor>0x00000000</mainbkgcolor>
@@ -37,16 +125,18 @@
     <plotoutlinecolor>0x00000000</plotoutlinecolor>
     <titlecolor>0x00000000</titlecolor>
     <timeaxiscolor>0x00FFFFFF</timeaxiscolor>
-    <entrycount>5</entrycount>
+    <entrycount>7</entrycount>
     <ADXMONSERIES linecolor="0x8080FF" axiscolor="0x8080FF" itemidhash="0xEF45C046" />
     <ADXMONSERIES linecolor="0x80FF80" axiscolor="0x80FF80" itemidhash="0xEF45C246" />
     <ADXMONSERIES linecolor="0x4080FF" axiscolor="0x4080FF" itemidhash="0xEF440B86" />
-    <ADXMONSERIES linecolor="0xFF8000" axiscolor="0xFF8000" itemidhash="0xEF45D4C6" />
-    <ADXMONSERIES linecolor="0x800080" axiscolor="0x800080" itemidhash="0xEF45D7C6" />
+    <ADXMONSERIES linecolor="0xFF8000" axiscolor="0xFF8000" itemidhash="0xEF457786" />
+    <ADXMONSERIES linecolor="0x800080" axiscolor="0x800080" itemidhash="0xEF4401A6" />
+    <ADXMONSERIES linecolor="0x000000" axiscolor="0x000000" itemidhash="0xEF4401A6" />
+    <ADXMONSERIES linecolor="0x400000" axiscolor="0x400000" itemidhash="0xEF47D5A6" />
   </ADXMONITOR>
 
   <ADXLISTVIEW id="RAWVALUES" idhash="0xA1FD98C5" title="Raw Values">
-    <entrycount>87</entrycount>
+    <entrycount>73</entrycount>
     <ADXLVENTRY entrytype="0" itemidhash="0xEF4401A6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF440FE6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF441546" />
@@ -57,22 +147,17 @@
     <ADXLVENTRY entrytype="0" itemidhash="0xEF4406C6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF440B86" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF441CC6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF441FC6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF4405A6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF440046" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF441DC6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF4408C6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF45C9A6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF45C7E6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF45DD46" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF45C246" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF45C046" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF45D486" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF45C386" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF45D4C6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF45D7C6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF45CDA6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF45C846" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xA2553399" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF45CD06" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF45D5C6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF45C0C6" />
@@ -111,37 +196,28 @@
     <ADXLVENTRY entrytype="0" itemidhash="0xEF453C46" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF453906" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF4521C6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF4534C6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF47D1A6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47DFE6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47C546" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47DA46" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47D846" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47CF26" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47CC86" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47D6C6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47DB86" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF47CCC6" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF47CFC6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47D5A6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47D046" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xD7B31ACB" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF47D506" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47CDC6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47D8C6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47A5A6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCD1AAC5B" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xB5EA569F" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xACB26039" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x7515C938" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xB5C028DB" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x9E5EBD57" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF47ABE6" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47B146" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47AE46" />
-    <ADXLVENTRY entrytype="0" itemidhash="0xEF47AC46" />
     <ADXLVENTRY entrytype="0" itemidhash="0xEF47BB26" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x1BC48C40" />
   </ADXLISTVIEW>
 
-  <ADXVALUE id="RAW_00" idhash="0xEF4401A6" title="0x00   Static 1?">
+  <ADXVALUE id="RAW_00" idhash="0xEF4401A6" title="0x00    Static 1?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x00</packetoffset>
-    <range low="0.000000" high="255.000000" />
-    <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <range low="2.000000" high="2.000000" />
+    <alarms low="0.000000" high="2.000000" />
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -164,12 +240,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_02" idhash="0xEF441546" title="0x02">
+  <ADXVALUE id="RAW_02" idhash="0xEF441546" title="0x02    state: 13 normal, 5 while key in start?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x02</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -178,22 +254,23 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_03" idhash="0xEF440A46" title="0x03">
+  <ADXVALUE id="RAW_03" idhash="0xEF440A46" title="0x03    Coolant temp sensor voltage?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x03</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
-    <outputtype>1</outputtype>
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
-    <MATH equation="X">
+    <MATH equation="0.0195887 * X">
       <VAR varID="X" type="native" />
     </MATH>
   </ADXVALUE>
 
   <ADXVALUE id="RAW_04" idhash="0xEF440846" title="0x04    Coolant Temperature">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>coolant temp</units>
     <packetoffset>0x04</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
@@ -206,10 +283,26 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_05" idhash="0xEF441F26" title="0x05">
+  <ADXVALUE id="RAW_05" idhash="0xEF441F26" title="0x05    Intake air temp sensor voltage">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>iat?</units>
     <packetoffset>0x05</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="0.0195887 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_06" idhash="0xEF441C86" title="0x06    Intake Air Temp">
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Intake Air Temp</units>
+    <packetoffset>0x06</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
     <digcount>2</digcount>
@@ -221,22 +314,9 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_06" idhash="0xEF441C86" title="0x06    Intake Air Temp?">
-    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
-    <packetoffset>0x06</packetoffset>
-    <range low="0.000000" high="255.000000" />
-    <alarms low="0.000000" high="255.000000" />
-    <digcount>2</digcount>
-    <outputtype>3</outputtype>
-    <datatype>3</datatype>
-    <unittype>3</unittype>
-    <MATH equation="0.75 * X - 48">
-      <VAR varID="X" type="native" />
-    </MATH>
-  </ADXVALUE>
-
   <ADXVALUE id="RAW_07" idhash="0xEF4406C6" title="0x07    TPS Voltage">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>TPS Voltage</units>
     <packetoffset>0x07</packetoffset>
     <range low="0.000000" high="5.000000" />
     <alarms low="0.000000" high="255.000000" />
@@ -249,10 +329,25 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_08" idhash="0xEF440B86" title="0x08    Throttle Body Position">
+  <ADXVALUE id="RAW_08" idhash="0xEF440B86" title="0x08    Throttle Body Position*">
+    <flags>0x00000004</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Throttle Body Position</units>
     <packetoffset>0x08</packetoffset>
+    <range low="0.000000" high="100.000000" />
+    <alarms low="0.000000" high="100.099998" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X*.5">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_09" idhash="0xEF441CC6" title="0x09-0x0A    TPS voltage, slow filter (8.8 fixed point, low byte)?">
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <packetoffset>0x09</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
     <digcount>2</digcount>
@@ -264,26 +359,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_09" idhash="0xEF441CC6" title="0x09">
-    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
-    <packetoffset>0x09</packetoffset>
-    <range low="0.000000" high="255.000000" />
-    <alarms low="0.000000" high="255.000000" />
-    <digcount>2</digcount>
-    <outputtype>1</outputtype>
-    <datatype>3</datatype>
-    <unittype>3</unittype>
-    <MATH equation="X">
-      <VAR varID="X" type="native" />
-    </MATH>
-  </ADXVALUE>
-
-  <ADXVALUE id="RAW_0A" idhash="0xEF441FC6" title="0x0A">
+  <ADXVALUE id="RAW_0A" idhash="0xEF441FC6" title="0x0A    TPS voltage, slow filter msb (12 = idle TPS count)?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x0A</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -292,8 +373,9 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_0B" idhash="0xEF4405A6" title="0x0B    Mass Air Flow Voltage?">
+  <ADXVALUE id="RAW_0B" idhash="0xEF4405A6" title="0x0B    Mass Air Flow Voltage">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>MAF Voltage</units>
     <packetoffset>0x0B</packetoffset>
     <range low="0.000000" high="5.000000" />
     <alarms low="0.000000" high="255.000000" />
@@ -306,10 +388,10 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_0C" idhash="0xEF440046" title="0x0C    MAF Air Mass*">
+  <ADXVALUE id="RAW_0C" idhash="0xEF440046" title="0x0C-0x0D    MAF Air Mass*">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
-    <units>maf</units>
+    <units>MAF</units>
     <packetoffset>0x0C</packetoffset>
     <sizeinbits>16</sizeinbits>
     <range low="0.000000" high="500.000000" />
@@ -328,7 +410,7 @@
     <packetoffset>0x0D</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -337,7 +419,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_0E" idhash="0xEF441DC6" title="0x0E    Bank 1 air charge or load?">
+  <ADXVALUE id="RAW_0E" idhash="0xEF441DC6" title="0x0E-0x0F    Engine load: air mass per rev from MAF sensor (mg/stroke = X*0.0212)? (0 if MAF unplugged)">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x0E</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -351,13 +433,13 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_0F" idhash="0xEF4408C6" title="0x0F    Bank 1 air charge or load msb?">
+  <ADXVALUE id="RAW_0F" idhash="0xEF4408C6" title="0x0F    Air mass per rev from MAF sensor msb">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>0x0f</units>
     <packetoffset>0x0F</packetoffset>
     <range low="0.000000" high="64.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -366,12 +448,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_10" idhash="0xEF45C9A6" title="0x10    Bank 2 air charge or load?">
+  <ADXVALUE id="RAW_10" idhash="0xEF45C9A6" title="0x10-0x11    Engine load from final air mass (holds value on MAF fault)?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x10</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -380,13 +462,13 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_11" idhash="0xEF45C7E6" title="0x11    Bank 2 air charge or load msb?">
+  <ADXVALUE id="RAW_11" idhash="0xEF45C7E6" title="0x11    Air mass per rev from final air mass msb?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>0x11</units>
     <packetoffset>0x11</packetoffset>
     <range low="0.000000" high="64.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -395,12 +477,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_12" idhash="0xEF45DD46" title="0x12">
+  <ADXVALUE id="RAW_12" idhash="0xEF45DD46" title="0x12    Adaptive value, 128 after reset then settles near 112?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x12</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -424,7 +506,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_14" idhash="0xEF45C046" title="0x14    Engine Speed">
+  <ADXVALUE id="RAW_14" idhash="0xEF45C046" title="0x14-0x15    Engine Speed">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>RPM</units>
@@ -446,7 +528,7 @@
     <packetoffset>0x15</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -455,9 +537,10 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_16" idhash="0xEF45D486" title="0x16    Target Idle Speed">
+  <ADXVALUE id="RAW_16" idhash="0xEF45D486" title="0x16-0x17    Target Idle Speed">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Target Idle</units>
     <packetoffset>0x16</packetoffset>
     <sizeinbits>16</sizeinbits>
     <range low="0.000000" high="255.000000" />
@@ -476,7 +559,7 @@
     <packetoffset>0x17</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -490,7 +573,7 @@
     <packetoffset>0x18</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -499,12 +582,13 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_19" idhash="0xEF45D4C6" title="0x19">
+  <ADXVALUE id="RAW_19" idhash="0xEF45D4C6" title="0x19    pair with 0x1A: 39 or 99, 0 w/o cam, flickers 39/40 when cold (less than 60C)?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x19</units>
     <packetoffset>0x19</packetoffset>
-    <range low="-4.000000" high="44.000000" />
+    <range low="-5.000000" high="260.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -513,12 +597,13 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_1A" idhash="0xEF45D7C6" title="0x1A">
+  <ADXVALUE id="RAW_1A" idhash="0xEF45D7C6" title="0x1A    pair with 0x19: 99 or 39, drops to 68 while cam unplugged?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x1A</units>
     <packetoffset>0x1A</packetoffset>
-    <range low="-10.000000" high="110.000000" />
+    <range low="-5.000000" high="260.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -527,12 +612,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_1B" idhash="0xEF45CDA6" title="0x1B   Static 0">
+  <ADXVALUE id="RAW_1B" idhash="0xEF45CDA6" title="0x1B    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x1B</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -541,12 +626,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_1C" idhash="0xEF45C846" title="0x1C    flag(0/1)">
+  <ADXVALUE id="RAW_1C" idhash="0xEF45C846" title="0x1C    AC flag">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x1C</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -557,62 +642,67 @@
 
   <ADXVALUE id="RAW_1D" idhash="0xEF45CD06" title="0x1D    Upstream O2 voltage bank 1">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Upstream O2 Voltage Bank 1</units>
     <packetoffset>0x1D</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
-    <outputtype>1</outputtype>
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
-    <MATH equation="X">
+    <MATH equation="0.0195887 * X">
       <VAR varID="X" type="native" />
     </MATH>
   </ADXVALUE>
 
   <ADXVALUE id="RAW_1E" idhash="0xEF45D5C6" title="0x1E    Upstream O2 voltage bank 2">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Upstream O2 Voltage Bank 2</units>
     <packetoffset>0x1E</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
-    <outputtype>1</outputtype>
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
-    <MATH equation="X">
+    <MATH equation="0.0195887 * X">
       <VAR varID="X" type="native" />
     </MATH>
   </ADXVALUE>
 
   <ADXVALUE id="RAW_1F" idhash="0xEF45C0C6" title="0x1F    Downstream O2 voltage bank 1">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Downstream O2 Voltage Bank 1</units>
     <packetoffset>0x1F</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
-    <outputtype>1</outputtype>
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
-    <MATH equation="X">
+    <MATH equation="0.0195887 * X">
       <VAR varID="X" type="native" />
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_20" idhash="0xEF469DA6" title="0x20    Downstream O2 voltage bank 1">
+  <ADXVALUE id="RAW_20" idhash="0xEF469DA6" title="0x20    Downstream O2 voltage bank 2">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Downstream O2 Voltage Bank 2</units>
     <packetoffset>0x20</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
-    <outputtype>1</outputtype>
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
-    <MATH equation="X">
+    <MATH equation="0.0195887 * X">
       <VAR varID="X" type="native" />
     </MATH>
   </ADXVALUE>
 
   <ADXVALUE id="RAW_21" idhash="0xEF4693E6" title="0x21    Ignition Angle Cyl 1">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 1</units>
     <packetoffset>0x21</packetoffset>
     <range low="-23.625000" high="72.000000" />
     <alarms low="0.000000" high="255.000000" />
@@ -627,6 +717,7 @@
 
   <ADXVALUE id="RAW_22" idhash="0xEF468946" title="0x22    Ignition Angle Cyl 2">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 2</units>
     <packetoffset>0x22</packetoffset>
     <range low="-23.625000" high="72.000000" />
     <alarms low="0.000000" high="255.000000" />
@@ -641,6 +732,7 @@
 
   <ADXVALUE id="RAW_23" idhash="0xEF469646" title="0x23    Ignition Angle Cyl 3">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 3</units>
     <packetoffset>0x23</packetoffset>
     <range low="-23.625000" high="72.000000" />
     <alarms low="0.000000" high="255.000000" />
@@ -655,6 +747,7 @@
 
   <ADXVALUE id="RAW_24" idhash="0xEF469446" title="0x24    Ignition Angle Cyl 4">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 4</units>
     <packetoffset>0x24</packetoffset>
     <range low="-23.625000" high="72.000000" />
     <alarms low="0.000000" high="255.000000" />
@@ -669,6 +762,7 @@
 
   <ADXVALUE id="RAW_25" idhash="0xEF468326" title="0x25    Ignition Angle Cyl 5">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 5</units>
     <packetoffset>0x25</packetoffset>
     <range low="-23.625000" high="72.000000" />
     <alarms low="0.000000" high="255.000000" />
@@ -683,6 +777,7 @@
 
   <ADXVALUE id="RAW_26" idhash="0xEF468086" title="0x26    Ignition Angle Cyl 6">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 6</units>
     <packetoffset>0x26</packetoffset>
     <range low="-23.625000" high="72.000000" />
     <alarms low="0.000000" high="255.000000" />
@@ -695,7 +790,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_27" idhash="0xEF469AC6" title="0x27    Injection Time Cylinder 1">
+  <ADXVALUE id="RAW_27" idhash="0xEF469AC6" title="0x27-0x28    Injection Time Cylinder 1">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x27</packetoffset>
@@ -716,7 +811,7 @@
     <packetoffset>0x28</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -725,7 +820,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_29" idhash="0xEF4680C6" title="0x29    Injection Time Cylinder 2">
+  <ADXVALUE id="RAW_29" idhash="0xEF4680C6" title="0x29-0x2A    Injection Time Cylinder 2">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x29</packetoffset>
@@ -746,7 +841,7 @@
     <packetoffset>0x2A</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -755,7 +850,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_2B" idhash="0xEF4699A6" title="0x2B    Injection Time Cylinder 3">
+  <ADXVALUE id="RAW_2B" idhash="0xEF4699A6" title="0x2B-0x2C    Injection Time Cylinder 3">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x2B</packetoffset>
@@ -776,7 +871,7 @@
     <packetoffset>0x2C</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -785,7 +880,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_2D" idhash="0xEF469906" title="0x2D    Injection Time Cylinder 4">
+  <ADXVALUE id="RAW_2D" idhash="0xEF469906" title="0x2D-0x2E    Injection Time Cylinder 4">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x2D</packetoffset>
@@ -806,7 +901,7 @@
     <packetoffset>0x2E</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -815,7 +910,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_2F" idhash="0xEF4694C6" title="0x2F    Injection Time Cylinder 5">
+  <ADXVALUE id="RAW_2F" idhash="0xEF4694C6" title="0x2F-0x30    Injection Time Cylinder 5">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x2F</packetoffset>
@@ -836,7 +931,7 @@
     <packetoffset>0x30</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -845,7 +940,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_31" idhash="0xEF4573E6" title="0x31    Injection Time Cylinder 6">
+  <ADXVALUE id="RAW_31" idhash="0xEF4573E6" title="0x31-0x32    Injection Time Cylinder 6">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x31</packetoffset>
@@ -866,7 +961,7 @@
     <packetoffset>0x32</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -875,7 +970,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_33" idhash="0xEF457646" title="0x33    Injection Time Bank 1 avg">
+  <ADXVALUE id="RAW_33" idhash="0xEF457646" title="0x33-0x34    Injection Time Bank 1 avg">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x33</packetoffset>
@@ -896,7 +991,7 @@
     <packetoffset>0x34</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -905,7 +1000,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_35" idhash="0xEF456326" title="0x35    Injection Time Bank 2 avg">
+  <ADXVALUE id="RAW_35" idhash="0xEF456326" title="0x35-0x36    Injection Time Bank 2 avg">
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x35</packetoffset>
@@ -926,7 +1021,7 @@
     <packetoffset>0x36</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -940,7 +1035,7 @@
     <packetoffset>0x37</packetoffset>
     <range low="0.000000" high="96.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -949,12 +1044,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_38" idhash="0xEF457786" title="0x38    overrun fuel cut flag and/or open/closed loop flag???">
+  <ADXVALUE id="RAW_38" idhash="0xEF457786" title="0x38    decel fuel cut state: 0, 4, 8, 9, 13 (cut), 0, 13 also at rev limiter?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x38</packetoffset>
     <range low="-2.000000" high="15.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -968,7 +1063,7 @@
     <packetoffset>0x39</packetoffset>
     <range low="-1.000000" high="4.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1033,7 +1128,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_3E" idhash="0xEF4561C6" title="0x3E    Long Term Fuel Trim - Idle Load - bank 1 *">
+  <ADXVALUE id="RAW_3E" idhash="0xEF4561C6" title="0x3E-0x3F    Long Term Fuel Trim - Idle Load - bank 1 *">
     <desc>additive</desc>
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
@@ -1055,7 +1150,7 @@
     <packetoffset>0x3F</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1064,7 +1159,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_40" idhash="0xEF453DA6" title="0x40    Long Term Fuel Trim - Idle Load - bank 2 *">
+  <ADXVALUE id="RAW_40" idhash="0xEF453DA6" title="0x40-0x41    Long Term Fuel Trim - Idle Load - bank 2 *">
     <desc>additive</desc>
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
@@ -1086,7 +1181,7 @@
     <packetoffset>0x41</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1095,7 +1190,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_42" idhash="0xEF452946" title="0x42    Long Term Fuel Trim - Part Load - Bank 1">
+  <ADXVALUE id="RAW_42" idhash="0xEF452946" title="0x42-0x43    Long Term Fuel Trim - Part Load - Bank 1">
     <desc>multiplicative</desc>
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
@@ -1117,7 +1212,7 @@
     <packetoffset>0x43</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1126,7 +1221,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_44" idhash="0xEF453446" title="0x44    Long Term Fuel Trim - Part Load - Bank 2">
+  <ADXVALUE id="RAW_44" idhash="0xEF453446" title="0x44-0x45    Long Term Fuel Trim - Part Load - Bank 2">
     <desc>multiplicative</desc>
     <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
@@ -1148,7 +1243,7 @@
     <packetoffset>0x45</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1171,7 +1266,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_47" idhash="0xEF453AC6" title="0x47     Bank 2 Upstream O2 Heater Duty">
+  <ADXVALUE id="RAW_47" idhash="0xEF453AC6" title="0x47    Bank 2 Upstream O2 Heater Duty">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x47</packetoffset>
     <range low="0.000000" high="255.000000" />
@@ -1213,12 +1308,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_4A" idhash="0xEF4523C6" title="0x4A    evap leak diag related?">
+  <ADXVALUE id="RAW_4A" idhash="0xEF4523C6" title="0x4A    downstream O2 related? 0 if engine stopped or downstream disabled, ~66 then jumps to 249 on first coast, settles at 188 max?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x4A</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1227,12 +1322,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_4B" idhash="0xEF4539A6" title="0x4B    evap leak diag related?">
+  <ADXVALUE id="RAW_4B" idhash="0xEF4539A6" title="0x4B    near copy of 0x4A (0-5 counts higher)?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x4B</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1241,12 +1336,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_4C" idhash="0xEF453C46" title="0x4C">
+  <ADXVALUE id="RAW_4C" idhash="0xEF453C46" title="0x4C    ramps down at idle 32768 engine off?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x4C</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1255,12 +1350,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_4D" idhash="0xEF453906" title="0x4D">
+  <ADXVALUE id="RAW_4D" idhash="0xEF453906" title="0x4D    msb of 0x4C?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x4D</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1269,12 +1364,15 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_4E" idhash="0xEF4521C6" title="0x4E">
+  <ADXVALUE id="RAW_4E" idhash="0xEF4521C6" title="0x4E-0x4F    Idle speed integrator?">
+    <flags>0x00000003</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Idle speed integrator, signed 16-bit?</units>
     <packetoffset>0x4E</packetoffset>
-    <range low="0.000000" high="255.000000" />
+    <sizeinbits>16</sizeinbits>
+    <range low="-32773.000000" high="32773.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1283,12 +1381,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_4F" idhash="0xEF4534C6" title="0x4F">
+  <ADXVALUE id="RAW_4F" idhash="0xEF4534C6" title="0x4F    Idle speed integrator msb?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x4F</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1297,12 +1395,13 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_50" idhash="0xEF47D1A6" title="0x50    ">
+  <ADXVALUE id="RAW_50" idhash="0xEF47D1A6" title="0x50-0x51    Learned idle correction(reset to 0 by adaptation reset)?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x50</units>
     <packetoffset>0x50</packetoffset>
-    <range low="0.000000" high="255.000000" />
+    <range low="-32773.000000" high="32773.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1311,12 +1410,13 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_51" idhash="0xEF47DFE6" title="0x51    ">
+  <ADXVALUE id="RAW_51" idhash="0xEF47DFE6" title="0x51    Learned idle correction msb?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x51</units>
     <packetoffset>0x51</packetoffset>
-    <range low="0.000000" high="255.000000" />
+    <range low="-5.000000" high="260.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1325,12 +1425,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_52" idhash="0xEF47C546" title="0x52   Static 0">
+  <ADXVALUE id="RAW_52" idhash="0xEF47C546" title="0x52    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x52</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1339,12 +1439,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_53" idhash="0xEF47DA46" title="0x53   Static 0">
+  <ADXVALUE id="RAW_53" idhash="0xEF47DA46" title="0x53    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x53</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1353,12 +1453,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_54" idhash="0xEF47D846" title="0x54   Static 0">
+  <ADXVALUE id="RAW_54" idhash="0xEF47D846" title="0x54    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x54</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1367,12 +1467,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_55" idhash="0xEF47CF26" title="0x55   Static 0">
+  <ADXVALUE id="RAW_55" idhash="0xEF47CF26" title="0x55    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x55</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1381,12 +1481,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_56" idhash="0xEF47CC86" title="0x56   Static 0">
+  <ADXVALUE id="RAW_56" idhash="0xEF47CC86" title="0x56    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x56</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1395,12 +1495,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_57" idhash="0xEF47D6C6" title="0x57   Static 0">
+  <ADXVALUE id="RAW_57" idhash="0xEF47D6C6" title="0x57    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x57</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1409,12 +1509,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_58" idhash="0xEF47DB86" title="0x58   Static 0">
+  <ADXVALUE id="RAW_58" idhash="0xEF47DB86" title="0x58    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x58</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1423,12 +1523,13 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_59" idhash="0xEF47CCC6" title="0x59">
+  <ADXVALUE id="RAW_59" idhash="0xEF47CCC6" title="0x59    0 when cold (less than63C) or open loop, ~13 closed-loop idle, 254 spike on throttle tap?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x59</units>
     <packetoffset>0x59</packetoffset>
-    <range low="0.000000" high="255.000000" />
+    <range low="-5.000000" high="260.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1437,12 +1538,14 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_5A" idhash="0xEF47CFC6" title="0x5A">
+  <ADXVALUE id="RAW_5A" idhash="0xEF47CFC6" title="0x5A-0x5B     IdleTrim, 0x8000 = 0, never above 0, down to -58% at hot idle?">
+    <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x5A</units>
     <packetoffset>0x5A</packetoffset>
-    <range low="0.000000" high="255.000000" />
+    <range low="-5.000000" high="65540.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1451,12 +1554,13 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_5B" idhash="0xEF47D5A6" title="0x5B">
+  <ADXVALUE id="RAW_5B" idhash="0xEF47D5A6" title="0x5B    Trim word msb?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x5B</units>
     <packetoffset>0x5B</packetoffset>
-    <range low="0.000000" high="255.000000" />
+    <range low="-5.000000" high="260.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1465,12 +1569,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_5C" idhash="0xEF47D046" title="0x5C   flag(0/1)">
+  <ADXVALUE id="RAW_5C" idhash="0xEF47D046" title="0x5C    flag: 1 at standstill, clears at 40-80 km/h under load (launch limiter armed?)?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x5C</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1479,26 +1583,27 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_5D" idhash="0xEF47D506" title="0x5D ron adaption?">
+  <ADXVALUE id="RAW_5D" idhash="0xEF47D506" title="0x5D    Torque intervention? 164 = none?">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x5D</units>
     <packetoffset>0x5D</packetoffset>
-    <range low="0.000000" high="255.000000" />
+    <range low="-5.000000" high="260.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
-    <MATH equation="(100/255) * X">
+    <MATH equation="X">
       <VAR varID="X" type="native" />
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_5E" idhash="0xEF47CDC6" title="0x5E   Static 0">
+  <ADXVALUE id="RAW_5E" idhash="0xEF47CDC6" title="0x5E    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x5E</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1507,12 +1612,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_5F" idhash="0xEF47D8C6" title="0x5F   Static 0">
+  <ADXVALUE id="RAW_5F" idhash="0xEF47D8C6" title="0x5F    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x5F</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1521,12 +1626,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_60" idhash="0xEF47A5A6" title="0x60    bitfield, crank, idle, part load, unknown others *">
+  <ADXVALUE id="RAW_60" idhash="0xEF47A5A6" title="0x60    state bitfield: 1 off, 2 crank, 4 idle, 8 part load, 16 overrun, 32 WOT (TPS unplugged forces 40) *">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x60</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1535,12 +1640,15 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_61" idhash="0xEF47ABE6" title="0x61">
+  <ADXVALUE id="RAW_61" idhash="0xEF47ABE6" title="0x61-0x62    Battery-voltage compensation (inj dead time?)?">
+    <flags>0x00000002</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x61</units>
     <packetoffset>0x61</packetoffset>
-    <range low="0.000000" high="255.000000" />
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="65540.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1549,12 +1657,13 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_62" idhash="0xEF47B146" title="0x62">
+  <ADXVALUE id="RAW_62" idhash="0xEF47B146" title="0x62    Battery-voltage compensation msb">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x62</units>
     <packetoffset>0x62</packetoffset>
-    <range low="4.000000" high="12.000000" />
+    <range low="0.000000" high="15.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1563,12 +1672,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_63" idhash="0xEF47AE46" title="0x63   Static 0">
+  <ADXVALUE id="RAW_63" idhash="0xEF47AE46" title="0x63    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x63</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1577,12 +1686,12 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_64" idhash="0xEF47AC46" title="0x64   Static 0">
+  <ADXVALUE id="RAW_64" idhash="0xEF47AC46" title="0x64    Static 0">
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x64</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
@@ -1591,17 +1700,42 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="RAW_65" idhash="0xEF47BB26" title="0x65    checksum?">
+  <ADXVALUE id="RAW_65" idhash="0xEF47BB26" title="0x65    Checksum">
+    <desc>sum of 0x00-0x64 + 73</desc>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <packetoffset>0x65</packetoffset>
     <range low="0.000000" high="255.000000" />
     <alarms low="0.000000" high="255.000000" />
-    <digcount>0</digcount>
+    <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>3</datatype>
     <unittype>3</unittype>
     <MATH equation="X">
       <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="SUMOFSTATIC0VA" idhash="0x1BC48C40" title="0X18,1B,52-58,5E,5F,63,64    Sum of static 0 values">
+    <flags>0x00000004</flags>
+    <packetoffset>0x00</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="0.100000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="a+b+c+d+e+f+g+h+i+j+k+l+m">
+      <VAR varID="a" type="link" linkIDHash="0xEF45C386" />
+      <VAR varID="b" type="link" linkIDHash="0xEF45CDA6" />
+      <VAR varID="c" type="link" linkIDHash="0xEF47C546" />
+      <VAR varID="d" type="link" linkIDHash="0xEF47DA46" />
+      <VAR varID="e" type="link" linkIDHash="0xEF47D846" />
+      <VAR varID="f" type="link" linkIDHash="0xEF47CF26" />
+      <VAR varID="g" type="link" linkIDHash="0xEF47CC86" />
+      <VAR varID="h" type="link" linkIDHash="0xEF47D6C6" />
+      <VAR varID="i" type="link" linkIDHash="0xEF47DB86" />
+      <VAR varID="j" type="link" linkIDHash="0xEF47CDC6" />
+      <VAR varID="k" type="link" linkIDHash="0xEF47D8C6" />
+      <VAR varID="l" type="link" linkIDHash="0xEF47AE46" />
+      <VAR varID="m" type="link" linkIDHash="0xEF47AC46" />
     </MATH>
   </ADXVALUE>
 
