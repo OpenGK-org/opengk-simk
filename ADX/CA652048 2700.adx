@@ -1,0 +1,1997 @@
+<ADXFORMAT version="1.01">
+  <!-- Written 10/30/2026 02:47:44 -->
+  <ADXHEADER>
+    <guid>4948f148-506d-4384-b7b8-364330319c5f</guid>
+    <flags>0x10001</flags>
+    <objectcount>124</objectcount>
+    <userversion>V9.0</userversion>
+    <author>Not A TR7</author>
+    <desc>Developed using .bin and logs from:&#013;&#010;SIMK41 V6 2mbit (5wy15)&#013;&#010;ca652048 g3n7tm0c&#013;&#010;&#013;&#010;Initally based on KSW_dmg210_simk43_v6_5wy18_v01.adx,  many values in were wrong on the SIMK41.&#013;&#010;&#013;&#010;Values with ? have unconfirmed/uncertian meanings&#013;&#010;Values with * have unconfirmed/uncertian equations&#013;&#010;I entered a description of every value that goes into a little detail about how they were found.&#013;&#010;&#013;&#010;Some values were unclear or unchanging. So after figuring out what I could I gave claude my: .bin, .xdf, .adx, and a few logs, then had had it decomp/reverse engineer the output routine, it also confirmed all other values that I had already gotten.&#013;&#010;I listed the ram address of each byte (according to claude) incase anyone wants to cross check, may also be useful for anyone wanting to edit their ecu program so it outputs other data (by substituring current values).&#013;&#010;</desc>
+    <baud>10400</baud>
+    <parity>1</parity>
+    <DEFAULTS datasizeinbits="8" sigdigits="2" outputtype="3" baud="0" signed="0" lsbfirst="0" float="0" />
+    <connectcmd>CONNECTMACRO</connectcmd>
+    <monitorcmd>MONITORMACRO</monitorcmd>
+    <disconnectcmd>DISCONNECTMACR</disconnectcmd>
+  </ADXHEADER>
+
+  <ADXDASHBOARD id="DASH" idhash="0xAF483179" title="Dash">
+    <entrycount>7</entrycount>
+    <ADXDGENTRY gaugetype="0" itemidhash="0xDD1D236C" left="0" top="0" right="33" bottom="67" arcmax="300" bkgndcolor="0x001E1E1E" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" facecolor="0x00282828" majtickcolor="0x000060FF" mintickcolor="0x00002080" ticktxtnormcolor="0x000040C0" minvaltxtcolor="0x000040C0" maxvaltxtcolor="0x000040C0" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="0" itemidhash="0xCD0CD1DB" left="33" top="0" right="67" bottom="67" arcmax="300" bkgndcolor="0x001E1E1E" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" facecolor="0x00282828" majtickcolor="0x000060FF" mintickcolor="0x00002080" ticktxtnormcolor="0x000040C0" minvaltxtcolor="0x000040C0" maxvaltxtcolor="0x000040C0" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x33450280" left="67" top="0" right="100" bottom="33" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x4D4D4AC2" left="0" top="67" right="33" bottom="100" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xFAAA9AA2" left="33" top="67" right="67" bottom="100" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xD5E2F749" left="67" top="67" right="100" bottom="100" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x4F4046E6" left="67" top="33" right="100" bottom="67" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
+  </ADXDASHBOARD>
+
+  <ADXHISTOGRAM id="IGA__N__MAF" idhash="0x4EE30D35" title="Ignition angle, rpm, maf">
+    <desc>compares avg ignition angle against same axis as IP_IGAB__N__MAF</desc>
+    <rows>16</rows>
+    <cols>12</cols>
+    <xmin>0.000000</xmin>
+    <xmax>0.000000</xmax>
+    <ymin>0.000000</ymin>
+    <ymax>0.000000</ymax>
+    <rowval index="0" val="420.000000" />
+    <rowval index="1" val="700.000000" />
+    <rowval index="2" val="1000.000000" />
+    <rowval index="3" val="1200.000000" />
+    <rowval index="4" val="1500.000000" />
+    <rowval index="5" val="1800.000000" />
+    <rowval index="6" val="2200.000000" />
+    <rowval index="7" val="2600.000000" />
+    <rowval index="8" val="3000.000000" />
+    <rowval index="9" val="3200.000000" />
+    <rowval index="10" val="3700.000000" />
+    <rowval index="11" val="4000.000000" />
+    <rowval index="12" val="4500.000000" />
+    <rowval index="13" val="5050.000000" />
+    <rowval index="14" val="5550.000000" />
+    <rowval index="15" val="6000.000000" />
+    <colval index="0" val="50.000000" />
+    <colval index="1" val="90.000000" />
+    <colval index="2" val="130.000000" />
+    <colval index="3" val="180.000000" />
+    <colval index="4" val="230.000000" />
+    <colval index="5" val="280.000000" />
+    <colval index="6" val="330.000000" />
+    <colval index="7" val="380.000000" />
+    <colval index="8" val="430.000000" />
+    <colval index="9" val="480.000000" />
+    <colval index="10" val="530.000000" />
+    <colval index="11" val="580.000000" />
+    <historysize>16</historysize>
+    <xidhash>0x3C1AED99</xidhash>
+    <yidhash>0xCD0CD1DB</yidhash>
+    <zidhash>0xFAAA9AA2</zidhash>
+  </ADXHISTOGRAM>
+
+  <ADXHISTOGRAM id="FUELTRIM,RPM,M" idhash="0x778B7176" title="Fuel trim, rpm, maf">
+    <desc>has same axis as IP_TIB__N__MAF</desc>
+    <rows>16</rows>
+    <cols>12</cols>
+    <xmin>0.000000</xmin>
+    <xmax>0.000000</xmax>
+    <ymin>0.000000</ymin>
+    <ymax>0.000000</ymax>
+    <rowval index="0" val="420.000000" />
+    <rowval index="1" val="700.000000" />
+    <rowval index="2" val="1000.000000" />
+    <rowval index="3" val="1200.000000" />
+    <rowval index="4" val="1500.000000" />
+    <rowval index="5" val="1800.000000" />
+    <rowval index="6" val="2200.000000" />
+    <rowval index="7" val="2600.000000" />
+    <rowval index="8" val="3000.000000" />
+    <rowval index="9" val="3200.000000" />
+    <rowval index="10" val="3700.000000" />
+    <rowval index="11" val="4000.000000" />
+    <rowval index="12" val="4500.000000" />
+    <rowval index="13" val="5050.000000" />
+    <rowval index="14" val="5550.000000" />
+    <rowval index="15" val="6000.000000" />
+    <colval index="0" val="50.000000" />
+    <colval index="1" val="90.000000" />
+    <colval index="2" val="130.000000" />
+    <colval index="3" val="180.000000" />
+    <colval index="4" val="230.000000" />
+    <colval index="5" val="330.000000" />
+    <colval index="6" val="380.000000" />
+    <colval index="7" val="430.000000" />
+    <colval index="8" val="480.000000" />
+    <colval index="9" val="530.000000" />
+    <colval index="10" val="580.000000" />
+    <colval index="11" val="580.000000" />
+    <historysize>16</historysize>
+    <xidhash>0x3C1AED99</xidhash>
+    <yidhash>0xCD0CD1DB</yidhash>
+    <zidhash>0x4083103A</zidhash>
+  </ADXHISTOGRAM>
+
+  <ADXMONITOR id="SPEEDMONITOR" idhash="0x0746FE00" title="Speed monitor">
+    <mainbkgcolor>0x00FFFFFF</mainbkgcolor>
+    <plotbkgcolor>0x00F0F0F0</plotbkgcolor>
+    <plotoutlinecolor>0x00000000</plotoutlinecolor>
+    <titlecolor>0x00000000</titlecolor>
+    <timeaxiscolor>0x00000000</timeaxiscolor>
+    <entrycount>3</entrycount>
+    <ADXMONSERIES linecolor="0x000080" axiscolor="0x000080" itemidhash="0x33450280" />
+    <ADXMONSERIES linecolor="0x008000" axiscolor="0x008000" itemidhash="0xDD1D236C" />
+    <ADXMONSERIES linecolor="0xFF0000" axiscolor="0xFF0000" itemidhash="0xCD0CD1DB" />
+  </ADXMONITOR>
+
+  <ADXMONITOR id="MISC/PLACEHOLD" idhash="0xDCF6AFAA" title="misc/placeholder monitor">
+    <desc>placeholder for any monitors you may want to add, same color scheme as speed monitor.</desc>
+    <mainbkgcolor>0x00FFFFFF</mainbkgcolor>
+    <plotbkgcolor>0x00F0F0F0</plotbkgcolor>
+    <plotoutlinecolor>0x00000000</plotoutlinecolor>
+    <titlecolor>0x00000000</titlecolor>
+    <timeaxiscolor>0x00000000</timeaxiscolor>
+    <entrycount>4</entrycount>
+    <ADXMONSERIES linecolor="0x000080" axiscolor="0x000080" itemidhash="0xFAAA9AA2" />
+    <ADXMONSERIES linecolor="0x008000" axiscolor="0x008000" itemidhash="0xF60C0FDD" />
+    <ADXMONSERIES linecolor="0xFF0000" axiscolor="0xFF0000" itemidhash="0x0E14A84F" />
+    <ADXMONSERIES linecolor="0x000000" axiscolor="0x000000" itemidhash="0x30FDD0DC" />
+  </ADXMONITOR>
+
+  <ADXLOOKUPTABLE id="IDLELOOKUPTABL" idhash="0x5910A536" title="Idle lookup Table">
+    <desc>outputs 1 for every value of 0x60 where the idle flag is true</desc>
+    <inputtype>1</inputtype>
+    <outputtype>1</outputtype>
+    <lookupmode>1</lookupmode>
+    <entrycount>64</entrycount>
+    <tableentry input="0.000000" output="0.000000" />
+    <tableentry input="1.000000" output="0.000000" />
+    <tableentry input="2.000000" output="0.000000" />
+    <tableentry input="3.000000" output="0.000000" />
+    <tableentry input="4.000000" output="1.000000" />
+    <tableentry input="5.000000" output="1.000000" />
+    <tableentry input="6.000000" output="1.000000" />
+    <tableentry input="7.000000" output="1.000000" />
+    <tableentry input="8.000000" output="0.000000" />
+    <tableentry input="9.000000" output="0.000000" />
+    <tableentry input="10.000000" output="0.000000" />
+    <tableentry input="11.000000" output="0.000000" />
+    <tableentry input="12.000000" output="1.000000" />
+    <tableentry input="13.000000" output="1.000000" />
+    <tableentry input="14.000000" output="1.000000" />
+    <tableentry input="15.000000" output="1.000000" />
+    <tableentry input="16.000000" output="0.000000" />
+    <tableentry input="17.000000" output="0.000000" />
+    <tableentry input="18.000000" output="0.000000" />
+    <tableentry input="19.000000" output="0.000000" />
+    <tableentry input="20.000000" output="1.000000" />
+    <tableentry input="21.000000" output="1.000000" />
+    <tableentry input="22.000000" output="1.000000" />
+    <tableentry input="23.000000" output="1.000000" />
+    <tableentry input="24.000000" output="0.000000" />
+    <tableentry input="25.000000" output="0.000000" />
+    <tableentry input="26.000000" output="0.000000" />
+    <tableentry input="27.000000" output="0.000000" />
+    <tableentry input="28.000000" output="1.000000" />
+    <tableentry input="29.000000" output="1.000000" />
+    <tableentry input="30.000000" output="1.000000" />
+    <tableentry input="31.000000" output="1.000000" />
+    <tableentry input="32.000000" output="0.000000" />
+    <tableentry input="33.000000" output="0.000000" />
+    <tableentry input="34.000000" output="0.000000" />
+    <tableentry input="35.000000" output="0.000000" />
+    <tableentry input="36.000000" output="1.000000" />
+    <tableentry input="37.000000" output="1.000000" />
+    <tableentry input="38.000000" output="1.000000" />
+    <tableentry input="39.000000" output="1.000000" />
+    <tableentry input="40.000000" output="0.000000" />
+    <tableentry input="41.000000" output="0.000000" />
+    <tableentry input="42.000000" output="0.000000" />
+    <tableentry input="43.000000" output="0.000000" />
+    <tableentry input="44.000000" output="1.000000" />
+    <tableentry input="45.000000" output="1.000000" />
+    <tableentry input="46.000000" output="1.000000" />
+    <tableentry input="47.000000" output="1.000000" />
+    <tableentry input="48.000000" output="0.000000" />
+    <tableentry input="49.000000" output="0.000000" />
+    <tableentry input="50.000000" output="0.000000" />
+    <tableentry input="51.000000" output="0.000000" />
+    <tableentry input="52.000000" output="1.000000" />
+    <tableentry input="53.000000" output="1.000000" />
+    <tableentry input="54.000000" output="1.000000" />
+    <tableentry input="55.000000" output="1.000000" />
+    <tableentry input="56.000000" output="0.000000" />
+    <tableentry input="57.000000" output="0.000000" />
+    <tableentry input="58.000000" output="0.000000" />
+    <tableentry input="59.000000" output="0.000000" />
+    <tableentry input="60.000000" output="1.000000" />
+    <tableentry input="61.000000" output="1.000000" />
+    <tableentry input="62.000000" output="1.000000" />
+    <tableentry input="63.000000" output="1.000000" />
+  </ADXLOOKUPTABLE>
+
+  <ADXBITMASK id="ACON" idhash="0xA2553399" title="AC ON">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x1C</packetoffset>
+    <operand>0x00000001</operand>
+    <bitop>AND</bitop>
+    <result>0x00000001</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="0X5CUNIDENTIFI" idhash="0x5EBD982C" title="Radiator Fan">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x5C</packetoffset>
+    <operand>0x00000001</operand>
+    <bitop>AND</bitop>
+    <result>0x00000001</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="OFF" idhash="0xCD1AAC5B" title="Not Running">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000001</operand>
+    <bitop>AND</bitop>
+    <result>0x00000001</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="CRANKING" idhash="0xB5EA569F" title="Cranking">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000002</operand>
+    <bitop>AND</bitop>
+    <result>0x00000002</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="IDLE" idhash="0xACB26039" title="Idle">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000004</operand>
+    <bitop>AND</bitop>
+    <result>0x00000004</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="PARTLOAD" idhash="0x7515C938" title="Part Load">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000008</operand>
+    <bitop>AND</bitop>
+    <result>0x00000008</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="OVERRUNFUELCUT" idhash="0xB5C028DB" title="Overrun Fuel Cutoff">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000010</operand>
+    <bitop>AND</bitop>
+    <result>0x00000010</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="WIDEOPENTHROTT" idhash="0x9E5EBD57" title="Wide Open Throttle">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x60</packetoffset>
+    <operand>0x00000020</operand>
+    <bitop>AND</bitop>
+    <result>0x00000020</result>
+  </ADXBITMASK>
+
+  <ADXLISTVIEW id="CONFIRMEDVALUE" idhash="0x8E7D1910" title="Confirmed Values">
+    <entrycount>65</entrycount>
+    <ADXLVENTRY entrytype="0" itemidhash="0xA2553399" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x5EBD982C" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCD1AAC5B" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xB5EA569F" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xACB26039" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x7515C938" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xB5C028DB" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x9E5EBD57" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xD5E2F749" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCDA1CF63" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x4F4046E6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x81380223" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x882F9623" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xB0752AF0" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x33450280" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xB18DC2F0" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x3C1AED99" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x5A489056" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF45DD46" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xDD1D236C" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCD0CD1DB" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x6E6545D8" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEEBC5D65" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEED6DD65" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xFB3D8B5A" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x513D8B5B" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF488E71C" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF488FDBC" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF488E2BC" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF488E0BC" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF488F7DC" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF488F47C" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xC35E727E" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCE0E727E" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xC4FA143F" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xC4FA0E9F" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xC4FA119F" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xC4FA139F" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xC4FA04FF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xC4FA075F" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x22A604AF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x7AC42CAE" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x0EA3066D" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCA1D63B9" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF60C0FDD" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF60C157D" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF1F5AF8A" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xF1F5B52A" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x540689AF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x5406930F" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x30FDD0DC" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x30FDCA7C" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x44ACE3A1" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x47F8E3A1" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xBD6F75DF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xBD05F5DF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xB79F6215" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x1D9F6214" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF453C46" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xE860ED53" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x2880178F" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47CCC6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47D046" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x888569F3" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xAD149ED9" />
+  </ADXLISTVIEW>
+
+  <ADXLISTVIEW id="UNCONFIRMEDVAL" idhash="0x6406720E" title="Unconfirmed And Static Values">
+    <entrycount>24</entrycount>
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF4401A6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF441546" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF441CC6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF45C9A6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xE8BA85BD" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF45D7C6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x5E19DB69" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF457AC6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF453786" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF4520C6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47C546" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47DA46" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47D846" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47CF26" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47CC86" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47D6C6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47DB86" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47CCC6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x07D358E6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47CDC6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47D8C6" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x328649EE" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47AE46" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xEF47AC46" />
+  </ADXLISTVIEW>
+
+  <ADXVALUE id="RAW_00" idhash="0xEF4401A6" title="Static 1 / echo">
+    <desc>Was 1 in all logs and never changed, I assumed it was some static value/flag.&#013;&#010;&#013;&#010;According to claude its &quot;local-ID echo (=01)&quot;, ram address (none)&#013;&#010;confidence high</desc>
+    <flags>0x0000000C</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Static 1 / echo</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.000000" high="2.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="BATTREYVOLTAGE" idhash="0xD5E2F749" title="battery voltage">
+    <desc>Same as KSW_dmg210 adx. Tracked voltage, tested using variable power supply, equation may be slightly off.&#013;&#010;&#013;&#010;&#013;&#010;according to claude the ram address is 0xE04F</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>battery voltage (V)</units>
+    <packetoffset>0x01</packetoffset>
+    <range low="0.000000" high="20.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>3</outputtype>
+    <datatype>66</datatype>
+    <unittype>32</unittype>
+    <MATH equation="0.1015625 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_02" idhash="0xEF441546" title="Battery Status Flags *">
+    <desc>during logs it was normally 13, while it was 5 when cranking. was unable to confirm what it was on my own.&#013;&#010;&#013;&#010;According to claude its battery status flags&#013;&#010;Bit 1 = supply voltage valid&#013;&#010;Bit 2 = voltage above C_VB_MIN_JUMP&#013;&#010;Bit 3 = both channels &gt;=C_VB_MIN_OBD1&#013;&#010;Bit 4 = both &gt;=C_VB_MIN_OBD2&#013;&#010;Bit 5 = &quot;BFD16.12, a copy of digital input BFD76.14, A digital input pin, sampled every main-loop pass (0x5FD24). I couldn&#226;&#128;&#153;t identify the pin.&quot;&#013;&#010;Bit 6 &quot;BFD16.11, Set in the main loop when init is done and the pin above is set. It then skips many tasks, so it behaves like an after-run/shutdown flag.&quot;&#013;&#010;ram address 0xC245&#013;&#010;confidence &quot;high&quot; for bits 1-4&#013;&#010;&quot;Low&quot; for bit 5&#013;&#010;&quot;Low-medium&quot; for bit 6&#013;&#010;&#013;&#010;I havent independently tested/confirmed, bits 5 and 6 wernt ever high in my logs</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Battery Status Flags ?</units>
+    <packetoffset>0x02</packetoffset>
+    <range low="0.000000" high="63.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>2</datatype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="COOLTANTVOLTAG" idhash="0xCDA1CF63" title="Coolant temp sensor voltage">
+    <desc>moved with coollant temperature, responded to unplugging coolant temp sensor.&#013;&#010;&#013;&#010;&#013;&#010;according to Claude the ram address is 0xE1B3</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Coolant temp sensor voltage (V)</units>
+    <packetoffset>0x03</packetoffset>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>1</datatype>
+    <unittype>32</unittype>
+    <MATH equation="X * 5 / 255">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="COOLANTTEMPERA" idhash="0x4F4046E6" title="Coolant Temperature">
+    <desc>Followed cooant temperature, increased when I heated area around coolant temp sensor. Same byte as KSW_dmg210 adx but different equation.&#013;&#010;&#013;&#010;according to Claude the ram address is 0xC5B1</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Coolant temp (C)</units>
+    <packetoffset>0x04</packetoffset>
+    <range low="-48.000000" high="143.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>3</outputtype>
+    <datatype>13</datatype>
+    <unittype>15</unittype>
+    <MATH equation="(X - 64) * 0.75">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INTAKETEMPVOLT" idhash="0x81380223" title="Intake air temp sensor voltage">
+    <desc>Responded to disconnecting intake temp sensor, going to 255 (5v) when I did, moved with intake temp.&#013;&#010;&#013;&#010;according to Claude the ram address is 0xC5B9</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Intake air temp sensor voltage (V)</units>
+    <packetoffset>0x05</packetoffset>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>1</datatype>
+    <unittype>32</unittype>
+    <MATH equation="X * 5 / 255">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INTAKETEMPERAT" idhash="0x882F9623" title="Intake Air Temp">
+    <desc>Same as KSW_dmg210 adx. &#013;&#010;Increased when I heated area around intake temp sensor, also increased while sitting still with hot engine,then decreased when throttle applied. didnt move when momentairly disconnecting sensor, so must have some error handling/smoothing.&#013;&#010;&#013;&#010;according to Claude the ram address is 0xC5B6</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Intake Air Temp (C)</units>
+    <packetoffset>0x06</packetoffset>
+    <range low="-48.000000" high="143.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>19</datatype>
+    <unittype>15</unittype>
+    <MATH equation="X*.75-48">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="TPSVOLTAGE" idhash="0xB0752AF0" title="TPS Voltage">
+    <desc>followed behaviour I expected for tps voltage from a preveous project that read tps voltag.&#013;&#010;goes high when tps sensor disconnected.&#013;&#010;Same byte as the KSW_dmg210 adx.&#013;&#010;&#013;&#010;according to Claude the ram address is &#009;&#013;&#010;0xF8AB</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>TPS Voltage (V)</units>
+    <packetoffset>0x07</packetoffset>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>1</datatype>
+    <unittype>32</unittype>
+    <MATH equation="X * 5 /255">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="THROTTLEPOSITI" idhash="0x33450280" title="Throttle Body Position">
+    <desc>Responed to applyting throttle, typically max raw value in logs is 200, so assumed equation was X/2, but some logs were higher for some reason. Same byte as KSW_dmg210 adx but diffrent equation.&#013;&#010;&#013;&#010;according to Claude the ram address is 0xF8A9&#013;&#010;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Throttle Body Position (%)</units>
+    <packetoffset>0x08</packetoffset>
+    <range low="0.000000" high="100.000000" />
+    <alarms low="0.000000" high="100.099998" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>57</datatype>
+    <unittype>67</unittype>
+    <MATH equation="X*.5">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_09" idhash="0xEF441CC6" title="0x09 Closed Throttle Offset ?">
+    <desc>From logs seemed to have some relation to tps, but I couldnt figure out exact meaning.&#013;&#010;Updated about every 5 frames. when tps was unplugged it jumps to 16384, then decayed toward raw value of tps voltage*~256&#013;&#010;&#013;&#010;according to claude it is &quot;TPS closed-throttle offset&quot;, ram address&#009;&#013;&#010;0xF960-0xF961&#013;&#010;it said it had high confidence for what this value was. but i havent been able to confirm</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0x09 Closed Throttle Offset ? (TPS A/D counts x256)</units>
+    <packetoffset>0x09</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="16384.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="MAFVOLTAGE" idhash="0xB18DC2F0" title="Mass Air Flow Voltage">
+    <desc>Moved with rpm and throttle, disconnecting maf made it go to 255, maf voltage seemed like best bet. Same as KSW_dmg210 adx.&#013;&#010;&#013;&#010;according to claude the ram address is 0xC55D</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Mass Air Flow Voltage (V)</units>
+    <packetoffset>0x0B</packetoffset>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>1</datatype>
+    <unittype>32</unittype>
+    <MATH equation="X*5/255">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="MAFREADING" idhash="0x3C1AED99" title="MAF Air Mass flow rate">
+    <desc>Moved with maf voltage, guessed it was measured flow rate so set equation so output would match ID_MAF_TAB, followed closely enough that Im confident it is maf.&#013;&#010;&#013;&#010;according to claude the ram address is 0xF8EC-0xF8ED</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>MAF Air Mass flow rate (kg/h)</units>
+    <packetoffset>0x0C</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="600.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>26</datatype>
+    <unittype>13</unittype>
+    <MATH equation="0.25 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ENGINELOAD" idhash="0x5A489056" title="Engine load, MAF scale*">
+    <desc>Seemed to closely follow maf flow rate (0X0C-0X0D) but also varied with rpm, figured out it was maf/rpm, not entireley sure about equation its mostly a guess.&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: written at 0x79072 from the air-mass value F8EE divided by rpm (F968). It is the load value on the ECU&apos;s &apos;MAF&apos; scale: the OBD calculated-load routine (0x685E2) normalises it by C_MAF_MAX (raw 101 = 550 kg/h, i.e. 5.447 kg/h per high-byte count, or about 0.0212 per LSB of this 16-bit word, the same factor the XDF uses for 16-bit MAF axes). So full load is about 25856 (101*256).&#013;&#010;Correction: the unit is the XDF &apos;MAF&apos; scale (kg/h equivalent), not mg/stroke. The equation is a guess because the exact physical scaling of this word is not proven&quot;&#013;&#010; ram address 0xF8F4-0xF8F5&#013;&#010;Confidence: medium-high for what it is, medium for the scale.</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Engine load, MAF scale? (0 if MAF unplugged) (raw)</units>
+    <packetoffset>0x0E</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="32768.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>1</outputtype>
+    <datatype>2</datatype>
+    <unittype>90</unittype>
+    <MATH equation="0.021194781*X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_10" idhash="0xEF45C9A6" title="Filtered engine load*">
+    <desc>closely matched Engine load, but valuies were slightly different, seemed to be a smoothed value but kept working when maf was unplugged.&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: written at 0x6458E. It is a first-order low-pass (routine A5AC) of 0x0E-0x0F (F8F4) with a time constant taken from IP_MAF_CRLC_PU__N / IP_MAF_CRLC_PL__N (rpm dependent). When the MAF diagnosis fails it is replaced by the substitute byte C55A shifted left 8 bits, which is why it keeps working with the MAF unplugged and then only takes multiples of 256.&#013;&#010;Same scale as 0x0E-0x0F&quot;.&#013;&#010;ram address 0xF8EA-0xF8EB&#013;&#010;Confidence: high.</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Filtered engine load (smoothed 0x0E-0x0F) (raw)</units>
+    <packetoffset>0x10</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="32768.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="0.021194781*X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_12" idhash="0xEF45DD46" title="maf altitude correction *">
+    <desc>Seemed consistent from the end of one log to the start of the next, resetting adaptive values caused it to start at 128 for the next log, settled to around 110-112, only moved in steps of 1, couldnt figure out exact meaning&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: high byte of the filtered 8.8 value F8F8 (low-pass with C_MAF_FAC_ALTI_CRLC, limited by C_MAF_FAC_ALTI_MMV_MIN/MAX, routine at 0x64768). It is the MAF altitude (air-density) correction factor MAF_FAC_ALTI_MMV, used as the axis of ldp_maf_fac_alti_mmv_ip_isapwm (axis 90..128) and the IP_*_ALTI_* tables.&#013;&#010;Equation: 128 = 1.00 (the XDF uses 0.0078125*X for every 128 = 1.0 factor), so X/128. Logs show 104..128 = 0.81..1.00.&quot;&#013;&#010;ram address 0xC558&#013;&#010;Confidence: high for the identity, medium for the scaling.</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>maf altitude correction *</units>
+    <packetoffset>0x12</packetoffset>
+    <range low="0.500000" high="1.500000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X / 128">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="VEHICLESPEED" idhash="0xDD1D236C" title="Vehicle Speed">
+    <desc>Same as KSW_dmg210 adx, correlated almost perfectly with vehicle speed&#013;&#010;&#013;&#010;according to claude the ram address is &#009;&#013;&#010;0xC5E8</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Vehicle Speed (km/h)</units>
+    <packetoffset>0x13</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>5</datatype>
+    <unittype>6</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RPM" idhash="0xCD0CD1DB" title="Engine Speed">
+    <desc>Same as KSW_dmg210 adx, matched rpm.&#013;&#010;&#013;&#010;according to claude the ram address is 0xF968-0xF969</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Engine Speed (rpm)</units>
+    <packetoffset>0x14</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="8160.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>6</datatype>
+    <unittype>4</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="TARGETIDLE" idhash="0x6E6545D8" title="Target Idle Speed">
+    <desc>matched IP_N_SP_IS__TCO and IP_ACIN_N_SP_IS__TCO when compared to coolant temp&#013;&#010;&#013;&#010;according to claude the ram address is 0xCE12-0xCE13&#013;&#010;</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Target Idle Speed (rpm)</units>
+    <packetoffset>0x16</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="8160.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>37</datatype>
+    <unittype>4</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_18" idhash="0xEF45C386" title="0X18 Static 0 ?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;According to claude its &quot;Status/validity byte loaded with those same adaptation values (copied to C3B1, and cleared to 0 together with the CE24/CE1C words when the key doesn&#226;&#128;&#153;t match).&quot; those adapatation values its referring to are 0X52/0X53 and 0X54/0X55 which were also static 0 values in my testing&#013;&#010;its 0 because &quot;Adaptation not valid&quot;&#013;&#010;ram address 0xC3B0&#013;&#010;It gave a medium-low confidence for this value</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X18 Static 0 ?</units>
+    <packetoffset>0x18</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>2</datatype>
+    <unittype>2</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_19?" idhash="0xE8BA85BD" title="0X19 (pair with 0x1A) Cam sensor edge position*">
+    <desc>Couldnt figure out exact meaning, seemed to be effected by tests with cam position sensor though.&#013;&#010;paired with 0x1A. Normally 0x19=39 and 0x1A=99, 0/0 when cam sensor was disconnected before key on, frozen if cam sensor lost with engine off, once swapped from 39/99 to 99/39  after reconnecting cam sensor after start, flickered 39/40 with injector 2 disconnected.&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: Both 0x19 and 0x1A are copies of the same capture register (FC0F), stored in C28A when BFD2C.3 = 0 and in C28B when BFD2C.3 = 1, i.e. one value per cam-signal edge. Values are crank positions in 6 degree steps over a 120 step (720 deg) cycle. The cam diagnosis (0x5A5xx) checks them against 38 and 98 with a tolerance of C_CAM_DYW_DIAG (8), which matches the normal 39 / 99.&#013;&#010;Which edge is which: not proven.&quot;&#013;&#010;ram address 0xC28A&#013;&#010;Confidence: high for the meaning.&#013;&#010;&#013;&#010;I cant safely which edge is which so its staying u</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Cam sensor edge position</units>
+    <packetoffset>0x19</packetoffset>
+    <range low="0.000000" high="120.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>2</datatype>
+    <unittype>2</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_1A" idhash="0xEF45D7C6" title="0X1A (pair with 0x19) Cam sensor edge position*">
+    <desc>see 0X19 description for meaning&#013;&#010;&#013;&#010;See 0x19. RAM 0xC28B (the BFD2C.3 = 1 capture).</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Cam sensor edge position</units>
+    <packetoffset>0x1A</packetoffset>
+    <range low="0.000000" high="120.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>2</datatype>
+    <unittype>2</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_1B" idhash="0xEF45CDA6" title="0X1B TCU1 transmission CAN message Flag?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;According to claude its &quot;Flag byte: bit 0 = (E045 &amp; 7) &#226;&#137;&#160; 0, bit 1 = bit 3 of E045. E045 sits in the code that handles the TCU1 transmission CAN message (C_ABC_*_TIMEOUT_TCU1_DIAG).&quot;&#013;&#010;ram address 0xC246&#013;&#010;it gave a medium confidence rating&#013;&#010;&#013;&#010;I have a 6 spd so I cant test this&#013;&#010;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X1B TCU1 transmission CAN message Flag?</units>
+    <packetoffset>0x1B</packetoffset>
+    <range low="0.000000" high="3.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>2</datatype>
+    <unittype>2</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ACFLAG" idhash="0x5E19DB69" title="AC flag*">
+    <desc>Was 0 with ac off, 1 with ac on, was only 0/1 in logs. If there are any other flags in this byte im unaware of them&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: built at 0x74BD6 from four bits: value 1 = BFD72.4 (the A/C flag), 2 = BFD72.5, 4 = BFD78.9, 8 = BFD72.1. Only the value-1 bit was ever seen. Equation X is correct (1 = A/C on); if one of the other bits is ever set the reading will be above 1, so treat AC = (X mod 2).&quot;&#013;&#010;ram address 0xC247&#013;&#010;Confidence: high.</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>AC flag*</units>
+    <packetoffset>0x1C</packetoffset>
+    <range low="-0.100000" high="1.100000" />
+    <alarms low="0.000000" high="2.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="O2VOLTSB1UP" idhash="0xEEBC5D65" title="Upstream O2 voltage bank 1">
+    <desc>flickered between high and low values, whether it was high or low correlated with if stft bank 1 was increaseing/decreasing&#013;&#010;&#013;&#010;according to Claude the ram address is 0xE242</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Upstream O2 voltage bank 1 (V)</units>
+    <packetoffset>0x1D</packetoffset>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>58</datatype>
+    <unittype>32</unittype>
+    <MATH equation="0.0195887 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="O2VOLTSB2UP" idhash="0xEED6DD65" title="Upstream O2 voltage bank 2">
+    <desc>behaved the same way as Upstream O2 voltage bank 1, but for bank 2 stft.&#013;&#010;&#013;&#010;according to Claude the ram address is 0xE336</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Upstream O2 voltage bank 2 (V)</units>
+    <packetoffset>0x1E</packetoffset>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>58</datatype>
+    <unittype>32</unittype>
+    <MATH equation="0.0195887 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="O2VOLTSB1DOWN" idhash="0xFB3D8B5A" title="Downstream O2 voltage bank 1">
+    <desc>My downstream O2 sensors were too short to fit in my headers, They read high (~250) when loose in engine bay, went to 0 when I disabled C_CONF_CAT_EFF and disconnected the sensors.&#013;&#010;&#013;&#010;according to Claude the ram address is 0xE24E</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Downstream O2 voltage bank 1 (V)</units>
+    <packetoffset>0x1F</packetoffset>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>58</datatype>
+    <unittype>32</unittype>
+    <MATH equation="0.0195887 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="O2VOLTSB2DOWN" idhash="0x513D8B5B" title="Downstream O2 voltage bank 2">
+    <desc>same behaviour as Downstream O2 voltage bank 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xE342</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Downstream O2 voltage bank 2 (V)</units>
+    <packetoffset>0x20</packetoffset>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>58</datatype>
+    <unittype>32</unittype>
+    <MATH equation="0.0195887 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="WIDEBANDO2AFR" idhash="0x0E14A84F" title="Wideband O2 AFR">
+    <desc>Uses same scale as sparatan 2/ default for spartan 3&#013;&#010;uses 0v=10afr, 5v=20afr</desc>
+    <units>Wideband O2 AFR (AFR)</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="8.000000" high="22.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>28</datatype>
+    <unittype>21</unittype>
+    <MATH equation="(X+5)*2">
+      <VAR varID="X" type="link" linkIDHash="0xFB3D8B5A" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IGACYL1" idhash="0xF488E71C" title="Ignition Angle Cyl 1">
+    <desc>all 6 raw values from 0x21-0x26 seemed to closely match, compared to the KSW_dmg210 adx 2 of these lined up with its per cylinder ignition and those 2 reported values  seemed to follow what I would expect from ignition angles.&#013;&#010;cylinder numbering was guessed&#013;&#010;&#013;&#010;according to claude the ram address is 0xFC1F</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 1 (deg)</units>
+    <packetoffset>0x21</packetoffset>
+    <range low="-23.625000" high="72.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>38</datatype>
+    <unittype>23</unittype>
+    <MATH equation="-0.375*X+72.0">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IGACYL2" idhash="0xF488FDBC" title="Ignition Angle Cyl 2">
+    <desc>see description for Ignition Angle Cyl 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xFC20</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 2 (deg)</units>
+    <packetoffset>0x22</packetoffset>
+    <range low="-23.625000" high="72.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>38</datatype>
+    <unittype>23</unittype>
+    <MATH equation="-0.375*X+72.0">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IGACYL3" idhash="0xF488E2BC" title="Ignition Angle Cyl 3">
+    <desc>see description for Ignition Angle Cyl 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xFC21</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 3 (deg)</units>
+    <packetoffset>0x23</packetoffset>
+    <range low="-23.625000" high="72.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>38</datatype>
+    <unittype>23</unittype>
+    <MATH equation="-0.375*X+72.0">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IGACYL4" idhash="0xF488E0BC" title="Ignition Angle Cyl 4">
+    <desc>see description for Ignition Angle Cyl 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xFC22</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 4 (deg)</units>
+    <packetoffset>0x24</packetoffset>
+    <range low="-23.625000" high="72.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>38</datatype>
+    <unittype>23</unittype>
+    <MATH equation="-0.375*X+72.0">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IGACYL5" idhash="0xF488F7DC" title="Ignition Angle Cyl 5">
+    <desc>see description for Ignition Angle Cyl 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xFC23</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 5 (deg)</units>
+    <packetoffset>0x25</packetoffset>
+    <range low="-23.625000" high="72.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>38</datatype>
+    <unittype>23</unittype>
+    <MATH equation="-0.375*X+72.0">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IGACYL6" idhash="0xF488F47C" title="Ignition Angle Cyl 6">
+    <desc>see description for Ignition Angle Cyl 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xFC24</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition Angle Cyl 6 (deg)</units>
+    <packetoffset>0x26</packetoffset>
+    <range low="-23.625000" high="72.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>38</datatype>
+    <unittype>23</unittype>
+    <MATH equation="-0.375*X+72.0">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IGAB1AVG" idhash="0xC35E727E" title="Ignition Angle Bank 1 avg">
+    <units>Ignition Angle Bank 1 (deg)</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="-23.625000" high="72.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>38</datatype>
+    <unittype>23</unittype>
+    <MATH equation="(X+Y+Z)/3">
+      <VAR varID="X" type="link" linkIDHash="0xF488E71C" />
+      <VAR varID="Y" type="link" linkIDHash="0xF488E2BC" />
+      <VAR varID="Z" type="link" linkIDHash="0xF488F7DC" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IGAB2AVG" idhash="0xCE0E727E" title="Ignition Angle Bank 2 avg">
+    <units>Ignition Angle Bank 2 (deg)</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="-23.625000" high="72.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="(x+y+z)/3">
+      <VAR varID="x" type="link" linkIDHash="0xF488FDBC" />
+      <VAR varID="y" type="link" linkIDHash="0xF488E0BC" />
+      <VAR varID="z" type="link" linkIDHash="0xF488F47C" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IGNITIONANGLEA" idhash="0xFAAA9AA2" title="Ignition Angle Average">
+    <units>Ignition Angle Average (deg)</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="-23.625000" high="72.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>3</outputtype>
+    <datatype>38</datatype>
+    <unittype>23</unittype>
+    <MATH equation="(x+y)/2">
+      <VAR varID="x" type="link" linkIDHash="0xC35E727E" />
+      <VAR varID="y" type="link" linkIDHash="0xCE0E727E" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INJECTIONTIME1" idhash="0xC4FA143F" title="Injection Time Cylinder 1 ">
+    <desc>the raw values for 0X27-0X36 appeared to be 8 closely matching words. Guessed that they might be injection time since ignition was settled and I couldnt think of any other values, assumed last 2 were per bank averages.&#013;&#010;Numbers seemed to make sense after applying this equation but unconfirmed. &#013;&#010;&#013;&#010;according to claude the ram address is 0xE1BC-0xE1BD</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Injection Time Cylinder 1 (ms)</units>
+    <packetoffset>0x27</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="30.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>52</datatype>
+    <unittype>85</unittype>
+    <MATH equation="0.004 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INJECTIONTIME2" idhash="0xC4FA0E9F" title="Injection Time Cylinder 2 ">
+    <desc>see description for injection time cylinder 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xE1BE-0xE1BF</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Injection Time Cylinder 2 (ms)</units>
+    <packetoffset>0x29</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="30.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>52</datatype>
+    <unittype>85</unittype>
+    <MATH equation="0.004 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INJECTIONTIME3" idhash="0xC4FA119F" title="Injection Time Cylinder 3 ">
+    <desc>see description for injection time cylinder 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xE1C0-0xE1C1</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Injection Time Cylinder 3 (ms)</units>
+    <packetoffset>0x2B</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="30.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>52</datatype>
+    <unittype>85</unittype>
+    <MATH equation="0.004 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INJECTIONTIME4" idhash="0xC4FA139F" title="Injection Time Cylinder 4 ">
+    <desc>see description for injection time cylinder 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xE1C2-0xE1C3</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Injection Time Cylinder 4 (ms)</units>
+    <packetoffset>0x2D</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="30.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>52</datatype>
+    <unittype>85</unittype>
+    <MATH equation="0.004 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INJECTIONTIME5" idhash="0xC4FA04FF" title="Injection Time Cylinder 5 ">
+    <desc>see description for injection time cylinder 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xE1C4-0xE1C5</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Injection Time Cylinder 5 (ms)</units>
+    <packetoffset>0x2F</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="30.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>52</datatype>
+    <unittype>85</unittype>
+    <MATH equation="0.004 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INJECTIONTIME6" idhash="0xC4FA075F" title="Injection Time Cylinder 6 ">
+    <desc>see description for injection time cylinder 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xE1C6-0xE1C7</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Injection Time Cylinder 6 (ms)</units>
+    <packetoffset>0x31</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="30.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>52</datatype>
+    <unittype>85</unittype>
+    <MATH equation="0.004 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INJTIIMEB1" idhash="0x22A604AF" title="Injection Time Bank 1 avg ">
+    <desc>see description for injection time cylinder 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xFA96-0xFA97</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Injection Time Bank 1 avg (ms)</units>
+    <packetoffset>0x33</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="30.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>52</datatype>
+    <unittype>85</unittype>
+    <MATH equation="0.004 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INJTIMEB2" idhash="0x7AC42CAE" title="Injection Time Bank 2 avg ">
+    <desc>see description for injection time cylinder 1&#013;&#010;&#013;&#010;according to claude the ram address is 0xFA98-0xFA99</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Injection Time Bank 2 avg (ms)</units>
+    <packetoffset>0x35</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="30.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>52</datatype>
+    <unittype>85</unittype>
+    <MATH equation="0.004 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INJECTIONTIMEA" idhash="0xC4FA041F" title="Injection Time average">
+    <desc>average injection time of all cylinders</desc>
+    <units>Injection Time average (ms)</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="0.000000" high="30.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="(x+y)/2">
+      <VAR varID="x" type="link" linkIDHash="0x22A604AF" />
+      <VAR varID="y" type="link" linkIDHash="0x7AC42CAE" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_37" idhash="0xEF457AC6" title="Start of injection angle *">
+    <desc>Rpm dependent: 88 crank, ~50 idle, ~35 at 1400 rpm, 19-73 part load.&#013;&#010;0 when engine runs without cam position, starts normal 2-3 s then 0, recovers at next start or on cam sensor reconnection.&#013;&#010;couldnt figure it out from logs alone&#013;&#010;&#013;&#010;according to calude &quot;Verified in the firmware: SOI (start of injection) raw value, built at 0x6AA40-0x6ABD8 from IP_SOI__N_32__TI_MV (running) or IP_SOI_ST__N_32__TI_MV (start; first value 88 = your cranking value) plus two signed corrections, then clamped to 0..100. With the cam-fault flag set it uses C_SOI_CAM_DIAG (= 0), which is the &apos;0 without cam sync&apos; behaviour. Both tables use -6*X+180 degrees, so the equation is confirmed and the range is -420..180.&quot;&#013;&#010; ram address 0xFC35&#013;&#010;Confidence: high.</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Start of injection angle (deg)</units>
+    <packetoffset>0x37</packetoffset>
+    <range low="-420.000000" high="180.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>1</datatype>
+    <unittype>23</unittype>
+    <MATH equation="180 - 6 * X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="POWERCUT" idhash="0x0EA3066D" title="fuel/power cut level ">
+    <desc>When hitting rev limiter or when torque intervention is requested this increases up to a value of 13 (max seen from tcs was 9), Im assuming its fuel/power cut level (13 = full cut), since there are 14 values (0-13) im assuming it correlates to ID_TQR_REL_SCC__PAT_INH_IV&#013;&#010;&#013;&#010;according to calude it is &quot;inj inhibit pattern&quot;&#013;&#010;ram address 0xC7B4&#013;&#010;&#013;&#010;didnt give confidence level but it seems to match observed behaviour</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>fuel/power cut level</units>
+    <packetoffset>0x38</packetoffset>
+    <range low="0.000000" high="15.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>1</datatype>
+    <unittype>2</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="CLOSEDLOOPFLAG" idhash="0xCA1D63B9" title="Closed-Loop / Lambda Enable Flags">
+    <desc>0 when cold or injectors unplugged (with dtc). 3 once engine is warmed up. stft didnt move when this is 0.  presumably one bit per bank,&#013;&#010;&#013;&#010;Confirmed by claude:&#013;&#010;according to claude bit 1 is for bank 1 lambda and bit 2 is bank 2, IP_TI_WUP_IS_LSCL_AT LSCL=lambda closed loop&#013;&#010;ram address is 0xC248&#013;&#010;confidence &quot;Medium-high&quot;</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Closed-Loop / Lambda Enable Flags</units>
+    <packetoffset>0x39</packetoffset>
+    <range low="0.000000" high="3.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>1</datatype>
+    <unittype>2</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="STFTB1" idhash="0xF60C0FDD" title="Short Term Fuel Trim Bank 1">
+    <desc>behaved as Id expect stft to, fact that it closely matches 0X3B reinforces this since there should be one per bank. Same byte as KSW_dmg210 adx but different equation.&#013;&#010;&#013;&#010;according to claude the ram address is 0xE1FF</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Short Term Fuel Trim Bank 1 (%)</units>
+    <packetoffset>0x3A</packetoffset>
+    <range low="-50.000000" high="50.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>50</datatype>
+    <unittype>67</unittype>
+    <MATH equation="(x-128)/2.56">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="STFTB2" idhash="0xF60C157D" title="Short Term Fuel Trim Bank 2">
+    <desc>see short term fuel trim bank 1 for description&#013;&#010;&#013;&#010;according to claude the ram address is &#009;&#013;&#010;0xE2F3</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Short Term Fuel Trim Bank 2 (%)</units>
+    <packetoffset>0x3B</packetoffset>
+    <range low="-50.000000" high="50.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>50</datatype>
+    <unittype>67</unittype>
+    <MATH equation="(x-128)/2.56">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="SMOOTHEDSTFTB1" idhash="0xF1F5AF8A" title="Smoothed Short Term Fuel Trim Bank 1 ">
+    <desc>seemed to be in a similar range to stft, but slower updating, just like stft this and 0x3d were similar, average/smoothed stft seemed like best description&#013;&#010;&#013;&#010;according to claude the ram address is &#009;&#013;&#010;0xE217</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Smoothed Short Term Fuel Trim Bank 1 (%)</units>
+    <packetoffset>0x3C</packetoffset>
+    <range low="-50.000000" high="50.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>50</datatype>
+    <unittype>67</unittype>
+    <MATH equation="(x-128)/2.56">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="SMOOTHEDSTFTB2" idhash="0xF1F5B52A" title="Smoothed Short Term Fuel Trim Bank 2">
+    <desc>see Smoothed Short Term Fuel Trim Bank 1 for description&#013;&#010;&#013;&#010;according to claude the ram address is 0xE30B</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Smoothed Short Term Fuel Trim Bank 2 (%)</units>
+    <packetoffset>0x3D</packetoffset>
+    <range low="-50.000000" high="50.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>50</datatype>
+    <unittype>67</unittype>
+    <MATH equation="(x-128)/2.56">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LTFTIDLEB1" idhash="0x540689AF" title="Long Term Fuel Trim Idle Load bank 1 ">
+    <desc>based on logs it was a slow learned adaptive value, ltft idle load was best match esp due to being ebtween stft and ltft part load. Same byte as KSW_dmg210 adx. but that equation didnt seem to make sense.&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: additive injection-time adaptation. Value = (W - 32768) * 0.004 ms, where W = 0x3E + 256*0x3F (0x8000 = 0). Limited to +-125 counts (+-0.5 ms) by C_TI_AD_ADD_MIN/MAX (little-endian 0x7F83 / 0x807D; the XDF shows them byte-swapped). Reset to 0x8000 if out of limits. Your 0x3F range (127-128) fits these limits. The ms unit is inferred from C_TI_MIN = 250 = 1 ms; where it is added to the injection time was not traced.&quot;&#013;&#010;ram address 0xE208-0xE209&#013;&#010;Confidence: high for structure and limits, medium for the ms scale.</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Long Term Fuel Trim Idle Load bank 1 (ms)</units>
+    <packetoffset>0x3E</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-0.500000" high="0.500000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>49</datatype>
+    <unittype>85</unittype>
+    <MATH equation="(x - 32768)*0.004">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LTFTIDLEB2" idhash="0x5406930F" title="Long Term Fuel Trim Idle Load bank 2 ">
+    <desc>see Long Term Fuel Trim Part Load Bank 1 for description&#013;&#010;&#013;&#010;according to claude the ram address is 0xE2FC-0xE2FD</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Long Term Fuel Trim Idle Load bank 2 (ms)</units>
+    <packetoffset>0x40</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-0.500000" high="0.500000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>49</datatype>
+    <unittype>85</unittype>
+    <MATH equation="(x - 32768)*0.004">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LTFTPARTLOADB1" idhash="0x30FDD0DC" title="Long Term Fuel Trim Part Load Bank 1">
+    <desc>based on logs it was a slow learned adaptive value, ltftwas best match esp due to learned value before resetting adaptive values approximatley equalling Average stft from after resetting. Same byte as KSW_dmg210 adx but different equation.&#013;&#010;&#013;&#010;according to claude the ram address is 0xE208-0xE209</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Long Term Fuel Trim Part Load Bank 1 (%)</units>
+    <packetoffset>0x42</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-50.000000" high="50.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>49</datatype>
+    <unittype>67</unittype>
+    <MATH equation="(x - 32768) / 327.68">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LTFTPARTLOADB2" idhash="0x30FDCA7C" title="Long Term Fuel Trim Part Load Bank 2">
+    <desc>see Long Term Fuel Trim Part Load Bank 1 for description&#013;&#010;&#013;&#010;according to claude the ram address is 0xE300-0xE301&#013;&#010;</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Long Term Fuel Trim Part Load Bank 2 (%)</units>
+    <packetoffset>0x44</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-50.000000" high="50.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>49</datatype>
+    <unittype>67</unittype>
+    <MATH equation="(x - 32768) / 327.68">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="BANK1TOTALFUEL" idhash="0x44ACE3A1" title="Bank 1 total fuel trim*">
+    <desc>equation for total fuel trim (stft+ltft accounting for idle/part load)</desc>
+    <units>Bank 1 total fuel trim* (%)</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="-100.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>46</datatype>
+    <unittype>67</unittype>
+    <MATH equation="STFT + LTFTPL ">
+      <VAR varID="STFT" type="link" linkIDHash="0xF1F5AF8A" />
+      <VAR varID="LTFTPL" type="link" linkIDHash="0x30FDD0DC" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="BANK2TOTALFUEL" idhash="0x47F8E3A1" title="Bank 2 total fuel trim*">
+    <desc>equation for total fuel trim (stft+ltft accounting for idle/part load)</desc>
+    <units>Bank 2 total fuel trim* (%)</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="-100.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>46</datatype>
+    <unittype>67</unittype>
+    <MATH equation="STFT + LTFTPL">
+      <VAR varID="STFT" type="link" linkIDHash="0xF1F5B52A" />
+      <VAR varID="LTFTPL" type="link" linkIDHash="0x30FDCA7C" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="AVERAGETOTALFU" idhash="0x4D4D4AC2" title="Average Total Fuel Trim*">
+    <desc>average of total fuel trim from banks 1 and 2</desc>
+    <units>Average Total Fuel Trim* (%)</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="-100.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>3</outputtype>
+    <datatype>46</datatype>
+    <unittype>67</unittype>
+    <MATH equation="(x+y)/2">
+      <VAR varID="x" type="link" linkIDHash="0x44ACE3A1" />
+      <VAR varID="y" type="link" linkIDHash="0x47F8E3A1" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="TOTALFUELTRIM" idhash="0x4083103A" title="Average fuel trim multiplier">
+    <desc>Average total fuel trim (excluding idle fuel trim) /100 +1</desc>
+    <units>Average fuel trim multiplier</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="0.500000" high="1.500000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>46</datatype>
+    <unittype>67</unittype>
+    <MATH equation="(s1+s2+(l1+l2)*(1-I))/200+1">
+      <VAR varID="s1" type="link" linkIDHash="0xF60C0FDD" />
+      <VAR varID="s2" type="link" linkIDHash="0xF60C157D" />
+      <VAR varID="l1" type="link" linkIDHash="0x30FDD0DC" />
+      <VAR varID="l2" type="link" linkIDHash="0x30FDCA7C" />
+      <VAR varID="I" type="link" linkIDHash="0x68EF6C6" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="O2DUTYB1UP" idhash="0xBD6F75DF" title="Bank 1 Upstream O2 Heater Duty ">
+    <desc>closely matched with 0x47. 0 at rest ~63 after engine start, climbs to ~250, settles after a while, matches what I would expect from o2 sensor heaters, assumed it was upstream bank1/bank2 because was active even when downstream sensors disabled.&#013;&#010;&#013;&#010;according to claude the ram address is 0xE2CE</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Bank 1 Upstream O2 Heater Duty (%)</units>
+    <packetoffset>0x46</packetoffset>
+    <range low="0.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>1</datatype>
+    <unittype>67</unittype>
+    <MATH equation="X / 2.56">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="O2DUTYB2UP" idhash="0xBD05F5DF" title="Bank 2 Upstream O2 Heater Duty">
+    <desc>see bank 1 upstream o2 ehater duty for description&#013;&#010;&#013;&#010;according to claude the ram address is 0xE3C2</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Bank 2 Upstream O2 Heater Duty (%)</units>
+    <packetoffset>0x47</packetoffset>
+    <range low="0.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>1</datatype>
+    <unittype>67</unittype>
+    <MATH equation="x / 2.56">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_48" idhash="0xEF453786" title="Upstream O2 heater PWM factor bank 1?">
+    <desc>closely matched with 0x49. initally thought it was downstream o2 sensor duty before i realized thats what 0x4a and 0x4b are, but no longer sure what they are.&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: this is bank 1 (E2CC sits with E2CE = 0x46, the bank 1 upstream heater), and 0x49 is bank 2. Initialised to C_LSHPWM_FAC_INI (163) and limited by C_LSHPWM_FAC_MIN (64) and C_LSHPWM_FAC_MAX (192); logs show 128-192, the top being exactly the max limit. The PWM output is X*256*25000&gt;&gt;16 on a 25000 count period, so heater duty (0x46/0x4A) is X/2.56 %. What moves this factor after init was not found in code (it is probably updated through a pointer).&quot;&#013;&#010; ram address 0xE2CC&#013;&#010;Confidence: medium.</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Upstream O2 heater PWM factor bank 1?</units>
+    <packetoffset>0x48</packetoffset>
+    <range low="64.000000" high="192.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_49" idhash="0xEF4520C6" title="Upstream O2 heater PWM factor bank 2?">
+    <desc>see 0x48 for desctiption&#013;&#010;&#013;&#010;according to claude the ram address is 0xE3C0 </desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Upstream O2 heater PWM factor bank 2?</units>
+    <packetoffset>0x49</packetoffset>
+    <range low="64.000000" high="192.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="O2DUTYB1DOWN" idhash="0xB79F6215" title="Downstream O2 sensor heater duty Bank 1 ">
+    <desc>closely matched with 0x4B. 0 if engine stopped or C_CONF_CAT_EFF disabled. from logs before disabling C_CONF_CAT_EFF it was ~63 at start then jumps to ~250 after a while, settles at ~188 max, my guess is downstream o2 sensor duty because with C_CONF_CAT_EFF enabled the behavour was similar to bank 1 upstream duty.&#013;&#010;&#013;&#010;according to claude the ram address is 0xE2DC&#013;&#010;</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Downstream O2 sensor heater duty Bank 1 (%)</units>
+    <packetoffset>0x4A</packetoffset>
+    <range low="0.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>1</datatype>
+    <unittype>67</unittype>
+    <MATH equation="X / 2.56">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="O2DUTYB2DOWN" idhash="0x1D9F6214" title="Downstream O2 sensor heater duty Bank 2 ">
+    <desc>nearly the same as 0x4A, likely the same value but for b1 isntead of b2&#013;&#010;&#013;&#010;see Downstream O2 sensor heater duty Bank 1 for discription&#013;&#010;&#013;&#010;according to claude the ram address is 0xE3D0</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Downstream O2 sensor heater duty Bank 2 (%)</units>
+    <packetoffset>0x4B</packetoffset>
+    <range low="0.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>1</datatype>
+    <unittype>67</unittype>
+    <MATH equation="X / 2.56">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_4C" idhash="0xEF453C46" title="ISAPWM ">
+    <desc>32768 engine off and when starting, ramps down at idle (about 9000 warm idle), rises with rpm with some variation with throttle. higher at higher idle targets. probably iacv duty, unknown equation&#013;&#010;&#013;&#010; according to claude &quot;Verified in the firmware: ISA (idle air actuator) PWM duty, ramped by C_ISAPWM_LGRD and diagnosed with C_ISAPWM_MMV_DIAG / C_MIN_PWM_ISA / C_MAX_PWM_ISA. All 16-bit ISAPWM tables in the XDF use 0.0015258789*X (= X/655.36 %, 65535 = 100 %), and the stored limits come out as round percentages (C_ISAPWM_MAX_I_IS = 9830 = 15 %), so this scale is confirmed.&quot;&#013;&#010;ram address 0xF8E8-0xF8E9&#013;&#010;Confidence: high.</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>ISAPWM * (%)</units>
+    <packetoffset>0x4C</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="100.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>36</datatype>
+    <unittype>67</unittype>
+    <MATH equation="X * 0.0015258789">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IDLEINTEGRATOR" idhash="0xE860ED53" title="Idle speed controller output (PID sum)*">
+    <desc>0 under load, larger at idle entry then decays down as rpm aproaches idle, larger when rpm and idle rpm target are further appart. Seemed like some kind of idle speed integrator, which is reinnforced by the behaviour of learned idle correction. makes senst to be idle speed related if next to isapwm. formula unknown&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: written at 0x61E98. It is the sum of the idle controller terms (CE26 integrator + CE22 + CE36, where CE36 is the P term from IP_ISAPWM_P_IS__N_DIF_COR) multiplied by the gain C3B2, using signed saturating adds, and is forced to 0 when the idle controller is inactive (BFD4C.7/.8). It is a signed 16-bit ISA PWM correction in the same 1/655.36 % units as 0x4C, so the equation is signed(X)*0.0015258789 %. The name &apos;integrator&apos; only describes one of its parts.&quot;&#013;&#010;ram address 0xCE28-0xCE29&#013;&#010;Confidence: medium.</desc>
+    <flags>0x00000003</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Idle speed controller output (PID sum)? (%)</units>
+    <packetoffset>0x4E</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-25.000000" high="25.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>1</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X * 0.0015258789">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IDLECORRECTION" idhash="0x2880178F" title="Learned idle correction *">
+    <desc>reset to 0 with adaptive values, on exiting idle it steps up or down, with larger steps corresponding to larger values in the idle speed intigrator, this is most likely a learned value for idle speed correction. formula unknown&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: a learned (adaptive) ISA PWM correction, low-pass filtered with C_AD_CRLC_IS (routine 0x61EEE), saved to and restored from stored memory (restored at 0x61072, cleared to 0 with the adaptation reset). Signed 16-bit in the same 1/655.36 % units as 0x4C, limited by C_ISAPWM_AD_MIN_IS = -6554 (-10.0 %) and C_ISAPWM_AD_MAX_IS = +9830 (+15.0 %) (little-endian words; the XDF shows them byte-swapped). The round percentages confirm the scale.&quot;&#013;&#010;ram address 0xCDD8-0xCDD9&#013;&#010;Confidence: high.</desc>
+    <flags>0x00000003</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Learned idle correction * (%)</units>
+    <packetoffset>0x50</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-10.000000" high="15.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>1</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X * 0.0015258789">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_52" idhash="0xEF47C546" title="0X52 Static 0?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;according to claude 0X52-0X53 and 0X54-0X55 are &quot;Words restored from the stored adaptation record at start, zeroed if the record key doesn&#226;&#128;&#153;t match. They feed F8B6/F8BA through C_ISAPWM_ACCIN_AD_FAC, so they are idle-air (ISA PWM) A/C-load adaptation values.&quot;&#013;&#010;and its zero because &quot;Not learned or not stored&quot;&#013;&#010;ram address 0xCE24&#013;&#010;its confidence level for this is medium</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X52 Static 0?</units>
+    <packetoffset>0x52</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_53" idhash="0xEF47DA46" title="0X53 Static 0?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;see 0X52 for description&#013;&#010;ram address 0xCE25&#013;&#010;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X53 Static 0?</units>
+    <packetoffset>0x53</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_54" idhash="0xEF47D846" title="0X54 Static 0?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;see 0X52 for description&#013;&#010;ram address 0xCE1C&#013;&#010;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X54 Static 0?</units>
+    <packetoffset>0x54</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_55" idhash="0xEF47CF26" title="0X55 Static 0?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;see 0X52 for description&#013;&#010;ram address 0xCE1D&#013;&#010;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X55 Static 0?</units>
+    <packetoffset>0x55</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_56" idhash="0xEF47CC86" title="0X56 static 0">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;according to claude &quot;These table slots point at the C166 ZEROS register, the CPU&#226;&#128;&#153;s constant-zero SFR. They are literally &#226;&#128;&#156;unused slot&#226;&#128;&#157; entries.&quot;&#013;&#010;ram address 0xFF1C&#013;&#010;its confidence level is &quot;certian&quot;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X56 static 0</units>
+    <packetoffset>0x56</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_57" idhash="0xEF47D6C6" title="0X57 Static 0">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;see 0X56 for description&#013;&#010;ram address 0xFF1D&#013;&#010;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X57 Static 0</units>
+    <packetoffset>0x57</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_58" idhash="0xEF47DB86" title="0X58 Static 0?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;according to claude its &quot;Quotient of a RAM word (E036) and rpm (F968), fed into ISA PWM lookups.&quot;&#013;&#010;its reads 0 because &quot;Start-transient path inactive&quot; &#013;&#010;ram address C3AC&#013;&#010;its confience level for this is low</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X58 Static 0?</units>
+    <packetoffset>0x58</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_59" idhash="0xEF47CCC6" title="Evap canister purge demand *">
+    <desc>was 0 when ehgine was cold or in open loop , ~13 at closed-loop idle, up to 26 under idle with load load, a 254 spike was seen on a throttle tap. unsure what it could be based on logs.&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: canister purge (CPS) demand, produced by the routine at 0x59504 and used as the input of IP_CPPWM_CPS__CPPWM (the purge valve duty curve, output eq 0.390625*X %). It is zeroed in the purge-reset routine (0x58EB6) and the purge only runs when lambda control is active (C_LAM_TRA_STATE_MIN), which matches your 0 when cold / open loop. The scaling of this byte itself is not proven (if it follows the curve output it would be X*0.390625 %).&quot;&#013;&#010;ram address 0xC27E&#013;&#010;Confidence: medium-high.</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Evap canister purge demand?</units>
+    <packetoffset>0x59</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>12</datatype>
+    <unittype>67</unittype>
+    <MATH equation="X*0.390625">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IDLETRIM" idhash="0x07D358E6" title="evap purge lambda correction?">
+    <desc>I had no idea, suspected idle trim but not enough data to verify.&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: (offset binary, 0x8000 = 0). It is set to 0x8000 together with the purge demand (0x59) in the purge-reset routine at 0x58EB6, is limited to +-0x5000 (+-62.5 %) by the code at 0x59712-0x59860 (the clamp uses C_LAM_MV_DIF_MAX_1_CP), and is scaled by a ratio (E076/E078) into the lambda correction E066 = 0x8000 + result. That makes it the canister purge fuel (vapour) correction, which can only remove fuel, matching your &apos;never above 0, down to -58 % at hot idle&apos;. E064 is probably the bank 2 counterpart.&#013;&#010;Corrected: it is not an idle trim.&quot;&#013;&#010;ram address 0xE062&#013;&#010;Confidence: medium-low (function inferred from where it is set, cleared and used).</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Purge lambda correction (%)</units>
+    <packetoffset>0x5A</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-62.500000" high="62.500000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="(X - 32768) / 327.68">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_5C" idhash="0xEF47D046" title="Radiator fan stage">
+    <desc>only 1/0 in logs which seems like a flag. typically switches for on for ~15-180s, about 100 s on/off in a longer log with pleanty of sitting in traffic where it correlates to coolant temperature changes. Fits behaviour of radiator fan.&#013;&#010;&#013;&#010; according to claude &quot;Verified in the firmware: radiator fan stage 0..3 (cooling fan actuation, the *_CFA constants: coolant thresholds C_TCO_*_CFA, speed limits C_VS_*_CFA, delay timers C_T_RTD_*_CFA). Stage 1 drives one pair of output bits (BFD78.10/.2), stage 2 another (BFD78.8/.0), stage 3 both. Only 0 and 1 were seen in your logs.&quot;&#013;&#010; ram address 0xC276&#013;&#010;Confidence: high.</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Radiator fan stage</units>
+    <packetoffset>0x5C</packetoffset>
+    <range low="0.000000" high="3.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>1</datatype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="TORQUEREQUEST" idhash="0x888569F3" title="tcs torque intervention.">
+    <desc> tcs torque intervention: 164 = none, drops to 23 on hard launches with wheel spin then slowly increases, also triggered in logs where (iirc) i lost traction while moving. stayed 164 for launches with tcs off.&#013;&#010;&#013;&#010;according to claude the ram address is 0xC596</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>tcs torque intervention. (%)</units>
+    <packetoffset>0x5D</packetoffset>
+    <range low="0.000000" high="100.000000" />
+    <alarms low="0.000000" high="165.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X/1.64">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_5E" idhash="0xEF47CDC6" title="0X5E Static 0?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;according to claude &quot;Timer from C_ACCIN_DLY_1, the A/C input delay filter.&quot;&#013;&#010;its 0 because &quot;A/C input path not producing a count&quot;&#013;&#010;ram address 0xC597&#013;&#010;its confidence level is &quot;Low-medium&quot;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X5E Static 0?</units>
+    <packetoffset>0x5E</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_5F" idhash="0xEF47D8C6" title="0X5F Static 0?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;according to claude &quot;VIM (variable intake manifold) output flags: bit 0 for the single-stage config, bits 1 and 2 for the two-stage config. They come from the ID_VIM_* maps and C_VS_MIN_VIM.&quot;&#013;&#010;its zero because &quot;C_CONF_VIM = 0, so VIM is disabled in this tune&quot;&#013;&#010;ram address 0xC249&#013;&#010;its confidence level is &quot;High&quot;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X5F Static 0?</units>
+    <packetoffset>0x5F</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="STATEBITFIELD" idhash="0xC854F757" title="engine load state bitfield">
+    <desc>1 off, 2 crank, 4 idle, 8 part load, 16 overrun, 32 WOT (TPS unplugged forces 40)&#013;&#010;Same byte as KSW_dmg210 adx but bits differ slightly&#013;&#010;</desc>
+    <flags>0x0000000C</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>engine load state bitfield</units>
+    <packetoffset>0x60</packetoffset>
+    <range low="0.000000" high="63.000000" />
+    <alarms low="0.000000" high="41.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>2</datatype>
+    <unittype>2</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IDLEFLAG" idhash="0x068EF6C6" title="Idle Flag">
+    <units>Idle Flag</units>
+    <packetoffset>0x60</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X" lookupidhash="0x5910A536">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="VBATCOMP" idhash="0x328649EE" title="Ignition coil dwell time (battery / rpm compensated)*">
+    <desc>varies with battery voltage, thought could be some kind of voltage based compensation/adjustment, &#013;&#010;compared to some maps and it somewhat matched the shape of the axis of IP_TI_ADD_DLY__VB and IP_CPPWM_CPS_VB_ADD__VB&#013;&#010;&#013;&#010;according to claude &quot;Verified in the firmware: Computed from IP_TD__VB__N (dwell time vs battery voltage and rpm, XDF equation 0.004*X ms) plus a signed correction (0x72240-0x72276 and 0x5F48C-0x5F4AC), and consumed by the ignition timing code at 0x7E97E (divided against the rpm period). TD = coil dwell, not an injector dead time (the injector dead-time table IP_TI_ADD_DLY__VB has no rpm axis). The shape match you saw with the VB axes is because both depend on battery voltage.&#013;&#010;Equation 0.004*X ms follows the table&apos;s unit.&quot;&#013;&#010;ram address 0xFA6A-0xFA6B&#013;&#010;Confidence: high for the identity, medium-high for the scale.</desc>
+    <flags>0x00000002</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>Ignition coil dwell time (battery / rpm compensated) (ms)</units>
+    <packetoffset>0x61</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="25.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X * 0.004">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_63" idhash="0xEF47AE46" title="0X63 Static 0?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;according to claude &quot;Word restored from the stored record (offset 0x4E0). E1BA = E1B4 + 0x80 is derived from it. It looks like another stored idle-air learn value.&quot;&#013;&#010;its 0 because &quot;Not learned or not stored&quot;&#013;&#010;ram address 0xE1B4&#013;&#010;its confidence level is &quot;Low&quot;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X63 Static 0?</units>
+    <packetoffset>0x63</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAW_64" idhash="0xEF47AC46" title="0X64 Static 0?">
+    <desc>Was 0 in all logs and never changed.&#013;&#010;&#013;&#010;according to claude &quot;Word restored from the stored record (offset 0x4E0). E1BA = E1B4 + 0x80 is derived from it. It looks like another stored idle-air learn value.&quot;&#013;&#010;its 0 because &quot;Not learned or not stored&quot;&#013;&#010;ram address 0xE1B5&#013;&#010;its confidence level is &quot;Low&quot;</desc>
+    <flags>0x00000004</flags>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X64 Static 0?</units>
+    <packetoffset>0x64</packetoffset>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="1.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <datatype>3</datatype>
+    <unittype>3</unittype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="0X65" idhash="0xAD149ED9" title="0X65 Checksum">
+    <desc>seemed to vary somewhat randomly with eahc frame, since it was the last value i suspected it was a checksum.&#013;&#010;seems to be the sum of 0x00-0x64 + 73 % 256</desc>
+    <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
+    <units>0X65 Checksum</units>
+    <packetoffset>0x65</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>1</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXCLISTENSILENCE id="500MSPAUSE" idhash="0xBA65BF61" title="500msPause">
+    <silencelen>0</silencelen>
+    <totaltimeout>500</totaltimeout>
+  </ADXCLISTENSILENCE>
+
+  <ADXCSENDCOMMAND id="STARTDIAG" idhash="0xB49FC302" title="StartDiag">
+    <desc>If running at 10,400 baud.&#013;&#010;You don&apos;t need StartDiagnoticSession.&#013;&#010;You&apos;re in the default diagnostic session by default.&#013;&#010;&#013;&#010;0x5 = 120,000 baud</desc>
+    <SNDCMDCHECKSUM type="1" />
+    <bytestring size="0x6">8311F1108101</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCLISTENPACKET id="STARTDIAG_REPL" idhash="0xEE268A67" title="StartDiag_Reply" flags="0x00000004">
+    <listentimeout>400</listentimeout>
+    <packetbodylength>0</packetbodylength>
+    <packetoffsetinbody>0</packetoffsetinbody>
+    <packetsize>0</packetsize>
+    <headerstring size="6">83F111508101</headerstring>
+  </ADXCLISTENPACKET>
+
+  <ADXCLISTENSILENCE id="25MSPAUSE" idhash="0x21A32039" title="25msPause">
+    <silencelen>0</silencelen>
+    <totaltimeout>25</totaltimeout>
+  </ADXCLISTENSILENCE>
+
+  <ADXMACRO id="MONITORMACRO" idhash="0xD177CF5B" title="Monitor Macro" basecmdflags="0x01" repeatcount="1">
+    <NODE commandID="DATAREQUEST" repeatcount="1" />
+    <NODE commandID="200MSPAUSE" repeatcount="1" />
+    <NODE commandID="DATAREPLY" repeatcount="1" />
+  </ADXMACRO>
+
+  <ADXCLISTENSILENCE id="200MSPAUSE" idhash="0xBB29BF61" title="200msPause">
+    <silencelen>0</silencelen>
+    <totaltimeout>200</totaltimeout>
+  </ADXCLISTENSILENCE>
+
+  <ADXCLISTENSILENCE id="250MSPAUSE" idhash="0xBB373F61" title="250msPause">
+    <silencelen>0</silencelen>
+    <totaltimeout>250</totaltimeout>
+  </ADXCLISTENSILENCE>
+
+  <ADXMACRO id="DISCONNECTMACR" idhash="0xA2839E4B" title="Disconnect Macro" basecmdflags="0x03" repeatcount="1">
+    <NODE commandID="STOPCOMMS" repeatcount="1" />
+    <NODE commandID="STOPCOMMSREPLY" repeatcount="1" />
+  </ADXMACRO>
+
+  <ADXCSENDCOMMAND id="STOPCOMMS" idhash="0x50C1012D" title="StopComms">
+    <desc>dmg210: baud was 125000&#013;&#010;Hex string was: 0x12 0x08 0x91 0x00 0x25 0x80 0x00 0x2E </desc>
+    <bytestring size="0x5">8111F18205</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCLISTENPACKET id="STOPCOMMSREPLY" idhash="0xF3572B63" title="StopComms_Reply" flags="0x00000004">
+    <desc>dmg210: baud was 125000&#013;&#010;Hex string was 0x12 0x04 0xA0 0xB6 </desc>
+    <listentimeout>500</listentimeout>
+    <packetbodylength>0</packetbodylength>
+    <packetoffsetinbody>0</packetoffsetinbody>
+    <packetsize>0</packetsize>
+    <headerstring size="4">81F111C2</headerstring>
+  </ADXCLISTENPACKET>
+
+  <ADXMACRO id="CONNECTMACRO" idhash="0x1167300D" title="Connect Macro" repeatcount="1">
+    <NODE commandID="STOPDIAGSESSIO" repeatcount="1" />
+    <NODE commandID="FASTINIT" repeatcount="1" />
+    <NODE commandID="STARTCOMMS" repeatcount="1" />
+    <NODE commandID="STARTCOMMS_REP" repeatcount="1" />
+    <NODE commandID="500MSPAUSE" repeatcount="1" />
+    <NODE commandID="STARTDIAG" repeatcount="1" />
+    <NODE commandID="500MSPAUSE" repeatcount="1" />
+    <NODE commandID="STARTDIAG_REPL" repeatcount="1" />
+    <NODE commandID="250MSPAUSE" repeatcount="1" />
+  </ADXMACRO>
+
+  <ADXMACRO id="FASTINIT" idhash="0x338906C2" title="FastInit" repeatcount="1">
+    <desc>Wake up Sequence&#013;&#010;-------------------------------&#013;&#010;1. Set baudrate to 360&#013;&#010; (9 bits at 360 baud = 25ms)&#013;&#010;2. Send 0x00 to pulse the K-Line.&#013;&#010;3. Then wait 25ms &#013;&#010;4. Change the baud to 10,400&#013;&#010;5. FastInit complete</desc>
+    <NODE commandID="FASTINIT_HIGH" repeatcount="1" />
+    <NODE commandID="25MSPAUSE" repeatcount="1" />
+    <NODE commandID="FASTINIT_LOW" repeatcount="1" />
+    <NODE commandID="25MSPAUSE" repeatcount="1" />
+  </ADXMACRO>
+
+  <ADXCSENDCOMMAND id="STOPDIAGSESSIO" idhash="0xADABF98B" title="StopDiagSession">
+    <SNDCMDCHECKSUM type="1" />
+    <bytestring size="0x4">8111F120</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCSENDCOMMAND id="FASTINIT_LOW" idhash="0x632740F0" title="FastInit_Low">
+    <desc>Setting baud rate to 360&#013;&#010;(9 bits at 360 baud = 25ms)</desc>
+    <baud>360</baud>
+    <bytestring size="0x1">00</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCSENDCOMMAND id="FASTINIT_HIGH" idhash="0x6F67340C" title="FastInit_High">
+    <baud>360</baud>
+    <bytestring size="0x1">01</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCSENDCOMMAND id="STARTCOMMS" idhash="0xC8402316" title="StartComms">
+    <desc>dmg210: Hex string was &#013;&#010;0x12 0x08 0x91 0x01 0xE8 0x48 0x00 0x2A </desc>
+    <SNDCMDCHECKSUM type="1" />
+    <bytestring size="0x4">8111F181</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCLISTENPACKET id="STARTCOMMS_REP" idhash="0x3E36F9C2" title="StartComms_Reply" flags="0x00000004">
+    <desc>dmg210: header was 0x12 0x04 0xA0 0xB6 </desc>
+    <listentimeout>500</listentimeout>
+    <packetbodylength>0</packetbodylength>
+    <packetoffsetinbody>0</packetoffsetinbody>
+    <packetsize>0</packetsize>
+    <headerstring size="6">83F111C1EF8F</headerstring>
+  </ADXCLISTENPACKET>
+
+  <ADXCSENDCOMMAND id="DATAREQUEST" idhash="0xA193572A" title="Data Request ">
+    <desc>dmg210: baud was 125000</desc>
+    <baud>10400</baud>
+    <SNDCMDCHECKSUM type="1" />
+    <bytestring size="0x5">8211F12101</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCLISTENPACKET id="DATAREPLY" idhash="0xDAA83ACD" title="Data Reply" flags="0x00000001">
+    <desc>dmg210: baud was 125000</desc>
+    <baud>10400</baud>
+    <listentimeout>400</listentimeout>
+    <packetbodylength>104</packetbodylength>
+    <packetoffsetinbody>2</packetoffsetinbody>
+    <packetsize>102</packetsize>
+    <headerstring size="3">80F111</headerstring>
+  </ADXCLISTENPACKET>
+</ADXFORMAT>

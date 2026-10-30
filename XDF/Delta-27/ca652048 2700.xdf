@@ -1,4 +1,4 @@
-<!-- Written 02/10/2026 09:39:47 -->
+<!-- Written 10/30/2026 03:31:38 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -167,7 +167,7 @@
   </XDFFLAG>
   <XDFFLAG uniqueid="0x1802">
     <title>C_CONF_CAT_EFF</title>
-    <description>Constants Variant Selection</description>
+    <description>Constants Variant Selection&#013;&#010;determines if cat diagnoses routines are enabled &#013;&#010;</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="18" />
     <EMBEDDEDDATA mmedaddress="0x810F" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -7922,7 +7922,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11D8" flags="0xC">
     <title>C_N_FCUT</title>
-    <description>Constants N / VS limitations</description>
+    <description>Constants N / VS limitations&#013;&#010;soft limit for rev limit intended to prevent cat from overheating? C_T_N_MAX_FCUT is a delay before this soft limit is enforced?&#013;&#010;used for &quot;2 step&quot;</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x820E" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8134,7 +8134,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11E5" flags="0xC">
     <title>C_N_MAX</title>
-    <description>Constants N / VS limitations</description>
+    <description>Constants N / VS limitations&#013;&#010;soft rev limit </description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x8217" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8150,7 +8150,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11E6" flags="0xC">
     <title>C_N_MAX_AJ</title>
-    <description>Constants Basic functions, PL, FL</description>
+    <description>Constants Basic functions, PL, FL&#013;&#010;anti jerk, max engine speed that ecu filters fast/&quot;jerky&quot; throttle inputs</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="42" />
     <EMBEDDEDDATA mmedaddress="0x8218" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8160,13 +8160,13 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11E7" flags="0xC">
     <title>C_N_MAX_BOL_ST</title>
-    <description>Constants ST, AST</description>
+    <description>Constants ST, AST&#013;&#010;threshold for changing from &quot;cranking/starting&quot; to &quot;running/idle&quot; mode</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="21" />
     <EMBEDDEDDATA mmedaddress="0x8219" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8176,13 +8176,13 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11E8" flags="0xC">
     <title>C_N_MAX_CAT</title>
-    <description>Constants catalyst efficiency diagnosis</description>
+    <description>Constants catalyst efficiency diagnosis&#013;&#010;rpm limiter for catalust protection, triggered if ecu thermal model thinks exhuast or cat temp is too high in order to protect cat.</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="38" />
     <EMBEDDEDDATA mmedaddress="0x821A" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8192,7 +8192,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -8208,7 +8208,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -8230,7 +8230,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11EB" flags="0xC">
     <title>C_N_MAX_ER</title>
-    <description>Constants Misfire detection</description>
+    <description>Constants Misfire detection&#013;&#010;max rpm where misfire detection still runs</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="32" />
     <EMBEDDEDDATA mmedaddress="0x821D" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8241,13 +8241,13 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11EC" flags="0xC">
     <title>C_N_MAX_FCUT</title>
-    <description>Constants N / VS limitations</description>
+    <description>Constants N / VS limitations&#013;&#010;hard limit for rev limit intended to prevent cat from overheating? C_T_N_MAX_FCUT is a delay before this limit is enforced?&#013;&#010;used for &quot;2 step&quot;</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0x821E" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8263,7 +8263,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11ED" flags="0xC">
     <title>C_N_MAX_HYS</title>
-    <description>Constants N / VS limitations</description>
+    <description>Constants N / VS limitations&#013;&#010;hysteresis rpm for soft rev limiters</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x8220" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8279,7 +8279,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11EE" flags="0xC">
     <title>C_N_MAX_HYS_MAX</title>
-    <description>Constants N / VS limitations</description>
+    <description>Constants N / VS limitations&#013;&#010;rpm hysterises for hard rev limiter&#013;&#010;</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8221" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8295,7 +8295,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11EF" flags="0xC">
     <title>C_N_MAX_IGA_TQR</title>
-    <description>Constants Traction Control Function</description>
+    <description>Constants Traction Control Function&#013;&#010;max rpm where traction control can request to reduce torque by pulling timing</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="48" />
     <EMBEDDEDDATA mmedaddress="0x8222" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8305,13 +8305,13 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11F0" flags="0xC">
     <title>C_N_MAX_INF</title>
-    <description>Constants Rewetting</description>
+    <description>Constants Rewetting&#013;&#010;Should be the the max rpm that the ecu can intercept fast falling rpms, probably does so by changing isapwm or iga.</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="66" />
     <EMBEDDEDDATA mmedaddress="0x8223" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8321,7 +8321,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -8375,7 +8375,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11F4" flags="0xC">
     <title>C_N_MAX_MAX</title>
-    <description>Constants N / VS limitations</description>
+    <description>Constants N / VS limitations&#013;&#010;hard rev limit</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x8227" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8439,7 +8439,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11F8" flags="0xC">
     <title>C_N_MAX_VLS_LIM</title>
-    <description>Constants Diagnosis</description>
+    <description>Constants Diagnosis&#013;&#010;this should be the max rpm where downstream o2 sensors can influence fuel trims, although i thought the downstream sensors wernt used for this, so this might be wrong. should not apply with c_conf_cat_eff disabled</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="24" />
     <EMBEDDEDDATA mmedaddress="0x822A" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8449,7 +8449,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -8471,7 +8471,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11FA" flags="0xC">
     <title>C_N_MAX_VS_DIAG</title>
-    <description>Constants N / VS limitations</description>
+    <description>Constants N / VS limitations&#013;&#010;Should be the rev limit when vehicle speed sensor fails (or might be wheel speed sensor fails or abs fuse is blown/pulled)</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x822C" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8481,7 +8481,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -8529,7 +8529,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -8545,7 +8545,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -8946,7 +8946,7 @@
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
+    <MATH equation="X*32">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -9940,7 +9940,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x125A" flags="0xC">
     <title>C_TCO_MIN_CAT</title>
-    <description>Constants catalyst efficiency diagnosis</description>
+    <description>Constants catalyst efficiency diagnosis&#013;&#010;</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="38" />
     <EMBEDDEDDATA mmedaddress="0x82C3" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -10270,7 +10270,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1270" flags="0xC">
     <title>C_TCO_TH_OPEN</title>
-    <description>constants coolant thermostat diagnosis</description>
+    <description>constants coolant thermostat diagnosis&#013;&#010;temperature at which ecu assumes thermostat is fully open</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="58" />
     <EMBEDDEDDATA mmedaddress="0x82D9" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -12902,7 +12902,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x131C" flags="0xC">
     <title>C_T_N_MAX_FCUT</title>
-    <description>Constants N / VS limitations</description>
+    <description>Constants N / VS limitations&#013;&#010;time delay before rev limits for cat are enforced?, unknown equation or units.&#013;&#010;used with &quot;2 step&quot;</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x84C2" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -14183,7 +14183,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1373" flags="0xC">
     <title>C_VS_MAX_0</title>
-    <description>Constants N / VS limitations</description>
+    <description>Constants N / VS limitations&#013;&#010;speed limiter, dont know what _0 corresponds to</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x8350" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -14198,7 +14198,7 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1374" flags="0xC">
     <title>C_VS_MAX_1_2</title>
-    <description>Constants N / VS limitations</description>
+    <description>Constants N / VS limitations&#013;&#010;speed limiter, dont know what _1_2 cooresponds to</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x8351" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -27862,10 +27862,10 @@
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8E40" mmedelementsizebits="16" mmedrowcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
+      <min>-8160.000000</min>
+      <max>8160.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
+      <MATH equation="X + (-32768)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -29183,7 +29183,7 @@
     <CATEGORYMEM index="0" category="425" />
     <CATEGORYMEM index="1" category="432" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x85C4" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
       <embedinfo type="3" linkobjid="0xAF" />
       <datatype>3</datatype>
@@ -29194,7 +29194,7 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x85BD" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
       <embedinfo type="3" linkobjid="0xC3" />
       <datatype>3</datatype>
@@ -29205,12 +29205,12 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedaddress="0xAE32" mmedelementsizebits="16" mmedrowcount="6" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0xAE32" mmedelementsizebits="16" mmedrowcount="6" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>3</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="(3.051757076371405e-05 * X) + (0.000000)">
+      <MATH equation="(X - 32768) / 32768">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -29221,7 +29221,7 @@
     <CATEGORYMEM index="0" category="425" />
     <CATEGORYMEM index="1" category="432" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x85C4" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
       <embedinfo type="3" linkobjid="0xAF" />
       <datatype>3</datatype>
@@ -29232,7 +29232,7 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x85BD" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
       <embedinfo type="3" linkobjid="0xC3" />
       <datatype>3</datatype>
@@ -29243,12 +29243,12 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedaddress="0xADEA" mmedelementsizebits="16" mmedrowcount="6" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0xADEA" mmedelementsizebits="16" mmedrowcount="6" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>3</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="(3.051757076371405e-05 * X) + (0.000000)">
+      <MATH equation="(X - 32768) / 32768">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -32666,7 +32666,7 @@
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0xB1C0" mmedelementsizebits="16" mmedrowcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>0</decimalpl>
       <min>0.000000</min>
-      <max>255.000000</max>
+      <max>8000.000000</max>
       <outputtype>2</outputtype>
       <MATH equation="(1.0 * X) + (0.000000)">
         <VAR id="X" />
@@ -34620,9 +34620,9 @@
       <EMBEDDEDDATA mmedaddress="0x8E8A" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
       <embedinfo type="3" linkobjid="0xFD" />
-      <datatype>3</datatype>
+      <datatype>26</datatype>
       <unittype>3</unittype>
-      <DALINK index="0" />
+      <DALINK index="0" flags="0x2" objidhash="0xF8DCBBEC" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
@@ -34631,9 +34631,9 @@
       <EMBEDDEDDATA mmedaddress="0x8CB4" mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>16</indexcount>
       <embedinfo type="3" linkobjid="0x10B" />
-      <datatype>3</datatype>
-      <unittype>3</unittype>
-      <DALINK index="0" />
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" flags="0x4" objidhash="0xCD0CD1DB" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
@@ -34717,7 +34717,7 @@
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x9ABE" mmedelementsizebits="8" mmedrowcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>3</decimalpl>
-      <min>0.000000</min>
+      <min>-48.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="(0.375 * X) + (-48.000000)">
@@ -35287,7 +35287,7 @@
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x9C06" mmedelementsizebits="8" mmedrowcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>3</decimalpl>
-      <min>0.000000</min>
+      <min>-30.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="(0.375 * X) + (-48.000000)">
@@ -35401,7 +35401,7 @@
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x9C6E" mmedelementsizebits="8" mmedrowcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>3</decimalpl>
-      <min>0.000000</min>
+      <min>-48.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="(0.375 * X) + (-48.000000)">
@@ -35477,7 +35477,7 @@
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x9C4E" mmedelementsizebits="8" mmedrowcount="4" mmedcolcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>3</decimalpl>
-      <min>0.000000</min>
+      <min>-48.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="(0.375 * X) + (-48.000000)">
@@ -39620,7 +39620,7 @@
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0xA3F6" mmedelementsizebits="8" mmedrowcount="6" mmedcolcount="7" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>0</decimalpl>
       <min>0.000000</min>
-      <max>255.000000</max>
+      <max>8160.000000</max>
       <outputtype>2</outputtype>
       <MATH equation="(32.0 * X) + (0.000000)">
         <VAR id="X" />
@@ -39772,7 +39772,7 @@
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0xA451" mmedelementsizebits="8" mmedrowcount="6" mmedcolcount="7" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>0</decimalpl>
       <min>0.000000</min>
-      <max>255.000000</max>
+      <max>8160.000000</max>
       <outputtype>2</outputtype>
       <MATH equation="(32.0 * X) + (0.000000)">
         <VAR id="X" />
@@ -39848,7 +39848,7 @@
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0xB804" mmedelementsizebits="16" mmedrowcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>0</decimalpl>
       <min>0.000000</min>
-      <max>255.000000</max>
+      <max>8000.000000</max>
       <outputtype>2</outputtype>
       <MATH equation="(1.0 * X) + (0.000000)">
         <VAR id="X" />
