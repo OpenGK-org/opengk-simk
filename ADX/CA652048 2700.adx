@@ -8,7 +8,6 @@
     <author>Not A TR7</author>
     <desc>Developed using .bin and logs from:&#013;&#010;SIMK41 V6 2mbit (5wy15)&#013;&#010;ca652048 g3n7tm0c&#013;&#010;&#013;&#010;Initally based on KSW_dmg210_simk43_v6_5wy18_v01.adx,  many values in were wrong on the SIMK41.&#013;&#010;&#013;&#010;Values with ? have unconfirmed/uncertian meanings&#013;&#010;Values with * have unconfirmed/uncertian equations&#013;&#010;I entered a description of every value that goes into a little detail about how they were found.&#013;&#010;&#013;&#010;Some values were unclear or unchanging. So after figuring out what I could I gave claude my: .bin, .xdf, .adx, and a few logs, then had had it decomp/reverse engineer the output routine, it also confirmed all other values that I had already gotten.&#013;&#010;I listed the ram address of each byte (according to claude) incase anyone wants to cross check, may also be useful for anyone wanting to edit their ecu program so it outputs other data (by substituring current values).&#013;&#010;</desc>
     <baud>10400</baud>
-    <parity>1</parity>
     <DEFAULTS datasizeinbits="8" sigdigits="2" outputtype="3" baud="0" signed="0" lsbfirst="0" float="0" />
     <connectcmd>CONNECTMACRO</connectcmd>
     <monitorcmd>MONITORMACRO</monitorcmd>
