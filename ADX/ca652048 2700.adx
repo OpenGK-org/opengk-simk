@@ -1,10 +1,10 @@
 <ADXFORMAT version="1.01">
-  <!-- Written 11/03/2026 20:47:32 -->
+  <!-- Written 11/04/2026 13:35:58 -->
   <ADXHEADER>
     <guid>4948f148-506d-4384-b7b8-364330319c5f</guid>
     <flags>0x10001</flags>
-    <objectcount>133</objectcount>
-    <userversion>V10.0</userversion>
+    <objectcount>136</objectcount>
+    <userversion>V10.1</userversion>
     <author>Not A TR7</author>
     <desc>Developed using .bin and logs from:&#013;&#010;SIMK41 V6 2mbit (5wy15)&#013;&#010;ca652048 g3n7tm0c&#013;&#010;&#013;&#010;Initally based on KSW_dmg210_simk43_v6_5wy18_v01.adx,  many values in were wrong on the SIMK41.&#013;&#010;&#013;&#010;Values with ? have unconfirmed/uncertian meanings&#013;&#010;Values with * have unconfirmed/uncertian equations&#013;&#010;I entered a description of every value that goes into a little detail about how they were found.&#013;&#010;&#013;&#010;Some values were unclear or unchanging. So after figuring out what I could I gave claude my: .bin, .xdf, .adx, and a few logs, then had had it decomp/reverse engineer the output routine, it also confirmed all other values that I had already gotten.&#013;&#010;I listed the ram address of each byte (according to claude) incase anyone wants to cross check, may also be useful for anyone wanting to edit their ecu program so it outputs other data (by substituring current values).&#013;&#010;&#013;&#010;Knock retard values require patching</desc>
     <baud>10400</baud>
@@ -16,13 +16,25 @@
 
   <ADXDASHBOARD id="DASH" idhash="0xAF483179" title="Dash">
     <entrycount>7</entrycount>
-    <ADXDGENTRY gaugetype="0" itemidhash="0xDD1D236C" left="0" top="0" right="33" bottom="67" arcmax="300" bkgndcolor="0x001E1E1E" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" facecolor="0x00282828" majtickcolor="0x000060FF" mintickcolor="0x00002080" ticktxtnormcolor="0x000040C0" minvaltxtcolor="0x000040C0" maxvaltxtcolor="0x000040C0" alarmlowcolor="0x000000FF" />
-    <ADXDGENTRY gaugetype="0" itemidhash="0xCD0CD1DB" left="33" top="0" right="67" bottom="67" arcmax="300" bkgndcolor="0x001E1E1E" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" facecolor="0x00282828" majtickcolor="0x000060FF" mintickcolor="0x00002080" ticktxtnormcolor="0x000040C0" minvaltxtcolor="0x000040C0" maxvaltxtcolor="0x000040C0" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="0" itemidhash="0xDD1D236C" left="0" top="0" right="33" bottom="67" arcmin="50" arcmax="310" bkgndcolor="0x001E1E1E" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" facecolor="0x00282828" majtickcolor="0x000060FF" mintickcolor="0x00002080" ticktxtnormcolor="0x000040C0" minvaltxtcolor="0x000040C0" maxvaltxtcolor="0x000040C0" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="0" itemidhash="0xCD0CD1DB" left="33" top="0" right="67" bottom="67" arcmin="50" arcmax="310" bkgndcolor="0x001E1E1E" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" facecolor="0x00282828" majtickcolor="0x000060FF" mintickcolor="0x00002080" ticktxtnormcolor="0x000040C0" minvaltxtcolor="0x000040C0" maxvaltxtcolor="0x000040C0" alarmlowcolor="0x000000FF" />
     <ADXDGENTRY gaugetype="1" itemidhash="0x33450280" left="67" top="0" right="100" bottom="33" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
     <ADXDGENTRY gaugetype="1" itemidhash="0x4D4D4AC2" left="0" top="67" right="33" bottom="100" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
     <ADXDGENTRY gaugetype="1" itemidhash="0xFAAA9AA2" left="33" top="67" right="67" bottom="100" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
     <ADXDGENTRY gaugetype="1" itemidhash="0xD5E2F749" left="67" top="67" right="100" bottom="100" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
-    <ADXDGENTRY gaugetype="1" itemidhash="0x4F4046E6" left="67" top="33" right="100" bottom="67" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x4F4046E6" left="67" top="33" right="100" bottom="67" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" alarmhighcolor="0x00FF00FF" />
+  </ADXDASHBOARD>
+
+  <ADXDASHBOARD id="KNOCKDASH" idhash="0xFEF46942" title="knock dash">
+    <desc>Needs the Knock Retard in Log Patch</desc>
+    <entrycount>7</entrycount>
+    <ADXDGENTRY gaugetype="0" itemidhash="0xDD1D236C" left="0" top="0" right="33" bottom="67" arcmin="50" arcmax="310" bkgndcolor="0x001E1E1E" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" facecolor="0x00282828" majtickcolor="0x000060FF" mintickcolor="0x00002080" ticktxtnormcolor="0x000040C0" minvaltxtcolor="0x000040C0" maxvaltxtcolor="0x000040C0" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="0" itemidhash="0xCD0CD1DB" left="33" top="0" right="67" bottom="67" arcmin="50" arcmax="310" bkgndcolor="0x001E1E1E" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" facecolor="0x00282828" majtickcolor="0x000060FF" mintickcolor="0x00002080" ticktxtnormcolor="0x000040C0" minvaltxtcolor="0x000040C0" maxvaltxtcolor="0x000040C0" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x33450280" left="67" top="0" right="100" bottom="33" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x4D4D4AC2" left="0" top="67" right="33" bottom="100" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xA054AC5D" left="33" top="67" right="67" bottom="100" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" alarmhighcolor="0x00FF00FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xFAAA9AA2" left="67" top="67" right="100" bottom="100" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x4F4046E6" left="67" top="33" right="100" bottom="67" bkgndcolor="0x00282828" titlecolor="0x00282828" unitscolor="0x000040FF" bordercolor="0x00000000" curvaltxtcolor="0x000060FF" alarmlowcolor="0x000000FF" alarmhighcolor="0x00FF00FF" />
   </ADXDASHBOARD>
 
   <ADXHISTOGRAM id="IGA__N__MAF" idhash="0x4EE30D35" title="Ignition angle, rpm, maf">
@@ -107,6 +119,48 @@
     <xidhash>0x3C1AED99</xidhash>
     <yidhash>0xCD0CD1DB</yidhash>
     <zidhash>0x4083103A</zidhash>
+  </ADXHISTOGRAM>
+
+  <ADXHISTOGRAM id="KNK__N__MAF" idhash="0x2F46AD35" title="Knock retard, rpm, maf">
+    <desc>Needs the Knock Retard in Log Patch.&#013;&#010;&#013;&#010;compares avg knock retard against same axis as IP_IGAB__N__MAF</desc>
+    <rows>16</rows>
+    <cols>12</cols>
+    <xmin>0.000000</xmin>
+    <xmax>0.000000</xmax>
+    <ymin>0.000000</ymin>
+    <ymax>0.000000</ymax>
+    <rowval index="0" val="420.000000" />
+    <rowval index="1" val="700.000000" />
+    <rowval index="2" val="1000.000000" />
+    <rowval index="3" val="1200.000000" />
+    <rowval index="4" val="1500.000000" />
+    <rowval index="5" val="1800.000000" />
+    <rowval index="6" val="2200.000000" />
+    <rowval index="7" val="2600.000000" />
+    <rowval index="8" val="3000.000000" />
+    <rowval index="9" val="3200.000000" />
+    <rowval index="10" val="3700.000000" />
+    <rowval index="11" val="4000.000000" />
+    <rowval index="12" val="4500.000000" />
+    <rowval index="13" val="5050.000000" />
+    <rowval index="14" val="5550.000000" />
+    <rowval index="15" val="6000.000000" />
+    <colval index="0" val="50.000000" />
+    <colval index="1" val="90.000000" />
+    <colval index="2" val="130.000000" />
+    <colval index="3" val="180.000000" />
+    <colval index="4" val="230.000000" />
+    <colval index="5" val="330.000000" />
+    <colval index="6" val="380.000000" />
+    <colval index="7" val="430.000000" />
+    <colval index="8" val="480.000000" />
+    <colval index="9" val="530.000000" />
+    <colval index="10" val="580.000000" />
+    <colval index="11" val="580.000000" />
+    <historysize>16</historysize>
+    <xidhash>0x3C1AED99</xidhash>
+    <yidhash>0xCD0CD1DB</yidhash>
+    <zidhash>0xA054AC5D</zidhash>
   </ADXHISTOGRAM>
 
   <ADXMONITOR id="SPEEDMONITOR" idhash="0x0746FE00" title="Speed monitor">
@@ -394,7 +448,7 @@
   </ADXLISTVIEW>
 
   <ADXLISTVIEW id="KNOCKRETARDINL" idhash="0xA0208AFD" title="Knock Retard in Log Patch">
-    <entrycount>8</entrycount>
+    <entrycount>9</entrycount>
     <ADXLVENTRY entrytype="0" itemidhash="0x22FA153F" />
     <ADXLVENTRY entrytype="0" itemidhash="0x22FA0F9F" />
     <ADXLVENTRY entrytype="0" itemidhash="0x22FA109F" />
@@ -403,6 +457,7 @@
     <ADXLVENTRY entrytype="0" itemidhash="0x5F40C624" />
     <ADXLVENTRY entrytype="0" itemidhash="0xED01E9B8" />
     <ADXLVENTRY entrytype="0" itemidhash="0xED01F318" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xA054AC5D" />
   </ADXLISTVIEW>
 
   <ADXVALUE id="RAW_00" idhash="0xEF4401A6" title="Static 1 / echo">
@@ -426,7 +481,7 @@
     <units>battery voltage (V)</units>
     <packetoffset>0x01</packetoffset>
     <range low="0.000000" high="20.000000" />
-    <alarms low="0.000000" high="255.000000" />
+    <alarms low="12.000000" high="14.500000" />
     <digcount>1</digcount>
     <outputtype>3</outputtype>
     <datatype>66</datatype>
@@ -469,11 +524,12 @@
 
   <ADXVALUE id="COOLANTTEMPERA" idhash="0x4F4046E6" title="Coolant Temperature">
     <desc>Followed cooant temperature, increased when I heated area around coolant temp sensor. Same byte as KSW_dmg210 adx but different equation.&#013;&#010;&#013;&#010;according to Claude the ram address is 0xC5B1</desc>
+    <flags>0x0000000C</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Coolant temp (C)</units>
     <packetoffset>0x04</packetoffset>
     <range low="-48.000000" high="143.000000" />
-    <alarms low="0.000000" high="255.000000" />
+    <alarms low="75.000000" high="105.000000" />
     <digcount>1</digcount>
     <outputtype>3</outputtype>
     <datatype>13</datatype>
@@ -671,13 +727,13 @@
 
   <ADXVALUE id="RPM" idhash="0xCD0CD1DB" title="Engine Speed">
     <desc>Same as KSW_dmg210 adx, matched rpm.&#013;&#010;&#013;&#010;according to claude the ram address is 0xF968-0xF969</desc>
-    <flags>0x00000002</flags>
+    <flags>0x00000006</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Engine Speed (rpm)</units>
     <packetoffset>0x14</packetoffset>
     <sizeinbits>16</sizeinbits>
     <range low="0.000000" high="8160.000000" />
-    <alarms low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="6600.000000" />
     <digcount>1</digcount>
     <outputtype>1</outputtype>
     <datatype>6</datatype>
@@ -1157,7 +1213,7 @@
     </MATH>
   </ADXVALUE>
 
-  <ADXVALUE id="INJECTIONTIMEA" idhash="0xC4FA041F" title="Injection Time average">
+  <ADXVALUE id="INJECTIONTIMEA" idhash="0xC4FA041F" title="Injection Time Average">
     <desc>average injection time of all cylinders</desc>
     <units>Injection Time average (ms)</units>
     <packetoffset>0x00</packetoffset>
@@ -1172,13 +1228,13 @@
   </ADXVALUE>
 
   <ADXVALUE id="KNOCKTARD1" idhash="0x22FA153F" title="Knock Retard Cyl 1">
-    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE15D (0xE15C + 2 x cylinder index). 128 = no retard; each count below 128 is 0.375 deg of retard, so retard = (128 - X) * 0.375 deg. It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;Cylinder index 0 matches the ignition angle channel at 0x21 (cylinder numbering is the same guess as the ignition angles).&#013;&#010;This replaced the bank 1 injection time word (0x33-0x34) that used to be at this offset.&#013;&#010;Confidence: high.</desc>
-    <flags>0x0000000C</flags>
+    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE15D (0xE15C + 2 x cylinder index). It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;This replaced the bank 1 injection time word (0x33-0x34) that used to be at this offset.</desc>
+    <flags>0x00000004</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Knock Retard cyl 1 (deg)</units>
     <packetoffset>0x33</packetoffset>
-    <range low="-20.000000" high="20.000000" />
-    <alarms low="-1.000000" high="1.000000" />
+    <range low="0.000000" high="10.000000" />
+    <alarms low="0.000000" high="0.100000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>35</datatype>
@@ -1189,12 +1245,12 @@
   </ADXVALUE>
 
   <ADXVALUE id="KNOCKTARD2" idhash="0x22FA0F9F" title="Knock Retard Cyl 2">
-    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE15F (0xE15C + 2 x cylinder index). 128 = no retard; each count below 128 is 0.375 deg of retard, so retard = (128 - X) * 0.375 deg. It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;Cylinder index 1 matches the ignition angle channel at 0x22 (cylinder numbering is the same guess as the ignition angles).&#013;&#010;This replaced the bank 1 injection time word (0x33-0x34) that used to be at this offset.&#013;&#010;Confidence: high.</desc>
-    <flags>0x0000000C</flags>
+    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE15F (0xE15C + 2 x cylinder index). It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;This replaced the bank 1 injection time word (0x33-0x34) that used to be at this offset.</desc>
+    <flags>0x00000004</flags>
     <units>Knock Retard cyl 2 (deg)</units>
     <packetoffset>0x34</packetoffset>
-    <range low="-2.000000" high="20.000000" />
-    <alarms low="-1.000000" high="1.000000" />
+    <range low="0.000000" high="10.000000" />
+    <alarms low="0.000000" high="0.100000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>35</datatype>
@@ -1205,13 +1261,13 @@
   </ADXVALUE>
 
   <ADXVALUE id="KNOCKTARD3" idhash="0x22FA109F" title="Knock Retard Cyl 3">
-    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE161 (0xE15C + 2 x cylinder index). 128 = no retard; each count below 128 is 0.375 deg of retard, so retard = (128 - X) * 0.375 deg. It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;Cylinder index 2 matches the ignition angle channel at 0x23 (cylinder numbering is the same guess as the ignition angles).&#013;&#010;This replaced the bank 2 injection time word (0x35-0x36) that used to be at this offset.&#013;&#010;Confidence: high.</desc>
-    <flags>0x0000000C</flags>
+    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE161 (0xE15C + 2 x cylinder index). It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;This replaced the bank 2 injection time word (0x35-0x36) that used to be at this offset.</desc>
+    <flags>0x00000004</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Knock Retard cyl 3 (deg)</units>
     <packetoffset>0x35</packetoffset>
-    <range low="-20.000000" high="20.000000" />
-    <alarms low="-1.000000" high="-1.000000" />
+    <range low="0.000000" high="10.000000" />
+    <alarms low="0.000000" high="0.100000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>35</datatype>
@@ -1222,12 +1278,12 @@
   </ADXVALUE>
 
   <ADXVALUE id="KNOCKTARD4" idhash="0x22FA129F" title="Knock Retard Cyl 4">
-    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE163 (0xE15C + 2 x cylinder index). 128 = no retard; each count below 128 is 0.375 deg of retard, so retard = (128 - X) * 0.375 deg. It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;Cylinder index 3 matches the ignition angle channel at 0x24 (cylinder numbering is the same guess as the ignition angles).&#013;&#010;This replaced the bank 2 injection time word (0x35-0x36) that used to be at this offset.&#013;&#010;Confidence: high.</desc>
-    <flags>0x0000000C</flags>
+    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE163 (0xE15C + 2 x cylinder index). It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;This replaced the bank 2 injection time word (0x35-0x36) that used to be at this offset.</desc>
+    <flags>0x00000004</flags>
     <units>Knock Retard cyl 4 (deg)</units>
     <packetoffset>0x36</packetoffset>
-    <range low="-20.000000" high="20.000000" />
-    <alarms low="-1.000000" high="1.000000" />
+    <range low="0.000000" high="10.000000" />
+    <alarms low="0.000000" high="0.100000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>35</datatype>
@@ -1238,13 +1294,13 @@
   </ADXVALUE>
 
   <ADXVALUE id="KNOCKTARD5" idhash="0x22FA05FF" title="Knock Retard Cyl 5">
-    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE165 (0xE15C + 2 x cylinder index). 128 = no retard; each count below 128 is 0.375 deg of retard, so retard = (128 - X) * 0.375 deg. It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;Cylinder index 4 matches the ignition angle channel at 0x25 (cylinder numbering is the same guess as the ignition angles).&#013;&#010;This replaced the static 0 (CPU zero register) that used to be at this offset.&#013;&#010;Confidence: high.</desc>
-    <flags>0x0000000C</flags>
+    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE165 (0xE15C + 2 x cylinder index). It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;This replaced the static 0 (CPU zero register) that used to be at this offset.</desc>
+    <flags>0x00000004</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Knock Retard cyl 5 (deg)</units>
     <packetoffset>0x56</packetoffset>
-    <range low="-20.000000" high="20.000000" />
-    <alarms low="-1.000000" high="1.000000" />
+    <range low="0.000000" high="10.000000" />
+    <alarms low="0.000000" high="0.100000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>35</datatype>
@@ -1255,13 +1311,13 @@
   </ADXVALUE>
 
   <ADXVALUE id="KNOCKTARD6 " idhash="0x5F40C624" title="Knock Retard Cyl 6">
-    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE167 (0xE15C + 2 x cylinder index). 128 = no retard; each count below 128 is 0.375 deg of retard, so retard = (128 - X) * 0.375 deg. It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;Cylinder index 5 matches the ignition angle channel at 0x26 (cylinder numbering is the same guess as the ignition angles).&#013;&#010;This replaced the static 0 (CPU zero register) that used to be at this offset.&#013;&#010;Confidence: high.</desc>
-    <flags>0x0000000C</flags>
+    <desc>Remapped (needs the Knock Retard in Log Patch): reads the high byte of the per-cylinder knock retard word at RAM 0xE167 (0xE15C + 2 x cylinder index). It is the instantaneous retard: it steps down about 3.7 deg (light knock) or 6 deg (heavy knock) on a knock event, recovers slowly, is limited to the max-retard floor and to within 13 counts (4.9 deg) of the 6-cylinder average, and is pulled toward the adaptive knock map value when the cylinder moves to a different rpm/load cell.&#013;&#010;This replaced the static 0 (CPU zero register) that used to be at this offset.</desc>
+    <flags>0x00000004</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Knock Retard cyl 6 (deg)</units>
     <packetoffset>0x57</packetoffset>
-    <range low="-20.000000" high="20.000000" />
-    <alarms low="-1.000000" high="1.000000" />
+    <range low="0.000000" high="10.000000" />
+    <alarms low="0.000000" high="0.100000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>35</datatype>
@@ -1273,11 +1329,11 @@
 
   <ADXVALUE id="KNOCKRETARDB1" idhash="0xED01E9B8" title="Knock Retard Bank 1 avg">
     <desc>Average of knock retard for cylinders 1, 3, and 5. (needs the Knock Retard in Log Patch)</desc>
-    <flags>0x0000000C</flags>
+    <flags>0x00000004</flags>
     <units>Knock Retard Bank 1 (deg)</units>
     <packetoffset>0x00</packetoffset>
-    <range low="-20.000000" high="20.000000" />
-    <alarms low="-1.000000" high="1.000000" />
+    <range low="0.000000" high="10.000000" />
+    <alarms low="0.000000" high="0.100000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>35</datatype>
@@ -1291,19 +1347,36 @@
 
   <ADXVALUE id="KNOCKRETARDB2" idhash="0xED01F318" title="Knock Retard Bank 2 avg">
     <desc>Average of knock retard for cylinders 2, 4, and 6. (needs the Knock Retard in Log Patch)</desc>
-    <flags>0x0000000C</flags>
+    <flags>0x00000004</flags>
     <units>Knock Retard Bank 1 (deg)</units>
     <packetoffset>0x00</packetoffset>
-    <range low="-20.000000" high="20.000000" />
-    <alarms low="-1.000000" high="1.000000" />
+    <range low="0.000000" high="10.000000" />
+    <alarms low="0.000000" high="0.100000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>35</datatype>
     <unittype>23</unittype>
     <MATH equation="(x+y+z)/3">
-      <VAR varID="x" type="link" linkIDHash="0xF488FDBC" />
-      <VAR varID="y" type="link" linkIDHash="0xF488E0BC" />
-      <VAR varID="z" type="link" linkIDHash="0xF488F47C" />
+      <VAR varID="x" type="link" linkIDHash="0x22FA0F9F" />
+      <VAR varID="y" type="link" linkIDHash="0x22FA129F" />
+      <VAR varID="z" type="link" linkIDHash="0x5F40C624" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="KNOCKRETARDAVE" idhash="0xA054AC5D" title="Knock Retard Average">
+    <desc>Average of knock retard for all cylinders. (needs the Knock Retard in Log Patch)</desc>
+    <flags>0x00000004</flags>
+    <units>Knock Retard Average (deg)</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="0.000000" high="10.000000" />
+    <alarms low="0.000000" high="0.100000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>35</datatype>
+    <unittype>23</unittype>
+    <MATH equation="(X+Y)*0.5">
+      <VAR varID="X" type="link" linkIDHash="0xED01E9B8" />
+      <VAR varID="Y" type="link" linkIDHash="0xED01F318" />
     </MATH>
   </ADXVALUE>
 
@@ -1457,13 +1530,13 @@
 
   <ADXVALUE id="LTFTPARTLOADB1" idhash="0x30FDD0DC" title="Long Term Fuel Trim Part Load Bank 1">
     <desc>based on logs it was a slow learned adaptive value, ltftwas best match esp due to learned value before resetting adaptive values approximatley equalling Average stft from after resetting. Same byte as KSW_dmg210 adx but different equation.&#013;&#010;&#013;&#010;according to claude the ram address is 0xE208-0xE209</desc>
-    <flags>0x00000002</flags>
+    <flags>0x0000000E</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Long Term Fuel Trim Part Load Bank 1 (%)</units>
     <packetoffset>0x42</packetoffset>
     <sizeinbits>16</sizeinbits>
     <range low="-50.000000" high="50.000000" />
-    <alarms low="0.000000" high="255.000000" />
+    <alarms low="-20.000000" high="20.000000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>49</datatype>
@@ -1475,13 +1548,13 @@
 
   <ADXVALUE id="LTFTPARTLOADB2" idhash="0x30FDCA7C" title="Long Term Fuel Trim Part Load Bank 2">
     <desc>see Long Term Fuel Trim Part Load Bank 1 for description&#013;&#010;&#013;&#010;according to claude the ram address is 0xE300-0xE301&#013;&#010;</desc>
-    <flags>0x00000002</flags>
+    <flags>0x0000000E</flags>
     <parentcmdidhash>0xDAA83ACD</parentcmdidhash>
     <units>Long Term Fuel Trim Part Load Bank 2 (%)</units>
     <packetoffset>0x44</packetoffset>
     <sizeinbits>16</sizeinbits>
     <range low="-50.000000" high="50.000000" />
-    <alarms low="0.000000" high="255.000000" />
+    <alarms low="-20.000000" high="20.000000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>49</datatype>
@@ -1493,10 +1566,11 @@
 
   <ADXVALUE id="BANK1TOTALFUEL" idhash="0x44ACE3A1" title="Bank 1 total fuel trim*">
     <desc>equation for total fuel trim (stft+ltft accounting for idle/part load)</desc>
+    <flags>0x0000000C</flags>
     <units>Bank 1 total fuel trim* (%)</units>
     <packetoffset>0x00</packetoffset>
     <range low="-100.000000" high="100.000000" />
-    <alarms low="0.000000" high="255.000000" />
+    <alarms low="-20.000000" high="20.000000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>46</datatype>
@@ -1509,10 +1583,11 @@
 
   <ADXVALUE id="BANK2TOTALFUEL" idhash="0x47F8E3A1" title="Bank 2 total fuel trim*">
     <desc>equation for total fuel trim (stft+ltft accounting for idle/part load)</desc>
+    <flags>0x0000000C</flags>
     <units>Bank 2 total fuel trim* (%)</units>
     <packetoffset>0x00</packetoffset>
     <range low="-100.000000" high="100.000000" />
-    <alarms low="0.000000" high="255.000000" />
+    <alarms low="-20.000000" high="20.000000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>46</datatype>
@@ -1525,10 +1600,11 @@
 
   <ADXVALUE id="AVERAGETOTALFU" idhash="0x4D4D4AC2" title="Average Total Fuel Trim*">
     <desc>average of total fuel trim from banks 1 and 2</desc>
+    <flags>0x0000000C</flags>
     <units>Average Total Fuel Trim* (%)</units>
     <packetoffset>0x00</packetoffset>
     <range low="-100.000000" high="100.000000" />
-    <alarms low="0.000000" high="255.000000" />
+    <alarms low="-20.000000" high="20.000000" />
     <digcount>1</digcount>
     <outputtype>3</outputtype>
     <datatype>46</datatype>
@@ -1541,10 +1617,11 @@
 
   <ADXVALUE id="TOTALFUELTRIM" idhash="0x4083103A" title="Average fuel trim multiplier">
     <desc>Average total fuel trim (excluding idle fuel trim) /100 +1</desc>
+    <flags>0x0000000C</flags>
     <units>Average fuel trim multiplier</units>
     <packetoffset>0x00</packetoffset>
     <range low="0.500000" high="1.500000" />
-    <alarms low="0.000000" high="255.000000" />
+    <alarms low="0.800000" high="1.200000" />
     <digcount>2</digcount>
     <outputtype>3</outputtype>
     <datatype>46</datatype>
