@@ -11578,51 +11578,36 @@ temperature at which ecu assumes thermostat is fully open</description>
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x12C3" flags="0xC">
+  <XDFCONSTANT uniqueid="0x12C3" flags="0xC" vislevel="0">
     <title>C_TPS_HYS_VIM</title>
     <description>Constants VIM</description>
-    <CATEGORYMEM index="0" category="16" />
-    <CATEGORYMEM index="1" category="65" />
-    <EMBEDDEDDATA mmedaddress="0x830A" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x830a" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedtypeflags="0x0" />
     <decimalpl>1</decimalpl>
     <rangehigh>119.500000</rangehigh>
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x12C4" flags="0xC">
+    <CATEGORYMEM index="0" category="16" /><CATEGORYMEM index="1" category="65" /><units /><outputtype>1</outputtype><MATH equation="X/2.56"><VAR id="X" /></MATH></XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x12C4" flags="0xC" vislevel="0">
     <title>C_TPS_HYS_VIM_1</title>
     <description>Constants VIM</description>
-    <CATEGORYMEM index="0" category="16" />
-    <CATEGORYMEM index="1" category="65" />
-    <EMBEDDEDDATA mmedaddress="0x830B" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x830b" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedtypeflags="0x0" />
     <decimalpl>1</decimalpl>
     <rangehigh>119.500000</rangehigh>
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x12C5" flags="0xC">
+    <CATEGORYMEM index="0" category="16" /><CATEGORYMEM index="1" category="65" /><units /><outputtype>1</outputtype><MATH equation="X/2.56"><VAR id="X" /></MATH></XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x12C5" flags="0xC" vislevel="0">
     <title>C_TPS_HYS_VIM_2</title>
     <description>Constants VIM</description>
-    <CATEGORYMEM index="0" category="16" />
-    <CATEGORYMEM index="1" category="65" />
-    <EMBEDDEDDATA mmedaddress="0x830C" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x830c" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedtypeflags="0x0" />
     <decimalpl>1</decimalpl>
     <rangehigh>119.500000</rangehigh>
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
+    <CATEGORYMEM index="0" category="16" /><CATEGORYMEM index="1" category="65" /><units /><outputtype>1</outputtype><MATH equation="X/2.56"><VAR id="X" /></MATH></XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x12C6" flags="0xC">
     <title>C_TPS_IS</title>
     <description>Constants IS</description>
@@ -19712,10 +19697,8 @@ speed limiter, dont know what _1_2 cooresponds to</description>
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
-  <XDFTABLE uniqueid="0x6C" flags="0x30">
+  <XDFTABLE uniqueid="0x6C" flags="0x30" vislevel="0">
     <title>ldp_tps_vim_1_id_vim_1</title>
-    <CATEGORYMEM index="0" category="221" />
-    <CATEGORYMEM index="1" category="250" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -19723,11 +19706,10 @@ speed limiter, dont know what _1_2 cooresponds to</description>
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="0.0" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><outputtype>1</outputtype><LABEL index="0" value="0.0" /></XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -19736,33 +19718,20 @@ speed limiter, dont know what _1_2 cooresponds to</description>
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="1" />
-      <LABEL index="1" value="2" />
-      <LABEL index="2" value="3" />
-      <LABEL index="3" value="4" />
-      <LABEL index="4" value="5" />
-      <LABEL index="5" value="6" />
-      <LABEL index="6" value="7" />
-      <LABEL index="7" value="8" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><LABEL index="0" value="1" /><LABEL index="1" value="2" /><LABEL index="2" value="3" /><LABEL index="3" value="4" /><LABEL index="4" value="5" /><LABEL index="5" value="6" /><LABEL index="6" value="7" /><LABEL index="7" value="8" /></XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8734" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x2" mmedaddress="0x8734" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedcolcount="1" />
       <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
+      <min>0.0</min>
+      <max>255.0</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x6D" flags="0x30">
+      <units /><MATH equation="X/2.56"><VAR id="X" /></MATH><DALINK index="0" /></XDFAXIS>
+  <description /><CATEGORYMEM index="0" category="221" /><CATEGORYMEM index="1" category="250" /></XDFTABLE>
+  <XDFTABLE uniqueid="0x6D" flags="0x30" vislevel="0">
     <title>ldp_tps_vim_2_id_vim_2</title>
-    <CATEGORYMEM index="0" category="221" />
-    <CATEGORYMEM index="1" category="250" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -19770,11 +19739,10 @@ speed limiter, dont know what _1_2 cooresponds to</description>
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="0.0" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><outputtype>1</outputtype><LABEL index="0" value="0.0" /></XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -19783,33 +19751,20 @@ speed limiter, dont know what _1_2 cooresponds to</description>
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="1" />
-      <LABEL index="1" value="2" />
-      <LABEL index="2" value="3" />
-      <LABEL index="3" value="4" />
-      <LABEL index="4" value="5" />
-      <LABEL index="5" value="6" />
-      <LABEL index="6" value="7" />
-      <LABEL index="7" value="8" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><LABEL index="0" value="1" /><LABEL index="1" value="2" /><LABEL index="2" value="3" /><LABEL index="3" value="4" /><LABEL index="4" value="5" /><LABEL index="5" value="6" /><LABEL index="6" value="7" /><LABEL index="7" value="8" /></XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8746" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x2" mmedaddress="0x8746" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedcolcount="1" />
       <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
+      <min>0.0</min>
+      <max>255.0</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x6E" flags="0x30">
+      <units /><MATH equation="X/2.56"><VAR id="X" /></MATH><DALINK index="0" /></XDFAXIS>
+  <description /><CATEGORYMEM index="0" category="221" /><CATEGORYMEM index="1" category="250" /></XDFTABLE>
+  <XDFTABLE uniqueid="0x6E" flags="0x30" vislevel="0">
     <title>ldp_tps_vim_id_vim</title>
-    <CATEGORYMEM index="0" category="221" />
-    <CATEGORYMEM index="1" category="250" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -19817,11 +19772,10 @@ speed limiter, dont know what _1_2 cooresponds to</description>
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="0.0" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><outputtype>1</outputtype><LABEL index="0" value="0.0" /></XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -19830,29 +19784,18 @@ speed limiter, dont know what _1_2 cooresponds to</description>
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="1" />
-      <LABEL index="1" value="2" />
-      <LABEL index="2" value="3" />
-      <LABEL index="3" value="4" />
-      <LABEL index="4" value="5" />
-      <LABEL index="5" value="6" />
-      <LABEL index="6" value="7" />
-      <LABEL index="7" value="8" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><LABEL index="0" value="1" /><LABEL index="1" value="2" /><LABEL index="2" value="3" /><LABEL index="3" value="4" /><LABEL index="4" value="5" /><LABEL index="5" value="6" /><LABEL index="6" value="7" /><LABEL index="7" value="8" /></XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8722" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x2" mmedaddress="0x8722" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedcolcount="1" />
       <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
+      <min>0.0</min>
+      <max>255.0</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
+      <units /><DALINK index="0" /><MATH equation="X/2.56"><VAR id="X" /></MATH></XDFAXIS>
+  <description /><CATEGORYMEM index="0" category="221" /><CATEGORYMEM index="1" category="250" /></XDFTABLE>
   <XDFTABLE uniqueid="0x6F" flags="0x30">
     <title>ldp_tqr_asr_nv_id_nr_pat</title>
     <CATEGORYMEM index="0" category="221" />
@@ -44769,7 +44712,7 @@ speed limiter, dont know what _1_2 cooresponds to</description>
     <XDFPATCHENTRY name="ID_VIM_2__N_32_VIM_2__TPS_VIM_2" address="0x97C8" datasize="0x40" patchdata="00000000000000000000000000000000000000000000000000000000000000000000000000000000010101010101010101010101010101010101010101010101" basedata="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" />
     <XDFPATCHENTRY name="IP_T_VIM__VB" address="0xA558" datasize="0x6" patchdata="5A5A5A5A5A5A" basedata="000000000000" />
   </XDFPATCH>
-  <XDFPATCH uniqueid="0x26B9" vislevel="0">
+  <XDFPATCH uniqueid="0x26B9" vislevel="2">
     <title>VIM on Lambda</title>
     <description>THIS IS A PROGRAM PATCH NOT A CALIBRATION PATCH
  - developed on CA652048_G3N7tM0C_6577715202  
@@ -44792,7 +44735,7 @@ Use with Variable Intake Enable (C_CONF_VIM = 2). Two-stage mode only.
     <XDFPATCHENTRY name="VIM_2 drive BCLR (on): P2.12 (SFFC0.12) to P8.1 (SFFD4.1)" address="0x3290E" datasize="0x2" patchdata="1EEA" basedata="CEE0" />
     <XDFPATCHENTRY name="VIM_2 drive BSET (off): P2.12 (SFFC0.12) to P8.1 (SFFD4.1)" address="0x32914" datasize="0x2" patchdata="1FEA" basedata="CFE0" />
   <CATEGORYMEM index="0" category="2000" /><CATEGORYMEM index="1" category="2048" /><CATEGORYMEM index="2" category="0" /></XDFPATCH>
-  <XDFPATCH uniqueid="0x4209" vislevel="0">
+  <XDFPATCH uniqueid="0x4209" vislevel="2">
     <title>Knock Retard in Log</title>
     <description>THIS IS A PROGRAM PATCH NOT A CALIBRATION PATCH
  - developed on CA652048_G3N7tM0C_6577715202  
