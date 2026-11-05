@@ -1,10 +1,10 @@
-<!-- Written 10/30/2026 03:31:38 -->
+<?xml version='1.0' encoding='utf-8'?>
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
     <deftitle>Hyundai 2.7L Siemens 652048</deftitle>
-    <description></description>
-    <author>OpenGK - chase206, dmg210, dante, kylem</author>
+    <description />
+    <author>OpenGK - chase206, dmg210, dante, kylem, Not A TR7</author>
     <BASEOFFSET offset="0" subtract="0" />
     <DEFAULTS datasizeinbits="8" sigdigits="2" outputtype="1" signed="0" lsbfirst="0" float="0" />
     <REGION type="0xFFFFFFFF" startaddress="0x0" size="0x7FFFF" regioncolor="0x0" regionflags="0x0" />
@@ -156,6 +156,8 @@
     <CATEGORY index="0x1DE" name="lambda sensor voltage" />
     <CATEGORY index="0x1DF" name="compler switch" />
     <CATEGORY index="0x1E0" name="wheel speed" />
+    <CATEGORY index="0x7CF" name="Community Patches" />
+    <CATEGORY index="0x7FF" name="PROGRAM PATCHES" />
   </XDFHEADER>
   <XDFFLAG uniqueid="0x1801">
     <title>C_CLR_FMY_BACKUP</title>
@@ -167,7 +169,9 @@
   </XDFFLAG>
   <XDFFLAG uniqueid="0x1802">
     <title>C_CONF_CAT_EFF</title>
-    <description>Constants Variant Selection&#013;&#010;determines if cat diagnoses routines are enabled &#013;&#010;</description>
+    <description>Constants Variant Selection
+determines if cat diagnoses routines are enabled 
+</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="18" />
     <EMBEDDEDDATA mmedaddress="0x810F" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -7922,7 +7926,9 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11D8" flags="0xC">
     <title>C_N_FCUT</title>
-    <description>Constants N / VS limitations&#013;&#010;soft limit for rev limit intended to prevent cat from overheating? C_T_N_MAX_FCUT is a delay before this soft limit is enforced?&#013;&#010;used for &quot;2 step&quot;</description>
+    <description>Constants N / VS limitations
+soft limit for rev limit intended to prevent cat from overheating? C_T_N_MAX_FCUT is a delay before this soft limit is enforced?
+used for "2 step"</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x820E" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8134,7 +8140,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11E5" flags="0xC">
     <title>C_N_MAX</title>
-    <description>Constants N / VS limitations&#013;&#010;soft rev limit </description>
+    <description>Constants N / VS limitations
+soft rev limit </description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x8217" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8150,7 +8157,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11E6" flags="0xC">
     <title>C_N_MAX_AJ</title>
-    <description>Constants Basic functions, PL, FL&#013;&#010;anti jerk, max engine speed that ecu filters fast/&quot;jerky&quot; throttle inputs</description>
+    <description>Constants Basic functions, PL, FL
+anti jerk, max engine speed that ecu filters fast/"jerky" throttle inputs</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="42" />
     <EMBEDDEDDATA mmedaddress="0x8218" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8166,7 +8174,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11E7" flags="0xC">
     <title>C_N_MAX_BOL_ST</title>
-    <description>Constants ST, AST&#013;&#010;threshold for changing from &quot;cranking/starting&quot; to &quot;running/idle&quot; mode</description>
+    <description>Constants ST, AST
+threshold for changing from "cranking/starting" to "running/idle" mode</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="21" />
     <EMBEDDEDDATA mmedaddress="0x8219" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8182,7 +8191,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11E8" flags="0xC">
     <title>C_N_MAX_CAT</title>
-    <description>Constants catalyst efficiency diagnosis&#013;&#010;rpm limiter for catalust protection, triggered if ecu thermal model thinks exhuast or cat temp is too high in order to protect cat.</description>
+    <description>Constants catalyst efficiency diagnosis
+rpm limiter for catalust protection, triggered if ecu thermal model thinks exhuast or cat temp is too high in order to protect cat.</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="38" />
     <EMBEDDEDDATA mmedaddress="0x821A" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8230,7 +8240,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11EB" flags="0xC">
     <title>C_N_MAX_ER</title>
-    <description>Constants Misfire detection&#013;&#010;max rpm where misfire detection still runs</description>
+    <description>Constants Misfire detection
+max rpm where misfire detection still runs</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="32" />
     <EMBEDDEDDATA mmedaddress="0x821D" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8247,7 +8258,9 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11EC" flags="0xC">
     <title>C_N_MAX_FCUT</title>
-    <description>Constants N / VS limitations&#013;&#010;hard limit for rev limit intended to prevent cat from overheating? C_T_N_MAX_FCUT is a delay before this limit is enforced?&#013;&#010;used for &quot;2 step&quot;</description>
+    <description>Constants N / VS limitations
+hard limit for rev limit intended to prevent cat from overheating? C_T_N_MAX_FCUT is a delay before this limit is enforced?
+used for "2 step"</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0x821E" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8263,7 +8276,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11ED" flags="0xC">
     <title>C_N_MAX_HYS</title>
-    <description>Constants N / VS limitations&#013;&#010;hysteresis rpm for soft rev limiters</description>
+    <description>Constants N / VS limitations
+hysteresis rpm for soft rev limiters</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x8220" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8279,7 +8293,9 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11EE" flags="0xC">
     <title>C_N_MAX_HYS_MAX</title>
-    <description>Constants N / VS limitations&#013;&#010;rpm hysterises for hard rev limiter&#013;&#010;</description>
+    <description>Constants N / VS limitations
+rpm hysterises for hard rev limiter
+</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8221" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8295,7 +8311,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11EF" flags="0xC">
     <title>C_N_MAX_IGA_TQR</title>
-    <description>Constants Traction Control Function&#013;&#010;max rpm where traction control can request to reduce torque by pulling timing</description>
+    <description>Constants Traction Control Function
+max rpm where traction control can request to reduce torque by pulling timing</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="48" />
     <EMBEDDEDDATA mmedaddress="0x8222" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8311,7 +8328,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11F0" flags="0xC">
     <title>C_N_MAX_INF</title>
-    <description>Constants Rewetting&#013;&#010;Should be the the max rpm that the ecu can intercept fast falling rpms, probably does so by changing isapwm or iga.</description>
+    <description>Constants Rewetting
+Should be the the max rpm that the ecu can intercept fast falling rpms, probably does so by changing isapwm or iga.</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="66" />
     <EMBEDDEDDATA mmedaddress="0x8223" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8375,7 +8393,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11F4" flags="0xC">
     <title>C_N_MAX_MAX</title>
-    <description>Constants N / VS limitations&#013;&#010;hard rev limit</description>
+    <description>Constants N / VS limitations
+hard rev limit</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x8227" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8439,7 +8458,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11F8" flags="0xC">
     <title>C_N_MAX_VLS_LIM</title>
-    <description>Constants Diagnosis&#013;&#010;this should be the max rpm where downstream o2 sensors can influence fuel trims, although i thought the downstream sensors wernt used for this, so this might be wrong. should not apply with c_conf_cat_eff disabled</description>
+    <description>Constants Diagnosis
+this should be the max rpm where downstream o2 sensors can influence fuel trims, although i thought the downstream sensors wernt used for this, so this might be wrong. should not apply with c_conf_cat_eff disabled</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="24" />
     <EMBEDDEDDATA mmedaddress="0x822A" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -8471,7 +8491,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x11FA" flags="0xC">
     <title>C_N_MAX_VS_DIAG</title>
-    <description>Constants N / VS limitations&#013;&#010;Should be the rev limit when vehicle speed sensor fails (or might be wheel speed sensor fails or abs fuse is blown/pulled)</description>
+    <description>Constants N / VS limitations
+Should be the rev limit when vehicle speed sensor fails (or might be wheel speed sensor fails or abs fuse is blown/pulled)</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x822C" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -9940,7 +9961,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x125A" flags="0xC">
     <title>C_TCO_MIN_CAT</title>
-    <description>Constants catalyst efficiency diagnosis&#013;&#010;</description>
+    <description>Constants catalyst efficiency diagnosis
+</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="38" />
     <EMBEDDEDDATA mmedaddress="0x82C3" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -10270,7 +10292,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1270" flags="0xC">
     <title>C_TCO_TH_OPEN</title>
-    <description>constants coolant thermostat diagnosis&#013;&#010;temperature at which ecu assumes thermostat is fully open</description>
+    <description>constants coolant thermostat diagnosis
+temperature at which ecu assumes thermostat is fully open</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="58" />
     <EMBEDDEDDATA mmedaddress="0x82D9" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -11555,51 +11578,36 @@
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x12C3" flags="0xC">
+  <XDFCONSTANT uniqueid="0x12C3" flags="0xC" vislevel="0">
     <title>C_TPS_HYS_VIM</title>
     <description>Constants VIM</description>
-    <CATEGORYMEM index="0" category="16" />
-    <CATEGORYMEM index="1" category="65" />
-    <EMBEDDEDDATA mmedaddress="0x830A" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x830a" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedtypeflags="0x0" />
     <decimalpl>1</decimalpl>
     <rangehigh>119.500000</rangehigh>
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x12C4" flags="0xC">
+    <CATEGORYMEM index="0" category="16" /><CATEGORYMEM index="1" category="65" /><units /><outputtype>1</outputtype><MATH equation="X/2.56"><VAR id="X" /></MATH></XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x12C4" flags="0xC" vislevel="0">
     <title>C_TPS_HYS_VIM_1</title>
     <description>Constants VIM</description>
-    <CATEGORYMEM index="0" category="16" />
-    <CATEGORYMEM index="1" category="65" />
-    <EMBEDDEDDATA mmedaddress="0x830B" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x830b" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedtypeflags="0x0" />
     <decimalpl>1</decimalpl>
     <rangehigh>119.500000</rangehigh>
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
-  <XDFCONSTANT uniqueid="0x12C5" flags="0xC">
+    <CATEGORYMEM index="0" category="16" /><CATEGORYMEM index="1" category="65" /><units /><outputtype>1</outputtype><MATH equation="X/2.56"><VAR id="X" /></MATH></XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x12C5" flags="0xC" vislevel="0">
     <title>C_TPS_HYS_VIM_2</title>
     <description>Constants VIM</description>
-    <CATEGORYMEM index="0" category="16" />
-    <CATEGORYMEM index="1" category="65" />
-    <EMBEDDEDDATA mmedaddress="0x830C" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <EMBEDDEDDATA mmedaddress="0x830c" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedtypeflags="0x0" />
     <decimalpl>1</decimalpl>
     <rangehigh>119.500000</rangehigh>
     <datatype>3</datatype>
     <unittype>3</unittype>
     <DALINK index="0" />
-    <MATH equation="X">
-      <VAR id="X" />
-    </MATH>
-  </XDFCONSTANT>
+    <CATEGORYMEM index="0" category="16" /><CATEGORYMEM index="1" category="65" /><units /><outputtype>1</outputtype><MATH equation="X/2.56"><VAR id="X" /></MATH></XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x12C6" flags="0xC">
     <title>C_TPS_IS</title>
     <description>Constants IS</description>
@@ -12902,7 +12910,9 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x131C" flags="0xC">
     <title>C_T_N_MAX_FCUT</title>
-    <description>Constants N / VS limitations&#013;&#010;time delay before rev limits for cat are enforced?, unknown equation or units.&#013;&#010;used with &quot;2 step&quot;</description>
+    <description>Constants N / VS limitations
+time delay before rev limits for cat are enforced?, unknown equation or units.
+used with "2 step"</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x84C2" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -14183,7 +14193,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1373" flags="0xC">
     <title>C_VS_MAX_0</title>
-    <description>Constants N / VS limitations&#013;&#010;speed limiter, dont know what _0 corresponds to</description>
+    <description>Constants N / VS limitations
+speed limiter, dont know what _0 corresponds to</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x8350" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -14198,7 +14209,8 @@
   </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x1374" flags="0xC">
     <title>C_VS_MAX_1_2</title>
-    <description>Constants N / VS limitations&#013;&#010;speed limiter, dont know what _1_2 cooresponds to</description>
+    <description>Constants N / VS limitations
+speed limiter, dont know what _1_2 cooresponds to</description>
     <CATEGORYMEM index="0" category="16" />
     <CATEGORYMEM index="1" category="63" />
     <EMBEDDEDDATA mmedaddress="0x8351" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -17527,7 +17539,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
+      <MATH equation="X*32">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -17575,7 +17587,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
+      <MATH equation="X * 32">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -17623,7 +17635,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
+      <MATH equation="X*32">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -19685,10 +19697,8 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
-  <XDFTABLE uniqueid="0x6C" flags="0x30">
+  <XDFTABLE uniqueid="0x6C" flags="0x30" vislevel="0">
     <title>ldp_tps_vim_1_id_vim_1</title>
-    <CATEGORYMEM index="0" category="221" />
-    <CATEGORYMEM index="1" category="250" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -19696,11 +19706,10 @@
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="0.0" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><outputtype>1</outputtype><LABEL index="0" value="0.0" /></XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -19709,33 +19718,20 @@
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="1" />
-      <LABEL index="1" value="2" />
-      <LABEL index="2" value="3" />
-      <LABEL index="3" value="4" />
-      <LABEL index="4" value="5" />
-      <LABEL index="5" value="6" />
-      <LABEL index="6" value="7" />
-      <LABEL index="7" value="8" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><LABEL index="0" value="1" /><LABEL index="1" value="2" /><LABEL index="2" value="3" /><LABEL index="3" value="4" /><LABEL index="4" value="5" /><LABEL index="5" value="6" /><LABEL index="6" value="7" /><LABEL index="7" value="8" /></XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8734" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x2" mmedaddress="0x8734" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedcolcount="1" />
       <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
+      <min>0.0</min>
+      <max>255.0</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x6D" flags="0x30">
+      <units /><MATH equation="X/2.56"><VAR id="X" /></MATH><DALINK index="0" /></XDFAXIS>
+  <description /><CATEGORYMEM index="0" category="221" /><CATEGORYMEM index="1" category="250" /></XDFTABLE>
+  <XDFTABLE uniqueid="0x6D" flags="0x30" vislevel="0">
     <title>ldp_tps_vim_2_id_vim_2</title>
-    <CATEGORYMEM index="0" category="221" />
-    <CATEGORYMEM index="1" category="250" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -19743,11 +19739,10 @@
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="0.0" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><outputtype>1</outputtype><LABEL index="0" value="0.0" /></XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -19756,33 +19751,20 @@
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="1" />
-      <LABEL index="1" value="2" />
-      <LABEL index="2" value="3" />
-      <LABEL index="3" value="4" />
-      <LABEL index="4" value="5" />
-      <LABEL index="5" value="6" />
-      <LABEL index="6" value="7" />
-      <LABEL index="7" value="8" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><LABEL index="0" value="1" /><LABEL index="1" value="2" /><LABEL index="2" value="3" /><LABEL index="3" value="4" /><LABEL index="4" value="5" /><LABEL index="5" value="6" /><LABEL index="6" value="7" /><LABEL index="7" value="8" /></XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8746" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x2" mmedaddress="0x8746" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedcolcount="1" />
       <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
+      <min>0.0</min>
+      <max>255.0</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x6E" flags="0x30">
+      <units /><MATH equation="X/2.56"><VAR id="X" /></MATH><DALINK index="0" /></XDFAXIS>
+  <description /><CATEGORYMEM index="0" category="221" /><CATEGORYMEM index="1" category="250" /></XDFTABLE>
+  <XDFTABLE uniqueid="0x6E" flags="0x30" vislevel="0">
     <title>ldp_tps_vim_id_vim</title>
-    <CATEGORYMEM index="0" category="221" />
-    <CATEGORYMEM index="1" category="250" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -19790,11 +19772,10 @@
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="0.0" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><outputtype>1</outputtype><LABEL index="0" value="0.0" /></XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -19803,29 +19784,18 @@
       <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
-      <LABEL index="0" value="1" />
-      <LABEL index="1" value="2" />
-      <LABEL index="2" value="3" />
-      <LABEL index="3" value="4" />
-      <LABEL index="4" value="5" />
-      <LABEL index="5" value="6" />
-      <LABEL index="6" value="7" />
-      <LABEL index="7" value="8" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
-    </XDFAXIS>
+    <units /><LABEL index="0" value="1" /><LABEL index="1" value="2" /><LABEL index="2" value="3" /><LABEL index="3" value="4" /><LABEL index="4" value="5" /><LABEL index="5" value="6" /><LABEL index="6" value="7" /><LABEL index="7" value="8" /></XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x8722" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x2" mmedaddress="0x8722" mmedelementsizebits="8" mmedrowcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" mmedcolcount="1" />
       <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
+      <min>0.0</min>
+      <max>255.0</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
+      <units /><DALINK index="0" /><MATH equation="X/2.56"><VAR id="X" /></MATH></XDFAXIS>
+  <description /><CATEGORYMEM index="0" category="221" /><CATEGORYMEM index="1" category="250" /></XDFTABLE>
   <XDFTABLE uniqueid="0x6F" flags="0x30">
     <title>ldp_tqr_asr_nv_id_nr_pat</title>
     <CATEGORYMEM index="0" category="221" />
@@ -21067,9 +21037,9 @@
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x898A" mmedelementsizebits="8" mmedrowcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>2</decimalpl>
       <min>0.000000</min>
-      <max>255.000000</max>
+      <max>8160.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
+      <MATH equation="X*32">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -44719,4 +44689,86 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
+  <XDFPATCH uniqueid="0xECE">
+    <title>Variable Intake Enable</title>
+    <description>Enables variable intake using same values as a tuscan bin. Requires installing a variable intake, and either running 2 wires from the ecu or using the VIM on Lambda program zone patch.
+
+- Not A TR7</description>
+    <CATEGORYMEM index="0" category="2000" />
+    <XDFPATCHENTRY name="C_ABC_MAX_VIM_1_DIAG" address="0x80FB" datasize="0x1" patchdata="46" basedata="FF" />
+    <XDFPATCHENTRY name="C_ABC_MAX_VIM_2_DIAG" address="0x80FC" datasize="0x1" patchdata="46" basedata="FF" />
+    <XDFPATCHENTRY name="C_CONF_VIM" address="0x811C" datasize="0x1" patchdata="02" basedata="00" />
+    <XDFPATCHENTRY name="C_N_HYS_VIM_1" address="0x8213" datasize="0x1" patchdata="03" basedata="00" />
+    <XDFPATCHENTRY name="C_N_HYS_VIM_2" address="0x8214" datasize="0x1" patchdata="03" basedata="00" />
+    <XDFPATCHENTRY name="C_TPS_HYS_VIM_1" address="0x830B" datasize="0x1" patchdata="06" basedata="00" />
+    <XDFPATCHENTRY name="C_TPS_HYS_VIM_2" address="0x830C" datasize="0x1" patchdata="06" basedata="00" />
+    <XDFPATCHENTRY name="C_VB_MIN_VIM" address="0x8329" datasize="0x1" patchdata="3E" basedata="00" />
+    <XDFPATCHENTRY name="ldp_n_32_vim_1_id_vim_1" address="0x872B" datasize="0x8" patchdata="00161F3F6A7DA4BC" basedata="0000000000000000" />
+    <XDFPATCHENTRY name="ldp_tps_vim_1_id_vim_1" address="0x8734" datasize="0x8" patchdata="0003152B5578ABD5" basedata="0000000000000000" />
+    <XDFPATCHENTRY name="ldp_n_32_vim_2_id_vim_2" address="0x873D" datasize="0x8" patchdata="00161F3F6C7D99BC" basedata="0000000000000000" />
+    <XDFPATCHENTRY name="ldp_tps_vim_2_id_vim_2" address="0x8746" datasize="0x8" patchdata="0003152B5578ABD5" basedata="0000000000000000" />
+    <XDFPATCHENTRY name="ldp_vb_ip_t_vim" address="0x8AA8" datasize="0x6" patchdata="00000000061F" basedata="000000000000" />
+    <XDFPATCHENTRY name="ID_VIM_1__N_32_VIM_1__TPS_VIM_1" address="0x9788" datasize="0x40" patchdata="00000000000000000000000000000000000000000000000000000000000000000101010101010101010101010101010101010101010101010101010101010101" basedata="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" />
+    <XDFPATCHENTRY name="ID_VIM_2__N_32_VIM_2__TPS_VIM_2" address="0x97C8" datasize="0x40" patchdata="00000000000000000000000000000000000000000000000000000000000000000000000000000000010101010101010101010101010101010101010101010101" basedata="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" />
+    <XDFPATCHENTRY name="IP_T_VIM__VB" address="0xA558" datasize="0x6" patchdata="5A5A5A5A5A5A" basedata="000000000000" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x26B9" vislevel="2">
+    <title>VIM on Lambda</title>
+    <description>THIS IS A PROGRAM PATCH NOT A CALIBRATION PATCH
+ - developed on CA652048_G3N7tM0C_6577715202  
+when I compared the program zones for each CA652048_*.bin on the github they all matched, so this should work for all of them.
+
+Moves the VIM outputs onto the downstream O2 heater pins and turns the heaters off in code. VIM_1 drives  the bank 1 heater pin, VIM_2 the bank 2 heater pin.
+
+This works with C_CONF_CAT_EFF at 0 or 1 (set to 1 to leave the downstream O2 adc inputs active for logging a wideband controller or other input, otherwise set to 0).
+
+Use with Variable Intake Enable (C_CONF_VIM = 2). Two-stage mode only.
+
+- Not A TR7</description>
+    <XDFPATCHENTRY name="Skip downstream heater init: JB BFD68.1 to JMPR + NOP" address="0x1fc24" datasize="0x4" patchdata="0D33CC00" basedata="9A343210" />
+    <XDFPATCHENTRY name="VIM_1 diag BSET: P7.0 (SFFD0.0) to P8.0 (SFFD4.0)" address="0x2EF67" datasize="0x1" patchdata="EA" basedata="E8" />
+    <XDFPATCHENTRY name="VIM_1 diag BCLR: P7.0 (SFFD0.0) to P8.0 (SFFD4.0)" address="0x2EF99" datasize="0x1" patchdata="EA" basedata="E8" />
+    <XDFPATCHENTRY name="VIM_2 diag BSET: P2.12 (SFFC0.12) to P8.1 (SFFD4.1)" address="0x2F04E" datasize="0x2" patchdata="1FEA" basedata="CFE0" />
+    <XDFPATCHENTRY name="VIM_2 diag BCLR: P2.12 (SFFC0.12) to P8.1 (SFFD4.1)" address="0x2F080" datasize="0x2" patchdata="1EEA" basedata="CEE0" />
+    <XDFPATCHENTRY name="VIM_1 drive BCLR (on): P7.0 (SFFD0.0) to P8.0 (SFFD4.0)" address="0x3286B" datasize="0x1" patchdata="EA" basedata="E8" />
+    <XDFPATCHENTRY name="VIM_1 drive BSET (off): P7.0 (SFFD0.0) to P8.0 (SFFD4.0)" address="0x32871" datasize="0x1" patchdata="EA" basedata="E8" />
+    <XDFPATCHENTRY name="VIM_2 drive BCLR (on): P2.12 (SFFC0.12) to P8.1 (SFFD4.1)" address="0x3290E" datasize="0x2" patchdata="1EEA" basedata="CEE0" />
+    <XDFPATCHENTRY name="VIM_2 drive BSET (off): P2.12 (SFFC0.12) to P8.1 (SFFD4.1)" address="0x32914" datasize="0x2" patchdata="1FEA" basedata="CFE0" />
+  <CATEGORYMEM index="0" category="2000" /><CATEGORYMEM index="1" category="2048" /><CATEGORYMEM index="2" category="0" /></XDFPATCH>
+  <XDFPATCH uniqueid="0x4209" vislevel="2">
+    <title>Knock Retard in Log</title>
+    <description>THIS IS A PROGRAM PATCH NOT A CALIBRATION PATCH
+ - developed on CA652048_G3N7tM0C_6577715202  
+when I compared the program zones for each CA652048_*.bin on the github they all matched, so this should work for all of them.
+
+In the logged output this replaces:
+"Injection Time Bank 1 avg" and "Injection Time Bank 2 avg" (redundant, can be calculated from per cylinder injection time) with knock retard for cylinders 1-4.
+And 0x56 and 0x57 (always 0, pointed to zero register) with knock retard for cylinders 5&amp;6
+
+- Not A TR7</description>
+    <XDFPATCHENTRY name="Packet 0x33 Knock Retard Cyl 1: log pointer FA96 to E15D" address="0x105A8" datasize="0x2" patchdata="5DE1" basedata="96FA" />
+    <XDFPATCHENTRY name="Packet 0x34 Knock Retard Cyl 2: log pointer FA97 to E15F" address="0x105AA" datasize="0x2" patchdata="5FE1" basedata="97FA" />
+    <XDFPATCHENTRY name="Packet 0x35 Knock Retard Cyl 3: log pointer FA98 to E161" address="0x105AC" datasize="0x2" patchdata="61E1" basedata="98FA" />
+    <XDFPATCHENTRY name="Packet 0x36 Knock Retard Cyl 4: log pointer FA99 to E163" address="0x105AE" datasize="0x2" patchdata="63E1" basedata="99FA" />
+    <XDFPATCHENTRY name="Packet 0x56 Knock Retard Cyl 5: log pointer FF1C to E165" address="0x105EE" datasize="0x2" patchdata="65E1" basedata="1CFF" />
+    <XDFPATCHENTRY name="Packet 0x57 Knock Retard Cyl 6: log pointer FF1D to E167" address="0x105F0" datasize="0x2" patchdata="67E1" basedata="1DFF" />
+  <CATEGORYMEM index="0" category="2000" /><CATEGORYMEM index="1" category="2048" /><CATEGORYMEM index="2" category="0" /></XDFPATCH>
+  <XDFPATCH uniqueid="0x1C54">
+    <title>Ghost Cams</title>
+    <description>Modifies values in Dynamic Ignition Correction at Idle table and appropriate axis RPM values to induce an artificial lope at idle, also known as "Ghost Cams"
+- Kimchispiceworks</description>
+    <CATEGORYMEM index="0" category="2000" />
+    <XDFPATCHENTRY name="Modify Idle correction table" address="0x9C06" datasize="0xC" patchdata="3030434343B5B5B5B5B5B5B5" basedata="30303D5065809BABB0B5B5B5" />
+    <XDFPATCHENTRY name="Modify AT Idle correction tab" address="0x9C12" datasize="0xC" patchdata="3030434343B5B5B5B5B5B5B5" basedata="30303D5065809BABB0B5B5B5" />
+    <XDFPATCHENTRY name="Modify rpm correction axis" address="0x8E40" datasize="0x18" patchdata="C07E107F887FC47FFB7F00800580258050807880A080C880" basedata="107F607F887FC47FEC7F00801480328050807880A080C880" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x2970">
+    <title>MAF Calibration Patch E46 330ci</title>
+    <description>Use this patch to convert to commonly found MAFs to extend the MAF limitation.
+
+-chase206</description>
+    <CATEGORYMEM index="0" category="2000" />
+    <XDFPATCHENTRY name="Convert to E46 330ci MAF #2" address="0xAFC2" datasize="0x100" patchdata="C11F5E20FC209C214022E5228C233724E32493254526F826B0276A282529E329A52A682B302CF82CC52D952E682F3C301531F131D032B13397347E356A365A374C3841393A3A383B383C3C3D453E513F614075418C42A843C844EE45154743487549AA4AE54B254D6A4EB34F01515552AE530C557156DC574A59C15A3C5CBE5D485FD8606E620A64B0655A670E69CA6A8C6C586E2A700772EC73D875D177D179DC7BF17D11803C827384B58603895E8BC58D3A90BC924E95EC97989A509D11A0DEA2B1A58CA86EAB55AE41B130B421B713BA05BDF8BFECC2DEC5D3C8C8CBBECEB7D1B1D4AED7AEDAB1DDB8E0C3E3D3E6E7E900ED1EF043F36EF6A1F9DAFCFEFF" basedata="6E17DB174918B81829199C19111A881A001B7B1BF71B751CF61C781DFD1D841E0D1F981F2620B6204821DD2174220D23A9234724E7248A252F26D72680272D28DC288D29412AF72AB02B6B2C292DEA2DAD2E732F3C300731D531A6327A3351342A350736E736CA37B0389A39873A783B6D3C663D623E623F674070417D428E43A544BF45DF4604482E495D4A914BCB4C0A4E4F4F9950E9513F539A54FA556157CD583F5AB75B345DB85E4260D16167630365A5664E68FD69B26B6E6D316FFA70CA72A27480766578517A457C3F7E3F804682538466867F889E8AC28CEC8E1B9150938A95C9970D9A579CA99E04A16AA3DDA55FA8F2AA9AAD57B02EB320B631B9" />
+    <XDFPATCHENTRY name="Convert to E46 330ci MAF #1" address="0xAEC2" datasize="0x100" patchdata="000000000000000071008E00AC00C800E50001011E013A01580173019101AE01D001E301F7010A021E02330248025E0273028A02A102B802D102EA0203031C03380353036E038C03A803C503E50303042304430465048704A804CC04F00413053A0560058505AE05D50500062A0655068106AE06DC063C073C076E07A107D5070C0843087C08B508F1082E096C09AC09EC092E0A710AB50AFA0A3E0B850BCC0B150C5E0CA70CF10C3A0D850DD10D1E0E6A0EB80E080F580FA80FFA0F4E10A110F8104E11A81101125C12BA121A137A13DE134314A81411157E15EA155A16CC164117B8173118AC182A19AA192C1AB11A381BC11B4C1CDA1C6A1DFC1D911E281F" basedata="000000000000000040014D015A0168017601830191019F01AE01BC01CB01DA01E901F801080218022802390249025B026C027D028F02A202B402C702DA02EE02010316032A033F0355036A0381039703AE03C603DE03F6030F04290443045D0478049304AF04CC04E80406052405420561058005A005C005E1050206240647066A068D06B106D606FB06210748076F079607BF07E80712083D0869089608C408F408240955098809BC09F209290A610A9A0AD50A110B4F0B8D0BCD0B0E0C510C940CD90C1F0D660DAE0DF80D420E8E0EDB0E290F780FC90F1A106C10C01015116B11C2111A127312CD1229138513E3134314A31405156815CD1533169B160417" />
+  </XDFPATCH>
 </XDFFORMAT>
