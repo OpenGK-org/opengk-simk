@@ -1,10 +1,10 @@
-<!-- Written 10/02/2026 21:08:44 -->
+<!-- Written 11/08/2026 13:44:52 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
     <deftitle>Kia 2.0L Siemens 662008</deftitle>
     <description></description>
-    <author>OpenGK - chase206, dmg210, dante, kylem, kostas</author>
+    <author>OpenGK - chase206, dmg210, dante, kylem, kostas, bubblinepower</author>
     <BASEOFFSET offset="0" subtract="0" />
     <DEFAULTS datasizeinbits="8" sigdigits="2" outputtype="1" signed="0" lsbfirst="0" float="0" />
     <REGION type="0xFFFFFFFF" startaddress="0x0" size="0x7FFFF" regioncolor="0x0" regionflags="0x0" name="Binary File" desc="This region describes the bin file edited by this XDF" />
@@ -15,6 +15,7 @@
     <CATEGORY index="0x4" name="Fuel" />
     <CATEGORY index="0x8" name="Ignition" />
     <CATEGORY index="0x9" name="IVVT" />
+    <CATEGORY index="0xA" name="Catalyst Settings" />
     <CATEGORY index="0xC" name="Config Switches" />
     <CATEGORY index="0xF" name="Engine Cooling" />
     <CATEGORY index="0x10" name="Engine Speed" />
@@ -33,6 +34,21 @@
     <unittype>4</unittype>
     <DALINK index="0" />
     <MATH equation="X * 0.004">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69A5" flags="0xC">
+    <title>c_ti_fac</title>
+    <description>C_TI_FAC&#013;&#010;Injection Time Factor Scaling</description>
+    <CATEGORYMEM index="0" category="5" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x108E8" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>ms</units>
+    <decimalpl>3</decimalpl>
+    <rangehigh>16.000000</rangehigh>
+    <datatype>6</datatype>
+    <unittype>4</unittype>
+    <DALINK index="0" />
+    <MATH equation="X * 0.000030518043793392843518730449378195">
       <VAR id="X" />
     </MATH>
   </XDFCONSTANT>
@@ -1043,7 +1059,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x1160" flags="0x0">
     <title>ip_tipr_cst_at__tco</title>
-    <description>Injection (ST, AST, WUP)&#013;&#010;            IP_TIPR_CST[ms] = f(TCO[ C])&#013;&#010;&#013;&#010;Basic pre-injection time at Start MT</description>
+    <description>Injection (ST, AST, WUP)&#013;&#010;            IP_TIPR_CST[ms] = f(TCO[ C])&#013;&#010;&#013;&#010;Basic pre-injection time at Start AT</description>
     <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
@@ -1436,6 +1452,32 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
+  <XDFPATCH uniqueid="0x68F6">
+    <title>EVO X 550cc Injectors Scaling Patch</title>
+    <description>Scales all the relevant fuel injection maps to support the EVO X 550cc injectors.</description>
+    <CATEGORYMEM index="0" category="5" />
+    <XDFPATCHENTRY name="Injection Time Minimum" address="0x108F2" datasize="0x2" patchdata="4B00" basedata="E100" />
+    <XDFPATCHENTRY name="Injection Dead Times" address="0x17389" datasize="0x8" patchdata="726E5130221E1A0E" basedata="145B37261A161208" />
+    <XDFPATCHENTRY name="Injection Time Factor Scaling" address="0x108E8" datasize="0x2" patchdata="0406" basedata="4811" />
+    <XDFPATCHENTRY name="Basic Pre Inj. Time MT" address="0x1525E" datasize="0x10" patchdata="BA4568427A307D1CEE11F609FB04FC03" basedata="14CD50C3948ECA53BC344C1DA60EB80B" />
+    <XDFPATCHENTRY name="Basic Inj. Time at Start AT" address="0x14D12" datasize="0x50" patchdata="B2556D3D611F650CE706F40384028402643E7B2F6515140AAC06B7038402840225308624D10EA108A4068003040204028525901A1F0D01087106800304020402071C95154B0C01087106800304020402" basedata="0BFCAAB44C5C74244E14A10B660766077FB7A68BED3EA41DA113ED0A660766079A8D6C6B952B601987134C0AED05ED055A6E204E97268917F2124C0AED05ED056E527A3F27248917F2124C0AED05ED05" />
+    <XDFPATCHENTRY name="IVVT Injection Time Offset" address="0x19D04" datasize="0xC0" patchdata="808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080807E80808080808080808080807F7F80808080808080807F807F7F808080808080807F80807F80808080808080808080807F808080808080807F808080808080808080808080808080807D808080808080808080807E80808080808080808080807E80808080808080808080807F80808080808080808080807F80808080808080808080808080808080808080808080808080" basedata="808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080807B80808080808080807F807F7C7C8080808081807F7F7E7F7C7E80808080807F7F7E7F7F7D80808080807F7F7F7F7F7F7D8080808080807F7E7F7F7F7F8080808080807F808080807F778080808080807F8080807B80808080807F7F7F7F807F7980808080807F80808080807E808080808080807F7F80807D80808080808080808080808080808080808080808080808080" />
+    <XDFPATCHENTRY name="Basic Inj. Time at Start MT" address="0x14CC2" datasize="0x50" patchdata="DB4DF43B771E760B9306F403840284024937472DC51484095B06B703840284022F28E920630E6B08540680030402040299197618BD0CA3071F06800304020402C5143510EF0BA3071F06800304020402" basedata="FCE457B09C59B5215713A10B660766079BA22B85183DFC1BB212ED0A660766072F76CA60502AC3189D124C0AED05ED054B4BF2477725761601124C0AED05ED05163DAC2F1923761601124C0AED05ED05" />
+    <XDFPATCHENTRY name="Basic Pre Inj. Time AT" address="0x1526E" datasize="0x10" patchdata="074E63477A307D1CEE11F609FB04FC03" basedata="7EE5F6D1948ECA53BC344C1DA60EB80B" />
+  </XDFPATCH>
+  <XDFCONSTANT uniqueid="0x4087" flags="0xC">
+    <title>0x1013F Catalyst Efficiency Monitoring</title>
+    <description>c_conf_cat_eff</description>
+    <CATEGORYMEM index="0" category="11" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x1013F" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <rangehigh>1.000000</rangehigh>
+    <datatype>26</datatype>
+    <unittype>98</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
   <XDFCONSTANT uniqueid="0x74A0" flags="0xC">
     <title>c_cam_adj_rng_max_in</title>
     <description>C_CAM_ADJ_RNG_MAX_IN&#013;&#010;&#013;&#010;Constant Camshaft Adjust Range Max Intake</description>
